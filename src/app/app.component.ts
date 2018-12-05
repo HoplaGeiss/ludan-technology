@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'ludan-root',
+  styleUrls: ['./app.component.scss'],
+  template: `
+    <ludan-navbar></ludan-navbar>
+    <div>Hello</div>
+  `
 })
-export class AppComponent {
-  title = 'ludan-technology';
-}
+export class AppComponent {}
