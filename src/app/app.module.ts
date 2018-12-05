@@ -1,4 +1,4 @@
-import { NavbarModule } from './../shared/navbar/navbar.module';
+import { NavbarModule } from './shared/navbar/navbar.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 

@@ -1,5 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+export interface NavbarItemInterface {
+  label: string;
+  name?: string;
+}
+
 @Component({
   selector: 'ludan-navbar',
   styleUrls: ['navbar.component.scss'],
@@ -12,8 +17,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   `
 })
 export class NavbarComponent {
-  @Input() items: { label: string }[];
-  @Input() selectedItem: { label: string };
+  @Input() items: NavbarItemInterface[];
+  @Input() selectedItem: NavbarItemInterface;
 
   @Output() selectEvent = new EventEmitter();
 

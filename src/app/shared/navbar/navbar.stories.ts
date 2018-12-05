@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/angular';
 import { Subject } from 'rxjs';
 
 import { NavbarModule } from './navbar.module';
+import { NavbarItemInterface } from './navbar.component';
 
 @Component({
   selector: 'ludan-story',
@@ -16,8 +17,8 @@ import { NavbarModule } from './navbar.module';
 class MockComponent implements OnDestroy, OnInit {
   private destroy$: Subject<boolean> = new Subject<boolean>();
 
-  public items: { label: string }[];
-  public selectedItem: { label: string };
+  public items: NavbarItemInterface[];
+  public selectedItem: NavbarItemInterface;
 
   ngOnDestroy() {
     this.destroy$.next(true);

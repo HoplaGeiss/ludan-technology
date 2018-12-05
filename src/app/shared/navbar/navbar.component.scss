@@ -10,15 +10,18 @@ ul {
 
 li {
   padding: 2px 0;
+  margin: 0 1px;
   width: 80px;
   text-align: center;
   cursor: default;
+  border-bottom: 2px solid transparent;
 
   &.active {
-    border-bottom: 2px solid red;
+    border-bottom-color: red;
   }
 
-  &:not(.active) {
+  &:not(.active):hover {
     cursor: pointer;
+    border-bottom-color: grey;
   }
 }
