@@ -1,13 +1,17 @@
 {
   "name": "ludan-technology",
   "version": "0.0.0",
+  "license": "MIT",
+  "description": "Ludan Technology Website",
+  "author": "gabriel.muller.12@gmail.com",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "private": true,
   "dependencies": {
@@ -31,9 +35,14 @@
     "@angular/cli": "~7.1.1",
     "@angular/compiler-cli": "~7.1.0",
     "@angular/language-service": "~7.1.0",
-    "@types/node": "~8.9.4",
+    "@babel/core": "^7.2.0",
+    "@storybook/addon-knobs": "^4.0.11",
+    "@storybook/addons": "^4.0.11",
+    "@storybook/angular": "^4.0.11",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
+    "babel-loader": "^8.0.4",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -43,6 +52,7 @@
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.4.0",
+    "storybook-readme": "^4.0.2",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.6"
