@@ -10,7 +10,7 @@ import { PortfolioItem } from '../../models/portfolio-item.model';
         fxFlex.lt-md="100%"
         fxFlex.gt-sm="50%"
         *ngFor="let portfolioItem of portfolioItems"
-        [name]="portfolioItem.name"
+        [name]="portfolioItem.label"
         [img]="portfolioItem.img"
         (clickEvent)="selectEvent.emit(portfolioItem)"
       ></ludan-thumbnail>
