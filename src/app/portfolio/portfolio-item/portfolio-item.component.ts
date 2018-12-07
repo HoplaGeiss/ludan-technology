@@ -7,6 +7,4 @@ import { Component, Input } from '@angular/core';
     <markdown src="./assets/portfolio/example.md"></markdown>
   `
 })
-export class PortfolioItemComponent {
-  @Input() name: string;
-}
+export class PortfolioItemComponent {}

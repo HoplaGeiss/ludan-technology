@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ThumbnailInterface } from '../shared/models/thumnail.model';
-import { ThumbnailService } from '../shared/services/thumnail.service';
+import { ThumbnailInterface } from '../../shared/models/thumnail.model';
+import { ThumbnailService } from '../../shared/services/thumnail.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'ludan-portfolio',
-  styleUrls: ['./portfolio.component.scss'],
+  styleUrls: ['./portfolio-page.component.scss'],
   template: `
     <h1>Portfolio</h1>
 
@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
     </div>
   `
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioPageComponent implements OnInit {
   public thumbnails: ThumbnailInterface[];
 
   constructor(private thumbnailService: ThumbnailService, private router: Router) {}

@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { PortfolioItemComponent } from './portfolio-item/portfolio-item.component';
-import { PortfolioComponent } from './portfolio.component';
+import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: PortfolioComponent
+    component: PortfolioPageComponent
   },
   {
     path: ':id',
