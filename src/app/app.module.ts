@@ -1,3 +1,4 @@
+import { PortfolioService } from './shared/services/portfolio.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
@@ -8,7 +9,6 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { NavbarModule } from './shared/components/navbar/navbar.module';
-import { ThumbnailService } from './shared/services/thumnail.service';
 
 @NgModule({
   imports: [
@@ -20,7 +20,7 @@ import { ThumbnailService } from './shared/services/thumnail.service';
     MarkdownModule.forRoot({ loader: HttpClient })
   ],
   declarations: [AppComponent],
-  providers: [ThumbnailService],
+  providers: [PortfolioService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

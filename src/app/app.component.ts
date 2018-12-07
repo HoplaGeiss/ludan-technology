@@ -1,4 +1,3 @@
-import { ThumbnailService } from './shared/services/thumnail.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Subject } from 'rxjs';
@@ -6,6 +5,7 @@ import { takeUntil } from 'rxjs/operators';
 import * as _ from 'underscore';
 
 import { NavbarItemInterface } from './shared/components/navbar/navbar.component';
+import { PortfolioService } from './shared/services/portfolio.service';
 
 @Component({
   selector: 'ludan-root',
@@ -28,7 +28,7 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private thumbnailService: ThumbnailService
+    private portfolioService: PortfolioService
   ) {}
 
   ngOnDestroy() {
@@ -50,7 +50,7 @@ export class AppComponent implements OnInit, OnDestroy {
       if (route instanceof NavigationEnd) this.selectItem(route.url);
     });
 
-    this.thumbnailService.thumbnailsSubject.next([
+    this.portfolioService.portfolioItemsSubject.next([
       { id: 1, name: 'Example1', img: 'assets/default.png' },
       { id: 2, name: 'Example2', img: 'assets/default.png' },
       { id: 3, name: 'Example3', img: 'assets/default.png' },

@@ -2,8 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { storiesOf } from '@storybook/angular';
 import { Subject } from 'rxjs';
 
+import { PortfolioItem } from './../../models/portfolio-item.model';
 import { CatalogueModule } from './catalogue.module';
-import { ThumbnailInterface } from '../../models/thumnail.model';
 
 @Component({
   selector: 'ludan-story',
@@ -19,7 +19,7 @@ import { ThumbnailInterface } from '../../models/thumnail.model';
 class MockComponent implements OnDestroy, OnInit {
   private destroy$: Subject<boolean> = new Subject<boolean>();
 
-  public thumbnails: ThumbnailInterface[];
+  public thumbnails: PortfolioItem[];
 
   ngOnDestroy() {
     this.destroy$.next(true);
