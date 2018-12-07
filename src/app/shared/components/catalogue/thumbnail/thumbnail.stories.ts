@@ -26,7 +26,7 @@ class MockComponent implements OnDestroy, OnInit {
   ngOnInit() {}
 
   openCaseStudy = caseStudy => {
-    console.log('Open case', caseStudy);
+    console.log('Open portolioItem', caseStudy);
   };
 }
 

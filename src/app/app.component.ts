@@ -51,10 +51,10 @@ export class AppComponent implements OnInit, OnDestroy {
     });
 
     this.portfolioService.portfolioItemsSubject.next([
-      { id: 1, name: 'Example1', img: 'assets/default.png' },
-      { id: 2, name: 'Example2', img: 'assets/default.png' },
-      { id: 3, name: 'Example3', img: 'assets/default.png' },
-      { id: 4, name: 'Example4', img: 'assets/default.png' }
+      { id: '1', name: 'example', label: 'Example 1', img: 'assets/default.png' },
+      { id: '2', name: 'example2', label: 'Example 2', img: 'assets/default.png' },
+      { id: '3', name: 'example3', label: 'Example 3', img: 'assets/default.png' },
+      { id: '4', name: 'example4', label: 'Example 4', img: 'assets/default.png' }
     ]);
   }
 

@@ -11,7 +11,10 @@ import { CatalogueModule } from './catalogue.module';
     <div style="margin: auto; width: 60%; margin-top: 10%">
       <h1 style="border-bottom: 1px solid #ccc;">Catalogue</h1>
       <div style="height: 500px">
-        <ludan-catalogue [thumbnails]="thumbnails" (selectEvent)="selectThumbnail($event)"></ludan-catalogue>
+        <ludan-catalogue
+          [portfolioItems]="portfolioItems"
+          (selectEvent)="selectPortfolioItem($event)"
+        ></ludan-catalogue>
       </div>
     </div>
   `
@@ -19,7 +22,7 @@ import { CatalogueModule } from './catalogue.module';
 class MockComponent implements OnDestroy, OnInit {
   private destroy$: Subject<boolean> = new Subject<boolean>();
 
-  public thumbnails: PortfolioItem[];
+  public portfolioItems: PortfolioItem[];
 
   ngOnDestroy() {
     this.destroy$.next(true);
@@ -27,16 +30,16 @@ class MockComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit() {
-    this.thumbnails = [
-      { id: 1, name: 'Example1', img: 'assets/default.png' },
-      { id: 2, name: 'Example2', img: 'assets/default.png' },
-      { id: 3, name: 'Example3', img: 'assets/default.png' },
-      { id: 4, name: 'Example4', img: 'assets/default.png' }
+    this.portfolioItems = [
+      { id: '1', name: 'example', label: 'Example 1', img: 'assets/default.png' },
+      { id: '2', name: 'example2', label: 'Example 2', img: 'assets/default.png' },
+      { id: '3', name: 'example3', label: 'Example 3', img: 'assets/default.png' },
+      { id: '4', name: 'example4', label: 'Example 4', img: 'assets/default.png' }
     ];
   }
 
-  selectThumbnail = thumbnail => {
-    console.log('select', thumbnail);
+  selectPortfolioItem = portfolioItem => {
+    console.log('select', portfolioItem);
   };
 }
 
