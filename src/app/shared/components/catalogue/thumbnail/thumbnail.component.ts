@@ -18,6 +18,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   `
 })
 export class ThumbnailComponent {
+  hover: boolean;
+
   @Input() img: string;
   @Input() name: string;
 
