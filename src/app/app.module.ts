@@ -1,16 +1,26 @@
-import { NavbarModule } from './shared/navbar/navbar.module';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app.routing';
-import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
+import { BrowserModule } from '@angular/platform-browser';
+import { MarkdownModule } from 'ngx-markdown';
+
 import { environment } from '../environments/environment';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app.routing';
+import { NavbarModule } from './shared/components/navbar/navbar.module';
+import { ThumbnailService } from './shared/services/thumnail.service';
 
 @NgModule({
-  imports: [BrowserModule, AppRoutingModule, NavbarModule, AngularFireModule.initializeApp(environment.firebase)],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NavbarModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient })
+  ],
   declarations: [AppComponent],
-  providers: [],
+  providers: [ThumbnailService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

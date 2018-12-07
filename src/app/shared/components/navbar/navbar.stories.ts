@@ -33,7 +33,7 @@ class MockComponent implements OnDestroy, OnInit {
   selectItem = item => (this.selectedItem = item);
 }
 
-storiesOf('Navbar', module).add('Default', () => ({
+storiesOf('Shared', module).add('Navbar', () => ({
   moduleMetadata: {
     imports: [NavbarModule],
     declarations: [MockComponent]
