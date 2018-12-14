@@ -1,4 +1,5 @@
 @import '../shared/styles/mixins';
+@import '../shared/styles/layout';
 
 .overview {
   @include font-family();
@@ -6,9 +7,28 @@
 
 .catalogue-wrapper {
   height: 800px;
+  margin-bottom: 100px;
 }
 
 .overview-text {
   @include font-size(100px);
   margin: 40px 0;
+}
+
+@media screen and (max-width: $md) {
+  .overview-text {
+    @include font-size(60px);
+  }
+}
+
+@media screen and (max-width: $sm) {
+  .overview-text {
+    @include font-size(50px);
+  }
+}
+
+@media screen and (max-width: $xs) {
+  .overview-text {
+    @include font-size(30px);
+  }
 }
