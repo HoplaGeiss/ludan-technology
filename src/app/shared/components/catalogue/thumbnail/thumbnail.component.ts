@@ -11,8 +11,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       (mouseleave)="hover = false"
     >
       <div *ngIf="hover" class="hover-container" (click)="clickEvent.emit($event)">
-        <div class="title">{{ name }}</div>
-        <div class="subtitle">View case study</div>
+        <div class="hover-text-wrapper">
+          <div class="title">{{ name }}</div>
+          <div class="subtitle">View case study</div>
+        </div>
       </div>
     </div>
   `

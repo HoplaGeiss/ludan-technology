@@ -65,7 +65,7 @@ export class AppComponent implements OnInit, OnDestroy {
   };
 
   private selectItem = (url: string) => {
-    const itemName = url.split('/').pop();
+    const itemName = url.split('/')[1];
     const item = _.find(this.navbarItems, navbarItem => navbarItem.name === itemName);
     if (item) this.selectedNavbarItem = item;
   };

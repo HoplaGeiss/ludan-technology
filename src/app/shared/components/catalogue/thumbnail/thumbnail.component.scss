@@ -1,33 +1,48 @@
+@import '../../../styles/colors';
+@import '../../../styles/mixins';
+
 .thumbnail {
   width: 100%;
   height: 100%;
   position: relative;
 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  @include background-size(cover);
 
   .hover-container {
     position: absolute;
-    background: red;
     opacity: 0.7;
     width: 100%;
     height: 100%;
     color: white;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
+    @include transition(background-color 0.5s);
 
-    .title {
-      padding: 10px 0;
-      font-size: 20px;
+    &:hover {
+      background: ludan-color('accent', 'dark');
+
+      .hover-text-wrapper {
+        @include transform(translateY(0px));
+      }
     }
 
-    .subtitle {
-      font-size: 16px;
+    .hover-text-wrapper {
+      @include transition(transform 0.5s);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @include transform(translateY(20px));
+
+      .title {
+        padding: 10px 0;
+        @include font-size(20px);
+      }
+
+      .subtitle {
+        @include font-size(16px);
+      }
     }
   }
 }
