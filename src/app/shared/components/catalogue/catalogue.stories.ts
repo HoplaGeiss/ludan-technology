@@ -31,10 +31,10 @@ class MockComponent implements OnDestroy, OnInit {
 
   ngOnInit() {
     this.portfolioItems = [
-      { id: '1', name: 'example', label: 'Example 1', img: 'assets/default.png' },
-      { id: '2', name: 'example2', label: 'Example 2', img: 'assets/default.png' },
-      { id: '3', name: 'example3', label: 'Example 3', img: 'assets/default.png' },
-      { id: '4', name: 'example4', label: 'Example 4', img: 'assets/default.png' }
+      { id: '1', name: 'example', label: 'Example 1', img: 'default' },
+      { id: '2', name: 'example2', label: 'Example 2', img: 'default' },
+      { id: '3', name: 'example3', label: 'Example 3', img: 'default' },
+      { id: '4', name: 'example4', label: 'Example 4', img: 'default' }
     ];
   }
 

@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   template: `
     <div
       class="thumbnail"
-      [style.backgroundImage]="'url(' + img + ')'"
+      [style.backgroundImage]="'url(assets/images/' + img + '.png)'"
       (mouseover)="hover = true"
       (mouseleave)="hover = false"
     >

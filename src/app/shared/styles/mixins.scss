@@ -23,6 +23,10 @@
   font-size: calculateRem($size);
 }
 
+@mixin font-family() {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 @mixin transform($value) {
   -webkit-transform: $value;
   -moz-transform: $value;

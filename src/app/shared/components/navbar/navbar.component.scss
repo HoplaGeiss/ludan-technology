@@ -1,4 +1,8 @@
+@import '../../styles/mixins';
+
 .ludan-navbar {
+  @include font-size(26px);
+  @include font-family();
 }
 
 ul {
@@ -11,7 +15,7 @@ ul {
 li {
   padding: 2px 0;
   margin: 0 1px;
-  width: 80px;
+  width: 100px;
   text-align: center;
   cursor: default;
   border-bottom: 2px solid transparent;

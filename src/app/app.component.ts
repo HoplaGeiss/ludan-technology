@@ -11,11 +11,14 @@ import { PortfolioService } from './shared/services/portfolio.service';
   selector: 'ludan-root',
   styleUrls: ['./app.component.scss'],
   template: `
-    <ludan-navbar
-      [items]="navbarItems"
-      [selectedItem]="selectedNavbarItem"
-      (selectEvent)="navigate($event)"
-    ></ludan-navbar>
+    <div class="header">
+      <img src="assets/images/logo.png" routerLink="/" />
+      <ludan-navbar
+        [items]="navbarItems"
+        [selectedItem]="selectedNavbarItem"
+        (selectEvent)="navigate($event)"
+      ></ludan-navbar>
+    </div>
     <router-outlet></router-outlet>
   `
 })
@@ -51,10 +54,10 @@ export class AppComponent implements OnInit, OnDestroy {
     });
 
     this.portfolioService.portfolioItemsSubject.next([
-      { id: '1', name: 'example', label: 'Example 1', img: 'assets/default.png' },
-      { id: '2', name: 'example2', label: 'Example 2', img: 'assets/default.png' },
-      { id: '3', name: 'example3', label: 'Example 3', img: 'assets/default.png' },
-      { id: '4', name: 'example4', label: 'Example 4', img: 'assets/default.png' }
+      { id: '1', name: 'example', label: 'Example 1', img: 'default' },
+      { id: '2', name: 'example2', label: 'Example 2', img: 'default' },
+      { id: '3', name: 'example3', label: 'Example 3', img: 'default' },
+      { id: '4', name: 'example4', label: 'Example 4', img: 'default' }
     ]);
   }
 
@@ -63,10 +66,12 @@ export class AppComponent implements OnInit, OnDestroy {
       relativeTo: this.activatedRoute
     });
   };
+  ß;
 
   private selectItem = (url: string) => {
     const itemName = url.split('/')[1];
+    console.log(itemName);
     const item = _.find(this.navbarItems, navbarItem => navbarItem.name === itemName);
-    if (item) this.selectedNavbarItem = item;
+    this.selectedNavbarItem = item;
   };
 }

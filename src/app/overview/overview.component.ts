@@ -7,9 +7,14 @@ import { PortfolioService } from '../shared/services/portfolio.service';
   selector: 'ludan-overview',
   styleUrls: ['./overview.component.scss'],
   template: `
-    <h1>overview</h1>
-    <div class="catalogue-wrapper">
-      <ludan-catalogue [portfolioItems]="portfolioItems" (selectEvent)="selectPortfolioItem($event)"></ludan-catalogue>
+    <div class="overview">
+      <div class="overview-text">We are Strategy. A digitally minded creative agency based in NYC.</div>
+      <div class="catalogue-wrapper">
+        <ludan-catalogue
+          [portfolioItems]="portfolioItems"
+          (selectEvent)="selectPortfolioItem($event)"
+        ></ludan-catalogue>
+      </div>
     </div>
   `
 })

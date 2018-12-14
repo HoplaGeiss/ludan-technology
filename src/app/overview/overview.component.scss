@@ -1,3 +1,14 @@
+@import '../shared/styles/mixins';
+
+.overview {
+  @include font-family();
+}
+
 .catalogue-wrapper {
-  height: 500px;
+  height: 800px;
+}
+
+.overview-text {
+  @include font-size(100px);
+  margin: 40px 0;
 }

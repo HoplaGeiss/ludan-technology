@@ -28,6 +28,7 @@
 
     .hover-text-wrapper {
       @include transition(transform 0.5s);
+      @include font-family();
       width: 100%;
       display: flex;
       flex-direction: column;
