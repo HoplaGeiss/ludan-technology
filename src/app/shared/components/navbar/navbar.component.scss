@@ -18,14 +18,26 @@ li {
   width: 100px;
   text-align: center;
   cursor: default;
-  border-bottom: 2px solid transparent;
 
-  &.active {
-    border-bottom-color: red;
+  &::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    @include transition(width 0.2s);
   }
 
   &:not(.active):hover {
     cursor: pointer;
-    border-bottom-color: grey;
+  }
+
+  &:not(.active):hover::after {
+    width: 100%;
+  }
+
+  &.active::after {
+    width: 100%;
+    background: red;
   }
 }
