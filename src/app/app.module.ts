@@ -9,7 +9,7 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { NavbarModule } from './shared/components/navbar/navbar.module';
-import { PortfolioService } from './shared/services/portfolio.service';
+import { StoreService } from './shared/services/store.service';
 
 @NgModule({
   imports: [
@@ -22,7 +22,7 @@ import { PortfolioService } from './shared/services/portfolio.service';
     MarkdownModule.forRoot({ loader: HttpClient })
   ],
   declarations: [AppComponent],
-  providers: [PortfolioService],
+  providers: [StoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

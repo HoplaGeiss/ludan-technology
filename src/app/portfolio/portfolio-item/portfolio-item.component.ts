@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
-import { PortfolioItem } from './../../shared/models/portfolio-item.model';
-import { PortfolioService } from './../../shared/services/portfolio.service';
-
 import * as _ from 'underscore';
+
+import { CatalogueItem } from './../../shared/models/catalogue-item.model';
+import { StoreService } from './../../shared/services/store.service';
 
 @Component({
   selector: 'ludan-portfolio-item',
@@ -14,13 +13,13 @@ import * as _ from 'underscore';
   `
 })
 export class PortfolioItemComponent implements OnInit {
-  public portfolioItems: PortfolioItem[];
-  public portfolio: PortfolioItem;
+  public portfolioItems: CatalogueItem[];
+  public portfolio: CatalogueItem;
 
-  constructor(private portfolioService: PortfolioService, private route: ActivatedRoute) {}
+  constructor(private storeService: StoreService, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.portfolioItems = this.portfolioService.portfolioItemsSubject.getValue();
+    this.portfolioItems = this.storeService.portfolioItemsSubject.getValue();
     const portfolioId = this.route.snapshot.params.id;
     this.portfolio = _.find(this.portfolioItems, portfolioItem => portfolioItem.id === portfolioId);
   }

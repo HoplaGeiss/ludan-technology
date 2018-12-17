@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { PortfolioItem } from '../../models/portfolio-item.model';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
+import { CatalogueItem } from './../../models/catalogue-item.model';
 
 @Component({
   selector: 'ludan-catalogue',
@@ -9,16 +10,16 @@ import { PortfolioItem } from '../../models/portfolio-item.model';
       <ludan-thumbnail
         fxFlex.lt-md="100%"
         fxFlex.gt-sm="50%"
-        *ngFor="let portfolioItem of portfolioItems"
-        [name]="portfolioItem.label"
-        [img]="portfolioItem.img"
-        (clickEvent)="selectEvent.emit(portfolioItem)"
+        *ngFor="let catalogueItem of catalogueItems"
+        [name]="catalogueItem.label"
+        [img]="catalogueItem.img"
+        (clickEvent)="selectEvent.emit(catalogueItem)"
       ></ludan-thumbnail>
     </div>
   `
 })
 export class CatalogueComponent {
-  @Input() portfolioItems: PortfolioItem[];
+  @Input() catalogueItems: CatalogueItem[];
 
   @Output() selectEvent = new EventEmitter();
 }

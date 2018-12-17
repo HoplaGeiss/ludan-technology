@@ -5,7 +5,7 @@ import { takeUntil } from 'rxjs/operators';
 import * as _ from 'underscore';
 
 import { NavbarItemInterface } from './shared/components/navbar/navbar.component';
-import { PortfolioService } from './shared/services/portfolio.service';
+import { StoreService } from './shared/services/store.service';
 
 @Component({
   selector: 'ludan-root',
@@ -28,11 +28,7 @@ export class AppComponent implements OnInit, OnDestroy {
   public navbarItems: NavbarItemInterface[];
   public selectedNavbarItem: NavbarItemInterface;
 
-  constructor(
-    private router: Router,
-    private activatedRoute: ActivatedRoute,
-    private portfolioService: PortfolioService
-  ) {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private storeService: StoreService) {}
 
   ngOnDestroy() {
     this.destroy$.next(true);
@@ -53,8 +49,15 @@ export class AppComponent implements OnInit, OnDestroy {
       if (route instanceof NavigationEnd) this.selectItem(route.url);
     });
 
-    this.portfolioService.portfolioItemsSubject.next([
+    this.storeService.portfolioItemsSubject.next([
       { id: '1', name: 'example', label: 'Example 1', img: 'default' },
+      { id: '2', name: 'example2', label: 'Example 2', img: 'default' },
+      { id: '3', name: 'example3', label: 'Example 3', img: 'default' },
+      { id: '4', name: 'example4', label: 'Example 4', img: 'default' }
+    ]);
+
+    this.storeService.blogItemsSubject.next([
+      { id: '1', name: 'post1', label: 'Example 1', img: 'default' },
       { id: '2', name: 'example2', label: 'Example 2', img: 'default' },
       { id: '3', name: 'example3', label: 'Example 3', img: 'default' },
       { id: '4', name: 'example4', label: 'Example 4', img: 'default' }
@@ -66,11 +69,9 @@ export class AppComponent implements OnInit, OnDestroy {
       relativeTo: this.activatedRoute
     });
   };
-  ß;
 
   private selectItem = (url: string) => {
     const itemName = url.split('/')[1];
-    console.log(itemName);
     const item = _.find(this.navbarItems, navbarItem => navbarItem.name === itemName);
     this.selectedNavbarItem = item;
   };
