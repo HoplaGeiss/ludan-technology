@@ -24,7 +24,7 @@ export class PortfolioPageComponent implements OnInit {
     this.portfolioItems = this.storeService.portfolioItemsSubject.getValue();
   }
 
-  selectPortfolioItem = (item: CatalogueItem) => {
+  selectItem = (item: CatalogueItem) => {
     this.router.navigate([`/portfolio/${item.id}`]);
   };
 }

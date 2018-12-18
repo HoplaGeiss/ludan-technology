@@ -1,12 +1,30 @@
+@import './shared/styles/layout.scss';
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  margin: 10px 40px 0 40px;
 
   img {
     height: 40px;
     cursor: pointer;
     outline: none;
+  }
+}
+
+main {
+  padding: 0 200px;
+}
+
+@media screen and (max-width: $sm) {
+  main {
+    padding: 0 100px;
+  }
+}
+
+@media screen and (max-width: $xs) {
+  main {
+    padding: 0;
   }
 }

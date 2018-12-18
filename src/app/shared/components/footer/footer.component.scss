@@ -1,0 +1,62 @@
+@import '../../styles/colors';
+@import '../../styles/mixins.scss';
+
+.footer {
+  @include font-family();
+
+  .call-to-action {
+    height: 100px;
+    background: ludan-color('background');
+
+    .text,
+    .text-hover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include transition(height 0.5s, opacity 0.2s);
+      cursor: pointer;
+    }
+
+    .text {
+      @include font-size(30px);
+      height: 100%;
+    }
+
+    .text-hover {
+      @include font-size(16px);
+      color: white;
+      background: ludan-color('accent');
+      height: 0;
+      opacity: 0;
+    }
+
+    &:hover {
+      .text {
+        height: 0;
+        opacity: 0;
+      }
+
+      .text-hover {
+        height: 100%;
+        opacity: 1;
+      }
+    }
+  }
+
+  .bottom-row {
+    margin: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .copyright {
+    }
+    .socials {
+      img {
+        width: 28px;
+        margin: 0 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}

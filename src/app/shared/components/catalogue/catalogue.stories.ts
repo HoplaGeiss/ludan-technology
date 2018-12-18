@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { storiesOf } from '@storybook/angular';
 import { Subject } from 'rxjs';
 
-import { PortfolioItem } from './../../models/portfolio-item.model';
+import { CatalogueItem } from './../../models/catalogue-item.model';
 import { CatalogueModule } from './catalogue.module';
 
 @Component({
@@ -11,10 +11,7 @@ import { CatalogueModule } from './catalogue.module';
     <div style="margin: auto; width: 60%; margin-top: 10%">
       <h1 style="border-bottom: 1px solid #ccc;">Catalogue</h1>
       <div style="height: 500px">
-        <ludan-catalogue
-          [portfolioItems]="portfolioItems"
-          (selectEvent)="selectPortfolioItem($event)"
-        ></ludan-catalogue>
+        <ludan-catalogue [catalogueItems]="catalogueItems" (selectEvent)="selectItem($event)"></ludan-catalogue>
       </div>
     </div>
   `
@@ -22,7 +19,7 @@ import { CatalogueModule } from './catalogue.module';
 class MockComponent implements OnDestroy, OnInit {
   private destroy$: Subject<boolean> = new Subject<boolean>();
 
-  public portfolioItems: PortfolioItem[];
+  public catalogueItems: CatalogueItem[];
 
   ngOnDestroy() {
     this.destroy$.next(true);
@@ -30,7 +27,7 @@ class MockComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit() {
-    this.portfolioItems = [
+    this.catalogueItems = [
       { id: '1', name: 'example', label: 'Example 1', img: 'default' },
       { id: '2', name: 'example2', label: 'Example 2', img: 'default' },
       { id: '3', name: 'example3', label: 'Example 3', img: 'default' },
@@ -38,8 +35,8 @@ class MockComponent implements OnDestroy, OnInit {
     ];
   }
 
-  selectPortfolioItem = portfolioItem => {
-    console.log('select', portfolioItem);
+  selectItem = item => {
+    console.log('select', item);
   };
 }
 

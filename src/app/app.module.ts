@@ -1,3 +1,4 @@
+import { FooterModule } from './shared/components/footer/footer.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
@@ -17,6 +18,7 @@ import { StoreService } from './shared/services/store.service';
     BrowserAnimationsModule,
     AppRoutingModule,
     NavbarModule,
+    FooterModule,
     AngularFireModule.initializeApp(environment.firebase),
     HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient })

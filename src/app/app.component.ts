@@ -19,7 +19,8 @@ import { StoreService } from './shared/services/store.service';
         (selectEvent)="navigate($event)"
       ></ludan-navbar>
     </div>
-    <router-outlet></router-outlet>
+    <main><router-outlet></router-outlet></main>
+    <ludan-footer></ludan-footer>
   `
 })
 export class AppComponent implements OnInit, OnDestroy {
