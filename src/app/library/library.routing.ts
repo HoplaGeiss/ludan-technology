@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LibraryComponent } from './library.component';
 import { LibraryModalComponent } from './components/library-modal/library-modal.component';
-// import { LibrarySudokuComponent } from './components/library-sudoku/library-sudoku.component';
+import { LibrarySudokuComponent } from './components/library-sudoku/library-sudoku.component';
+import { LibraryComponent } from './library.component';
 
 const routes: Routes = [
   {
@@ -11,13 +11,13 @@ const routes: Routes = [
     component: LibraryComponent
   },
   {
-    path: ':modal',
+    path: 'modal',
     component: LibraryModalComponent
+  },
+  {
+    path: 'sudoku',
+    component: LibrarySudokuComponent
   }
-  // {
-  //   path: ':sudoku',
-  //   component: LibrarySudokuComponent
-  // }
 ];
 
 @NgModule({

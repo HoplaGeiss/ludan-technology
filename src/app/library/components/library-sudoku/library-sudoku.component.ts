@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   styleUrls: ['./library-sudoku.component.scss'],
-  template: ``
+  template: `
+    <ludan-sudoku></ludan-sudoku>
+  `
 })
 export class LibrarySudokuComponent {}

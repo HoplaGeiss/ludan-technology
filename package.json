@@ -28,6 +28,7 @@
     "@angular/router": "~7.1.0",
     "core-js": "^2.5.4",
     "ngx-ludan-modal": "^1.0.0",
+    "ngx-ludan-sudoku": "0.0.1",
     "ngx-markdown": "^7.0.2",
     "node-sass": "^4.11.0",
     "prismjs": "^1.15.0",

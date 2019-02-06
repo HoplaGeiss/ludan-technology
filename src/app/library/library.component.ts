@@ -24,6 +24,6 @@ export class LibraryComponent implements OnInit {
   }
 
   selectItem = (item: CatalogueItem) => {
-    this.router.navigate([`/library/${item.id}`]);
+    this.router.navigate([`/library/${item.name}`]);
   };
 }
