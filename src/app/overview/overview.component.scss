@@ -5,30 +5,44 @@
   @include font-family();
 }
 
+.landing-wrapper {
+  height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .dynamic-text {
+    @include font-size(30px);
+    width: 480px;
+    height: 145px;
+    z-index: 1;
+  }
+}
+
 .catalogue-wrapper {
   height: 800px;
   margin-bottom: 100px;
 }
 
-.overview-text {
-  @include font-size(100px);
-  margin: 40px 0;
-}
+// .overview-text {
+//   @include font-size(100px);
+//   margin: 40px 0;
+// }
 
-@media screen and (max-width: $md) {
-  .overview-text {
-    @include font-size(60px);
-  }
-}
+// @media screen and (max-width: $md) {
+//   .overview-text {
+//     @include font-size(60px);
+//   }
+// }
 
-@media screen and (max-width: $sm) {
-  .overview-text {
-    @include font-size(50px);
-  }
-}
+// @media screen and (max-width: $sm) {
+//   .overview-text {
+//     @include font-size(50px);
+//   }
+// }
 
-@media screen and (max-width: $xs) {
-  .overview-text {
-    @include font-size(30px);
-  }
-}
+// @media screen and (max-width: $xs) {
+//   .overview-text {
+//     @include font-size(30px);
+//   }
+// }

@@ -20,6 +20,10 @@ const routes: Routes = [
       {
         path: 'contact',
         loadChildren: './contact/contact.module#ContactModule'
+      },
+      {
+        path: 'library',
+        loadChildren: './library/library.module#LibraryModule'
       }
     ]
   }

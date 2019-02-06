@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 40px 0 40px;
+  margin: 40px 40px 0 40px;
 
   img {
     height: 40px;
@@ -15,6 +15,7 @@
 
 main {
   padding: 0 200px;
+  min-height: calc(100vh - 76px);
 }
 
 @media screen and (max-width: $sm) {

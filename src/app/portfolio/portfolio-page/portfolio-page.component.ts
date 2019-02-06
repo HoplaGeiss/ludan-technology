@@ -22,6 +22,7 @@ export class PortfolioPageComponent implements OnInit {
 
   ngOnInit() {
     this.portfolioItems = this.storeService.portfolioItemsSubject.getValue();
+    console.log(this.portfolioItems);
   }
 
   selectItem = (item: CatalogueItem) => {
