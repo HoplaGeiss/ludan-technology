@@ -39,10 +39,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.navbarItems = [
-      { label: 'Portfolio', name: 'portfolio' },
+      { label: 'Library', name: 'library' },
       { label: 'Blog', name: 'blog' },
-      { label: 'Contact', name: 'contact' },
-      { label: 'Library', name: 'library' }
+      { label: 'Portfolio', name: 'portfolio' },
+      { label: 'Contact', name: 'contact' }
     ];
 
     // On Init we need to call select tab on the router url directly, as the events have already been fired.
@@ -53,8 +53,7 @@ export class AppComponent implements OnInit, OnDestroy {
     });
 
     this.storeService.portfolioItemsSubject.next([
-      { id: '1', name: 'predictably', label: 'Predictably', img: 'default' },
-      { id: '2', name: 'marks_and_spencers', label: 'Marks and Spencers', img: 'default' }
+      { id: '2', name: 'marks_and_spencers', label: 'Marks and Spencers', img: 'mands' }
     ]);
 
     this.storeService.libraryItemsSubject.next([

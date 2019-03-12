@@ -19,12 +19,12 @@ enum tabs {
         <h1 class="landing__role">Ludan Technology</h1>
         <p class="landing__description">Angular 7 and Node.js development</p>
       </section>
-      <section class="portfolio">
-        <h2>Portfolio</h2>
+      <section class="library">
+        <h2>Library</h2>
         <div class="catalogue">
           <ludan-catalogue
-            [catalogueItems]="portfolioItems"
-            (selectEvent)="selectItem(tabs.PORTFOLIO, $event)"
+            [catalogueItems]="libraryItems"
+            (selectEvent)="selectItem(tabs.LIBRARY, $event)"
           ></ludan-catalogue>
         </div>
       </section>
@@ -34,12 +34,12 @@ enum tabs {
           <ludan-catalogue [catalogueItems]="blogItems" (selectEvent)="selectItem(tabs.BLOG, $event)"></ludan-catalogue>
         </div>
       </section>
-      <section class="library">
-        <h2>Library</h2>
+      <section class="portfolio">
+        <h2>Portfolio</h2>
         <div class="catalogue">
           <ludan-catalogue
-            [catalogueItems]="libraryItems"
-            (selectEvent)="selectItem(tabs.LIBRARY, $event)"
+            [catalogueItems]="portfolioItems"
+            (selectEvent)="selectItem(tabs.PORTFOLIO, $event)"
           ></ludan-catalogue>
         </div>
       </section>

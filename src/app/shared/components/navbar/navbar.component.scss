@@ -16,13 +16,13 @@ nav {
   height: $navbar-height;
   z-index: 2;
 
-  &.colored{
+  &.colored {
     background: ludan-color('primary');
 
-    li{
+    li {
       color: white;
 
-      &::after{
+      &::after {
         background: white !important;
       }
     }
@@ -43,7 +43,7 @@ nav {
     li {
       padding: 2px 0;
       margin: 0 1px;
-      width: 100px;
+      width: 120px;
       text-align: center;
       cursor: default;
 
@@ -71,4 +71,3 @@ nav {
     }
   }
 }
-

@@ -1,7 +1,4 @@
-@import '../shared/styles/layout';
-
 .blog {
-  min-height: calc(100vh - #{$navbar-height});
   display: flex;
   flex-direction: column;
   padding: 0 80px;

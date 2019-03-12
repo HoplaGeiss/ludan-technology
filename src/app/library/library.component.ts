@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
     <article class="library">
       <h1>Library</h1>
 
-      <div class="library__catlogue">
+      <div class="library__catalogue">
         <ludan-catalogue [catalogueItems]="libraryItems" (selectEvent)="selectItem($event)"></ludan-catalogue>
       </div>
     </article>
