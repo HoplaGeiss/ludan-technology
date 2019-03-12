@@ -1,26 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { StoreService } from '../../shared/services/store.service';
-import { CatalogueItem } from './../../shared/models/catalogue-item.model';
+import { StoreService } from '../shared/services/store.service';
+import { CatalogueItem } from './../shared/models/catalogue-item.model';
 
 @Component({
   selector: 'ludan-portfolio',
-  styleUrls: ['./blog-page.component.scss'],
+  styleUrls: ['./blog.component.scss'],
   template: `
-    <div class="catalogue-wrapper">
-      <ludan-catalogue [catalogueItems]="blogItems" (selectEvent)="selectItem($event)"></ludan-catalogue>
-    </div>
+    <article class="blog">
+      <h1>Blog</h1>
+      <div class="blog__catalogue">
+        <ludan-catalogue [catalogueItems]="blogItems" (selectEvent)="selectItem($event)"></ludan-catalogue>
+      </div>
+    </article>
   `
 })
-export class BlogPageComponent implements OnInit {
+export class BlogComponent implements OnInit {
   public blogItems: CatalogueItem[];
 
   constructor(private storeService: StoreService, private router: Router) {}
 
   ngOnInit() {
     this.blogItems = this.storeService.blogItemsSubject.getValue();
-    console.log(this.blogItems);
   }
 
   selectItem = (item: CatalogueItem) => {

@@ -1,0 +1,6 @@
+@import '../shared/styles/layout';
+
+.about {
+  min-height: calc(100vh - #{$navbar-height});
+  padding: 0 80px;
+}

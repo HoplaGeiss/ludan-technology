@@ -2,6 +2,7 @@
 @import '../../styles/mixins.scss';
 
 .footer {
+  margin-top: 80px;
   @include font-family();
 
   .call-to-action {

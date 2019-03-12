@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'ludan-contact',
   styleUrls: ['./contact.component.scss'],
   template: `
-    <h1>contact</h1>
+    <article class="about"><h1>contact</h1></article>
   `
 })
 export class ContactComponent {}

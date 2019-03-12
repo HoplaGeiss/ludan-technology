@@ -11,16 +11,17 @@ import { StoreService } from './shared/services/store.service';
   selector: 'ludan-root',
   styleUrls: ['./app.component.scss'],
   template: `
-    <div class="header">
-      <img src="assets/images/logo.png" routerLink="/" />
+    <main>
       <ludan-navbar
         [items]="navbarItems"
         [selectedItem]="selectedNavbarItem"
         (selectEvent)="navigate($event)"
       ></ludan-navbar>
-    </div>
-    <main><router-outlet></router-outlet></main>
-    <ludan-footer></ludan-footer>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+      <ludan-footer></ludan-footer>
+    </main>
   `
 })
 export class AppComponent implements OnInit, OnDestroy {
@@ -52,10 +53,8 @@ export class AppComponent implements OnInit, OnDestroy {
     });
 
     this.storeService.portfolioItemsSubject.next([
-      { id: '1', name: 'example', label: 'Example 1', img: 'default' },
-      { id: '2', name: 'example2', label: 'Example 2', img: 'default' },
-      { id: '3', name: 'example3', label: 'Example 3', img: 'default' },
-      { id: '4', name: 'example4', label: 'Example 4', img: 'default' }
+      { id: '1', name: 'predictably', label: 'Predictably', img: 'default' },
+      { id: '2', name: 'marks_and_spencers', label: 'Marks and Spencers', img: 'default' }
     ]);
 
     this.storeService.libraryItemsSubject.next([

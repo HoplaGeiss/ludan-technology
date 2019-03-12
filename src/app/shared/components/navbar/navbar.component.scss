@@ -1,43 +1,74 @@
 @import '../../styles/mixins';
+@import '../../styles/layout.scss';
+@import '../../styles/colors';
 
-.ludan-navbar {
+nav {
   @include font-size(26px);
   @include font-family();
-}
 
-ul {
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
   display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: $navbar-height;
+  z-index: 2;
 
-li {
-  padding: 2px 0;
-  margin: 0 1px;
-  width: 100px;
-  text-align: center;
-  cursor: default;
+  &.colored{
+    background: ludan-color('primary');
 
-  &::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #000;
-    @include transition(width 0.2s);
+    li{
+      color: white;
+
+      &::after{
+        background: white !important;
+      }
+    }
   }
 
-  &:not(.active):hover {
+  img {
+    height: 40px;
     cursor: pointer;
+    outline: none;
   }
 
-  &:not(.active):hover::after {
-    width: 100%;
-  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 
-  &.active::after {
-    width: 100%;
-    background: red;
+    li {
+      padding: 2px 0;
+      margin: 0 1px;
+      width: 100px;
+      text-align: center;
+      cursor: default;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #000;
+        @include transition(width 0.2s);
+      }
+
+      &:not(.active):hover {
+        cursor: pointer;
+      }
+
+      &:not(.active):hover::after {
+        width: 100%;
+      }
+
+      &.active::after {
+        width: 100%;
+        background: red;
+      }
+    }
   }
 }
+

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, HostListener, ViewChild, ElementRef } from '@angular/core';
 
 export interface NavbarItemInterface {
   label: string;
@@ -9,11 +9,14 @@ export interface NavbarItemInterface {
   selector: 'ludan-navbar',
   styleUrls: ['navbar.component.scss'],
   template: `
-    <ul class="ludan-navbar">
-      <li *ngFor="let item of items" (click)="selectItem(item)" [class.active]="item === selectedItem">
-        {{ item.label }}
-      </li>
-    </ul>
+    <nav #nav>
+      <img src="assets/images/logo.png" routerLink="/" />
+      <ul>
+        <li *ngFor="let item of items" (click)="selectItem(item)" [class.active]="item === selectedItem">
+          {{ item.label }}
+        </li>
+      </ul>
+    </nav>
   `
 })
 export class NavbarComponent {
@@ -22,7 +25,15 @@ export class NavbarComponent {
 
   @Output() selectEvent = new EventEmitter();
 
+  @ViewChild('nav') nav: ElementRef;
+
   selectItem = item => {
     if (item !== this.selectedItem) this.selectEvent.emit(item);
   };
+
+  @HostListener('window:scroll', ['$event']) onWindowScroll() {
+    window.pageYOffset > 0
+      ? this.nav.nativeElement.classList.add('colored')
+      : this.nav.nativeElement.classList.remove('colored');
+  }
 }

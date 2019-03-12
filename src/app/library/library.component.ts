@@ -7,11 +7,13 @@ import { Router } from '@angular/router';
   selector: 'ludan-library',
   styleUrls: ['./library.component.scss'],
   template: `
-    <h1>Library</h1>
+    <article class="library">
+      <h1>Library</h1>
 
-    <div class="catalogue-wrapper">
-      <ludan-catalogue [catalogueItems]="libraryItems" (selectEvent)="selectItem($event)"></ludan-catalogue>
-    </div>
+      <div class="library__catlogue">
+        <ludan-catalogue [catalogueItems]="libraryItems" (selectEvent)="selectItem($event)"></ludan-catalogue>
+      </div>
+    </article>
   `
 })
 export class LibraryComponent implements OnInit {

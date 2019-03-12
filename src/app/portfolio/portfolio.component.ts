@@ -1,28 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { CatalogueItem } from './../../shared/models/catalogue-item.model';
-import { StoreService } from './../../shared/services/store.service';
+import { CatalogueItem } from '../shared/models/catalogue-item.model';
+import { StoreService } from '../shared/services/store.service';
 
 @Component({
   selector: 'ludan-portfolio',
-  styleUrls: ['./portfolio-page.component.scss'],
+  styleUrls: ['./portfolio.component.scss'],
   template: `
-    <h1>Portfolio</h1>
+    <article class="portfolio">
+      <h1>Portfolio</h1>
 
-    <div class="catalogue-wrapper">
-      <ludan-catalogue [catalogueItems]="portfolioItems" (selectEvent)="selectItem($event)"></ludan-catalogue>
-    </div>
+      <div class="portfolio__catalogue">
+        <ludan-catalogue [catalogueItems]="portfolioItems" (selectEvent)="selectItem($event)"></ludan-catalogue>
+      </div>
+    </article>
   `
 })
-export class PortfolioPageComponent implements OnInit {
+export class PortfolioComponent implements OnInit {
   public portfolioItems: CatalogueItem[];
 
   constructor(private storeService: StoreService, private router: Router) {}
 
   ngOnInit() {
     this.portfolioItems = this.storeService.portfolioItemsSubject.getValue();
-    console.log(this.portfolioItems);
   }
 
   selectItem = (item: CatalogueItem) => {
