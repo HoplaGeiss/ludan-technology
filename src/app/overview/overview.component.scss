@@ -42,25 +42,38 @@
   }
 }
 
-// .overview-text {
-//   @include font-size(100px);
-//   margin: 40px 0;
-// }
+.description {
+  background: ludan-color('primary');
+  padding: 80px 20% 200px 20%;
+  text-align: center;
 
-// @media screen and (max-width: $md) {
-//   .overview-text {
-//     @include font-size(60px);
-//   }
-// }
+  p {
+    line-height: 30px;
+  }
+}
 
-// @media screen and (max-width: $sm) {
-//   .overview-text {
-//     @include font-size(50px);
-//   }
-// }
+.skills {
+  border: 1px solid ludan-color('grey');
+  border-radius: 10px;
+  margin: -80px 10% 0 10%;
+  background: white;
+  padding-top: 40px;
 
-// @media screen and (max-width: $xs) {
-//   .overview-text {
-//     @include font-size(30px);
-//   }
-// }
+  h3 {
+    margin-top: 0;
+  }
+
+  &__section {
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 0 2%;
+
+    p {
+      line-height: 24px;
+    }
+
+    h4 {
+      color: ludan-color('primary');
+    }
+  }
+}

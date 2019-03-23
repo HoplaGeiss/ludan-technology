@@ -1,11 +1,12 @@
-import { CatalogueModule } from './../shared/components/catalogue/catalogue.module';
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { CatalogueModule } from './../shared/components/catalogue/catalogue.module';
 import { OverviewComponent } from './overview.component';
 import { OverviewRoutingModule } from './overview.routing';
 
 @NgModule({
-  imports: [OverviewRoutingModule, CatalogueModule],
+  imports: [OverviewRoutingModule, CatalogueModule, FlexLayoutModule],
   declarations: [OverviewComponent],
   exports: [OverviewComponent]
 })
