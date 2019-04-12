@@ -12,7 +12,7 @@
     "test": "ng test",
     "lint": "tslint --project tsconfig.json -c tslint.json 'src/**/*.ts'",
     "lint:fix": "tslint --project tsconfig.json -c tslint.json 'src/**/*.ts' --fix",
-    "sass-lint": "sass-lint '**/*.scss' -v -q",
+    "sass-lint": "sass-lint -c .sass-lint.yml -v -q",
     "sass-lint:fix": "sass-lint-auto-fix",
     "e2e": "ng e2e",
     "storybook": "start-storybook -p 9001 -c .storybook"
