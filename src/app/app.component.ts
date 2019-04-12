@@ -61,8 +61,8 @@ export class AppComponent implements OnInit, OnDestroy {
     ]);
 
     this.storeService.libraryItemsSubject.next([
-      { id: '1', name: 'modal', label: 'Modal', img: 'modal2' },
-      { id: '2', name: 'sudoku', label: 'Sudoku', img: 'sudoku2' }
+      { id: '1', name: 'modal', label: 'Modal', img: 'modal' },
+      { id: '2', name: 'sudoku', label: 'Sudoku', img: 'sudoku' }
     ]);
 
     this.storeService.blogItemsSubject.next([
