@@ -26,3 +26,14 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ng build --prod
 firebase deploy
 ```
+
+## To do
+- colour scheme
+- linters for scss
+- linters for ts
+- pre push hook
+- font size responsive
+- find font
+- deploy on ludan.io
+- skills table look more ordered
+- same color for logo, primary and hover on footer links
