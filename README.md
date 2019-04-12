@@ -29,9 +29,7 @@ firebase deploy
 
 ## To do
 - colour scheme
-- linters for scss
-- linters for ts
-- pre push hook
+- sass-lint:fix is broken it just fixes the order. Wait until fixed.
 - font size responsive
 - find font
 - deploy on ludan.io
