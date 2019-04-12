@@ -30,7 +30,11 @@ export class AppComponent implements OnInit, OnDestroy {
   public navbarItems: NavbarItemInterface[];
   public selectedNavbarItem: NavbarItemInterface;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private storeService: StoreService) {}
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private storeService: StoreService
+  ) {}
 
   ngOnDestroy() {
     this.destroy$.next(true);
@@ -39,10 +43,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.navbarItems = [
-      { label: 'Library', name: 'library' },
-      { label: 'Blog', name: 'blog' },
-      { label: 'Portfolio', name: 'portfolio' },
-      { label: 'Contact', name: 'contact' }
+      { label: 'Library', name: 'library' }
+      // { label: 'Blog', name: 'blog' },
+      // { label: 'Portfolio', name: 'portfolio' },
+      // { label: 'Contact', name: 'contact' }
     ];
 
     // On Init we need to call select tab on the router url directly, as the events have already been fired.
@@ -57,12 +61,17 @@ export class AppComponent implements OnInit, OnDestroy {
     ]);
 
     this.storeService.libraryItemsSubject.next([
-      { id: '1', name: 'modal', label: 'Modal', img: 'default' },
-      { id: '2', name: 'sudoku', label: 'Sudoku', img: 'default' }
+      { id: '1', name: 'modal', label: 'Modal', img: 'modal2' },
+      { id: '2', name: 'sudoku', label: 'Sudoku', img: 'sudoku2' }
     ]);
 
     this.storeService.blogItemsSubject.next([
-      { id: '1', name: '18_11_08_ngrx_guards_and_resolvers', label: 'NgRx guards and resolvers', img: 'data' }
+      {
+        id: '1',
+        name: '18_11_08_ngrx_guards_and_resolvers',
+        label: 'NgRx guards and resolvers',
+        img: 'data'
+      }
     ]);
   }
 

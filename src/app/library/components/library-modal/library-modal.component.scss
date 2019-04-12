@@ -1,0 +1,36 @@
+@import '../../../shared/styles/button.scss';
+
+.library-modal {
+  padding: 0 50px;
+
+  .source-code-row,
+  .demo-row {
+    display: flex;
+    align-items: center;
+  }
+
+  .demo-row {
+    button {
+      margin-left: 10px;
+    }
+  }
+
+  .source-code-row {
+    margin-top: 5px;
+    a {
+      margin-left: 10px;
+    }
+  }
+
+  /deep/ .modal {
+    .body {
+      padding: 10px;
+    }
+
+    .footer {
+      background: ludan-color('background');
+      padding: 5px 10px;
+      text-align: center;
+    }
+  }
+}

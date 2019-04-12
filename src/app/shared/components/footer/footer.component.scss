@@ -2,8 +2,8 @@
 @import '../../styles/mixins.scss';
 
 .footer {
-  margin-top: 80px;
   @include font-family();
+  overflow: auto;
 
   .call-to-action {
     height: 100px;
@@ -26,7 +26,7 @@
     .text-hover {
       @include font-size(16px);
       color: white;
-      background: ludan-color('accent');
+      background: ludan-color('primary');
       height: 0;
       opacity: 0;
     }

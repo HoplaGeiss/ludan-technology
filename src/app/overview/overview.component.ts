@@ -65,7 +65,7 @@ enum tabs {
         </div>
       </section>
       <section class="library">
-        <h2>Library</h2>
+        <h2>Example of my work</h2>
         <div class="catalogue">
           <ludan-catalogue
             [catalogueItems]="libraryItems"
@@ -73,6 +73,7 @@ enum tabs {
           ></ludan-catalogue>
         </div>
       </section>
+      <!--
       <section class="blog">
         <h2>Blog</h2>
         <div class="catalogue">
@@ -91,6 +92,7 @@ enum tabs {
           ></ludan-catalogue>
         </div>
       </section>
+      -->
     </section>
   `
 })
@@ -109,6 +111,6 @@ export class OverviewComponent implements OnInit {
   }
 
   selectItem = (tab: tabs, item: CatalogueItem) => {
-    this.router.navigate([`/${tab}/${item.id}`]);
+    this.router.navigate([`/${tab}/${item.name}`]);
   };
 }

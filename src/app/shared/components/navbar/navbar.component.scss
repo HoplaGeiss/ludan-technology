@@ -6,7 +6,7 @@ nav {
   @include font-size(26px);
   @include font-family();
 
-  position: fixed;
+  // position: fixed;
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -45,7 +45,7 @@ nav {
       margin: 0 1px;
       width: 120px;
       text-align: center;
-      cursor: default;
+      cursor: pointer;
 
       &::after {
         content: '';
@@ -56,17 +56,13 @@ nav {
         @include transition(width 0.2s);
       }
 
-      &:not(.active):hover {
-        cursor: pointer;
-      }
-
       &:not(.active):hover::after {
         width: 100%;
       }
 
       &.active::after {
         width: 100%;
-        background: red;
+        background: ludan-color('primary');
       }
     }
   }

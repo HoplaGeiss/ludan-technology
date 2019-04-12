@@ -7,7 +7,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       <div>
         <img [src]="'assets/images/' + img + '.png'" />
         <figcaption class="hover-container" (click)="clickEvent.emit($event)">
-          <div class="hover-text-wrapper">
+          <div class="hover-container__background"></div>
+          <div class="hover-container__content">
             <p class="title">{{ name }}</p>
             <p class="subtitle">View case study</p>
           </div>
