@@ -47,7 +47,12 @@
   padding: 80px 20% 200px 20%;
   text-align: center;
 
-  p {
+  &__title {
+    @include font-size(26px);
+  }
+
+  &__text {
     line-height: 30px;
+    @include font-size(18px);
   }
 }

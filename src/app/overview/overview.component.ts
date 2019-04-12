@@ -20,8 +20,8 @@ enum tabs {
         <p class="landing__description">Angular 7 and Node.js development</p>
       </section>
       <section class="description">
-        <h3>Hi, I’m Gabriel. Nice to meet you.</h3>
-        <p>
+        <h3 class="description__title">Hi, I’m Gabriel. Nice to meet you.</h3>
+        <p class="description__text">
           Since beginning my journey as software developer nearly 5 years ago, I have
           worked for startups, small businesses and FTSE 100 businesses to create mobile
           and web applications. I'm quietly confident, naturally curious, and perpetually
