@@ -27,7 +27,7 @@ class MockComponent implements OnDestroy, OnInit {
 
   openCaseStudy = caseStudy => {
     console.log('Open portolioItem', caseStudy);
-  };
+  }
 }
 
 storiesOf('Shared/Catalogue', module).add('Thumbnail', () => ({

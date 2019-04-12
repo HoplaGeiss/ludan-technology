@@ -37,7 +37,7 @@ class MockComponent implements OnDestroy, OnInit {
 
   selectItem = item => {
     console.log('select', item);
-  };
+  }
 }
 
 storiesOf('Shared/Catalogue', module).add('Example', () => ({

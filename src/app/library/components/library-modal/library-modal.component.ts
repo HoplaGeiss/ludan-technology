@@ -32,5 +32,5 @@ export class LibraryModalComponent {
 
   openModal = () => {
     this.modalService.open('modalId');
-  };
+  }
 }

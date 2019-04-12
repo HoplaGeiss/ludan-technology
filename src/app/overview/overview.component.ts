@@ -77,5 +77,5 @@ export class OverviewComponent implements OnInit {
 
   selectItem = (tab: tabs, item: CatalogueItem) => {
     this.router.navigate([`/${tab}/${item.name}`]);
-  };
+  }
 }

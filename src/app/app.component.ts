@@ -53,7 +53,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.selectItem(this.router.url);
 
     this.router.events.pipe(takeUntil(this.destroy$)).subscribe(route => {
-      if (route instanceof NavigationEnd) this.selectItem(route.url);
+      if (route instanceof NavigationEnd) { this.selectItem(route.url); }
     });
 
     this.storeService.portfolioItemsSubject.next([
@@ -79,11 +79,11 @@ export class AppComponent implements OnInit, OnDestroy {
     this.router.navigate(['./' + tab.name], {
       relativeTo: this.activatedRoute
     });
-  };
+  }
 
   private selectItem = (url: string) => {
     const itemName = url.split('/')[1];
     const item = _.find(this.navbarItems, navbarItem => navbarItem.name === itemName);
     this.selectedNavbarItem = item;
-  };
+  }
 }

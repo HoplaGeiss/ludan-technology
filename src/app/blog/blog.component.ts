@@ -27,5 +27,5 @@ export class BlogComponent implements OnInit {
 
   selectItem = (item: CatalogueItem) => {
     this.router.navigate([`/blog/${item.id}`]);
-  };
+  }
 }

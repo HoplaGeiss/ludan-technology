@@ -28,5 +28,5 @@ export class PortfolioComponent implements OnInit {
 
   selectItem = (item: CatalogueItem) => {
     this.router.navigate([`/portfolio/${item.id}`]);
-  };
+  }
 }
