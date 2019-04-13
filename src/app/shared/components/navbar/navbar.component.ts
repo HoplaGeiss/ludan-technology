@@ -41,7 +41,7 @@ export class NavbarComponent {
 
   selectItem = item => {
     this.selectEvent.emit(item);
-  }
+  };
 
   @HostListener('window:scroll', ['$event']) onWindowScroll() {
     // window.pageYOffset > 0
