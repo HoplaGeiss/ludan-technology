@@ -1,10 +1,3 @@
 .library {
-  display: flex;
-  flex-direction: column;
-  padding: 0 80px;
-
-  &__catalogue {
-    flex-grow: 1;
-    position: relative;
-  }
+  padding: 0 20px;
 }

@@ -19,7 +19,7 @@ export interface NavbarItemInterface {
   template: `
     <nav #nav>
       <img src="assets/images/logo.png" routerLink="/" />
-      <ul>
+      <ul fxHide.lt-sm>
         <li
           *ngFor="let item of items"
           (click)="selectItem(item)"

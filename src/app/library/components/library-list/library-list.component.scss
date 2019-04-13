@@ -1,0 +1,9 @@
+.library-list {
+  display: flex;
+  flex-direction: column;
+
+  &__catalogue {
+    flex-grow: 1;
+    position: relative;
+  }
+}
