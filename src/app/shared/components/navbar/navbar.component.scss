@@ -1,7 +1,7 @@
-@import '../../styles/mixins';
-@import '../../styles/layout';
-@import '../../styles/colors';
-@import '../../styles/typography';
+@import 'mixins';
+@import 'layout';
+@import 'colours';
+@import 'typography';
 
 nav {
   @include fluid-type(320px, 1200px, 15px, 26px);
