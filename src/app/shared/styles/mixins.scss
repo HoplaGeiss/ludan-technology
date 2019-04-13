@@ -13,20 +13,6 @@
   background-size: $background-size;
 }
 
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
-}
-
-@mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
-}
-
-@mixin font-family() {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
 @mixin transform($value) {
   -webkit-transform: $value;
   -moz-transform: $value;

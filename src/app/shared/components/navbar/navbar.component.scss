@@ -1,9 +1,10 @@
 @import '../../styles/mixins';
-@import '../../styles/layout.scss';
+@import '../../styles/layout';
 @import '../../styles/colors';
+@import '../../styles/typography';
 
 nav {
-  @include font-size(26px);
+  @include fluid-type(320px, 1200px, 15px, 26px);
   @include font-family();
 
   // position: fixed;
@@ -15,6 +16,10 @@ nav {
   padding: 0 40px;
   height: $navbar-height;
   z-index: 2;
+
+  @media only screen and (max-width: $sm) {
+    padding: 0 20px;
+  }
 
   &.colored {
     background: ludan-color('primary');

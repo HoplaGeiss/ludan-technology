@@ -8,6 +8,10 @@
   background: white;
   margin-bottom: 80px;
 
+  @media only screen and (max-width: $sm) {
+    margin-bottom: 40px;
+  }
+
   h3 {
     margin-top: 0;
   }

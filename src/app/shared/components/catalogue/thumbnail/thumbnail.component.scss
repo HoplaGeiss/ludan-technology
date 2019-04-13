@@ -1,5 +1,6 @@
 @import '../../../styles/colors';
 @import '../../../styles/mixins';
+@import '../../../styles/typography';
 
 .thumbnail {
   max-width: 400px;
@@ -64,11 +65,11 @@
 
       .title {
         padding: 10px 0;
-        @include font-size(20px);
+        @include fluid-type(320px, 1200px, 10px, 20px);
       }
 
       .subtitle {
-        @include font-size(16px);
+        @include fluid-type(320px, 1200px, 8px, 16px);
       }
     }
   }
