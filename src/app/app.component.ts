@@ -3,6 +3,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import * as _ from 'underscore';
+import * as libraryItems from './shared/db/library.json';
 
 import { NavbarItemInterface } from './shared/components/navbar/navbar.component';
 import { StoreService } from './shared/services/store.service';
@@ -53,17 +54,16 @@ export class AppComponent implements OnInit, OnDestroy {
     this.selectItem(this.router.url);
 
     this.router.events.pipe(takeUntil(this.destroy$)).subscribe(route => {
-      if (route instanceof NavigationEnd) { this.selectItem(route.url); }
+      if (route instanceof NavigationEnd) {
+        this.selectItem(route.url);
+      }
     });
 
     this.storeService.portfolioItemsSubject.next([
       { id: '2', name: 'marks_and_spencers', label: 'Marks and Spencers', img: 'mands' }
     ]);
 
-    this.storeService.libraryItemsSubject.next([
-      { id: '1', name: 'modal', label: 'Modal', img: 'modal' },
-      { id: '2', name: 'sudoku', label: 'Sudoku', img: 'sudoku' }
-    ]);
+    this.storeService.libraryItemsSubject.next((libraryItems as any).items);
 
     this.storeService.blogItemsSubject.next([
       {
@@ -79,11 +79,11 @@ export class AppComponent implements OnInit, OnDestroy {
     this.router.navigate(['./' + tab.name], {
       relativeTo: this.activatedRoute
     });
-  }
+  };
 
   private selectItem = (url: string) => {
     const itemName = url.split('/')[1];
     const item = _.find(this.navbarItems, navbarItem => navbarItem.name === itemName);
     this.selectedNavbarItem = item;
-  }
+  };
 }

@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LibraryListComponent } from './components/library-list/library-list.component';
-import { LibraryModalComponent } from './components/library-modal/library-modal.component';
-import { LibrarySudokuComponent } from './components/library-sudoku/library-sudoku.component';
+import { LibraryModalComponent } from './components/library-items/components/library-modal/library-modal.component';
+import { LibrarySudokuComponent } from './components/library-items/components/library-sudoku/library-sudoku.component';
+import { LibraryItemsComponent } from './components/library-items/library-items.component';
 import { LibraryComponent } from './library.component';
 
 const routes: Routes = [
@@ -16,12 +17,20 @@ const routes: Routes = [
         component: LibraryListComponent
       },
       {
-        path: 'modal',
-        component: LibraryModalComponent
-      },
-      {
-        path: 'sudoku',
-        component: LibrarySudokuComponent
+        path: '',
+        component: LibraryItemsComponent,
+        children: [
+          {
+            path: 'modal',
+            data: { name: 'modal' },
+            component: LibraryModalComponent
+          },
+          {
+            path: 'sudoku',
+            data: { name: 'sudoku' },
+            component: LibrarySudokuComponent
+          }
+        ]
       }
     ]
   }

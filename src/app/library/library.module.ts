@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 
+import { LibraryItemsModule } from './components/library-items/library-items.module';
 import { LibraryListModule } from './components/library-list/library-list.module';
-import { LibraryModalModule } from './components/library-modal/library-modal.module';
-import { LibrarySudokuModule } from './components/library-sudoku/library-sudoku.module';
 import { LibraryComponent } from './library.component';
 import { LibraryRoutingModule } from './library.routing';
 
 @NgModule({
-  imports: [LibraryRoutingModule, LibraryModalModule, LibrarySudokuModule, LibraryListModule],
+  imports: [LibraryRoutingModule, LibraryListModule, LibraryItemsModule],
   declarations: [LibraryComponent],
   exports: [LibraryComponent]
 })

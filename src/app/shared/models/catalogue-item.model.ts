@@ -3,6 +3,8 @@ export interface CatalogueItemInterface {
   name: string;
   label: string;
   img?: string;
+  description?: string;
+  url?: string;
 }
 
 export class CatalogueItem implements CatalogueItemInterface {
@@ -10,11 +12,15 @@ export class CatalogueItem implements CatalogueItemInterface {
   name: string;
   label: string;
   img?: string;
+  description?: string;
+  url?: string;
 
   constructor(catalogueItem: any) {
     this.id = catalogueItem.id;
     this.name = catalogueItem.name;
     this.label = catalogueItem.label;
     this.img = catalogueItem.img || 'default';
+    this.description = catalogueItem.description;
+    this.url = catalogueItem.url;
   }
 }
