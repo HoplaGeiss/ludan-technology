@@ -1,3 +1,29 @@
+@import 'typography';
+@import 'layout';
+@import 'colours';
+
 .library {
-  padding: 0 20px;
+  @include font-family();
+  padding: 0 50px;
+
+  @media only screen and (max-width: $xs) {
+    padding: 0 20px;
+  }
+
+  /deep/ .library-item__description {
+    p {
+      text-align: justify;
+    }
+    a {
+      margin-top: 5px;
+      display: inline-block;
+    }
+
+    .separator {
+      width: 20%;
+      height: 1px;
+      margin: 30px auto;
+      background-color: ludan-color('grey', 'light');
+    }
+  }
 }

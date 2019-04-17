@@ -11,6 +11,8 @@
   }
 
   .demo-row {
+    padding-bottom: 10px;
+
     button {
       margin-left: 10px;
     }
@@ -18,10 +20,6 @@
 
   .source-code-row {
     margin-top: 5px;
-    a {
-      margin-left: 10px;
-      @include fluid-type(320px, 1200px, 12px, 16px);
-    }
   }
 
   /deep/ .modal {
