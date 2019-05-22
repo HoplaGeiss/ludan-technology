@@ -11,7 +11,10 @@ import { CatalogueItem } from './../shared/models/catalogue-item.model';
     <article class="blog">
       <h1>Blog</h1>
       <div class="blog__catalogue">
-        <ludan-catalogue [catalogueItems]="blogItems" (selectEvent)="selectItem($event)"></ludan-catalogue>
+        <ludan-catalogue
+          [catalogueItems]="blogItems"
+          (selectEvent)="selectItem($event)"
+        ></ludan-catalogue>
       </div>
     </article>
   `
@@ -26,6 +29,6 @@ export class BlogComponent implements OnInit {
   }
 
   selectItem = (item: CatalogueItem) => {
-    this.router.navigate([`/blog/${item.id}`]);
-  }
+    this.router.navigate([`/blog/${item.name}`]);
+  };
 }

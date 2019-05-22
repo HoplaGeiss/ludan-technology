@@ -9,7 +9,12 @@ import { StoreService } from './../../shared/services/store.service';
   selector: 'ludan-blog-item',
   styleUrls: ['blog-item.component.scss'],
   template: `
-    <markdown *ngIf="blogItem" [src]="'./assets/blog/' + blogItem.name + '.md'"></markdown>
+    <article class="blog-article">
+      <markdown
+        *ngIf="blogItem"
+        [src]="'./assets/blog/' + blogItem.name + '.md'"
+      ></markdown>
+    </article>
   `
 })
 export class BlogItemComponent implements OnInit {
@@ -20,7 +25,7 @@ export class BlogItemComponent implements OnInit {
 
   ngOnInit() {
     this.blogItems = this.storeService.blogItemsSubject.getValue();
-    const blogItemId = this.route.snapshot.params.id;
-    this.blogItem = _.find(this.blogItems, blogItem => blogItem.id === blogItemId);
+    const blogItemName = this.route.snapshot.params.name;
+    this.blogItem = _.find(this.blogItems, blogItem => blogItem.name === blogItemName);
   }
 }

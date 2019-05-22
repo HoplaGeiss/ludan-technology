@@ -44,8 +44,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.navbarItems = [
-      { label: 'Library', name: 'library' }
-      // { label: 'Blog', name: 'blog' },
+      { label: 'Library', name: 'library' },
+      { label: 'Blog', name: 'blog' }
       // { label: 'Portfolio', name: 'portfolio' },
       // { label: 'Contact', name: 'contact' }
     ];
@@ -68,9 +68,9 @@ export class AppComponent implements OnInit, OnDestroy {
     this.storeService.blogItemsSubject.next([
       {
         id: '1',
-        name: '18_11_08_ngrx_guards_and_resolvers',
+        name: 'ngrx_guards_and_resolvers',
         label: 'NgRx guards and resolvers',
-        img: 'data'
+        img: 'guards'
       }
     ]);
   }

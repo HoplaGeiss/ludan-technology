@@ -30,7 +30,7 @@ enum tabs {
       </section>
       <ludan-skills></ludan-skills>
       <section class="library">
-        <h2>Example of my work</h2>
+        <h2 class="overview__title">Example of my work</h2>
         <div class="catalogue">
           <ludan-catalogue
             [catalogueItems]="libraryItems"
@@ -38,9 +38,8 @@ enum tabs {
           ></ludan-catalogue>
         </div>
       </section>
-      <!--
       <section class="blog">
-        <h2>Blog</h2>
+        <h2 class="overview__title">Blog</h2>
         <div class="catalogue">
           <ludan-catalogue
             [catalogueItems]="blogItems"
@@ -48,6 +47,7 @@ enum tabs {
           ></ludan-catalogue>
         </div>
       </section>
+      <!--
       <section class="portfolio">
         <h2>Portfolio</h2>
         <div class="catalogue">
@@ -77,5 +77,5 @@ export class OverviewComponent implements OnInit {
 
   selectItem = (tab: tabs, item: CatalogueItem) => {
     this.router.navigate([`/${tab}/${item.name}`]);
-  }
+  };
 }

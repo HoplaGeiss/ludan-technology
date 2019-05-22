@@ -6,6 +6,11 @@
   @include font-family();
 }
 
+.overview__title {
+  @include fluid-type(320px, 1200px, 20px, 40px);
+  color: ludan-color('primary');
+}
+
 .landing {
   height: calc(100vh - #{$navbar-height});
   @media only screen and (max-width: $sm) {

@@ -1,0 +1,30 @@
+@import 'colours';
+@import 'typography';
+
+.blog-article {
+  padding: 40px;
+  font-size: 1.5em;
+  @include font-family();
+
+  /deep/ h3 {
+    color: ludan-color('primary');
+    @include fluid-type(320px, 1200px, 20px, 34px);
+  }
+
+  /deep/ code {
+    background: ludan-color('background');
+    padding: 0 5px;
+  }
+
+  /deep/ pre code {
+    background: none;
+  }
+
+  /deep/ p {
+    padding: 8px 0;
+  }
+
+  /deep/ li {
+    margin-bottom: 8px;
+  }
+}
