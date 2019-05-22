@@ -23,7 +23,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Deploy application
 
 ```
-ng build --prod
+ng build
 firebase deploy
 ```
 
@@ -31,10 +31,9 @@ firebase deploy
 - colour scheme
 - sass-lint:fix is broken it just fixes the order. Wait until fixed.
 - find font
-- deploy on ludan.io
 - skills table look more ordered
-- same color for logo, primary and hover on footer links
 - create a burger menu for the navbar
 - add breadcrumb
 - add navigation to home
-- make the sudoku responsive
+- make modal responsive
+- add https support
