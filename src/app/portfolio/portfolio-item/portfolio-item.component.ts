@@ -9,7 +9,10 @@ import { StoreService } from './../../shared/services/store.service';
   selector: 'ludan-portfolio-item',
   styleUrls: ['portfolio-item.component.scss'],
   template: `
-    <markdown *ngIf="portfolio" [src]="'./assets/portfolio/' + portfolio.name + '.md'"></markdown>
+    <markdown
+      *ngIf="portfolio"
+      [src]="'./assets/portfolio/' + portfolio.name + '.md'"
+    ></markdown>
   `
 })
 export class PortfolioItemComponent implements OnInit {
@@ -20,7 +23,10 @@ export class PortfolioItemComponent implements OnInit {
 
   ngOnInit() {
     this.portfolioItems = this.storeService.portfolioItemsSubject.getValue();
-    const portfolioId = this.route.snapshot.params.id;
-    this.portfolio = _.find(this.portfolioItems, portfolioItem => portfolioItem.id === portfolioId);
+    const portfolioName = this.route.snapshot.params.name;
+    this.portfolio = _.find(
+      this.portfolioItems,
+      portfolioItem => portfolioItem.name === portfolioName
+    );
   }
 }

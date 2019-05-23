@@ -4,13 +4,49 @@
 
 .overview {
   @include font-family();
+
+  &__title {
+    @include fluid-type(320px, 1200px, 20px, 40px);
+    color: ludan-color('primary');
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    @include fluid-type(320px, 1200px, 14px, 18px);
+    color: ludan-color('grey');
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    color: ludan-color('primary');
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .portfolio,
+  .blog,
+  .library {
+    display: flex;
+    flex-direction: column;
+    padding: 0 80px 40px 80px;
+
+    @media only screen and (max-width: $sm) {
+      padding: 0px 40px 40px 40px;
+    }
+
+    .catalogue {
+      flex-grow: 1;
+      position: relative;
+    }
+  }
 }
 
-.overview__title {
-  @include fluid-type(320px, 1200px, 20px, 40px);
-  color: ludan-color('primary');
-}
-
+// --- Landing ---
 .landing {
   height: calc(100vh - #{$navbar-height});
   @media only screen and (max-width: $sm) {
@@ -37,27 +73,12 @@
   }
 }
 
-.portfolio,
-.blog,
-.library {
-  display: flex;
-  flex-direction: column;
-  padding: 0 80px 40px 80px;
-
-  @media only screen and (max-width: $sm) {
-    padding: 0px 40px 40px 40px;
-  }
-
-  .catalogue {
-    flex-grow: 1;
-    position: relative;
-  }
-}
-
+// --- Description ---
 .description {
   background: ludan-color('primary');
   padding: 80px 20% 200px 20%;
   text-align: center;
+  color: white;
 
   @media only screen and (max-width: $sm) {
     padding: 40px 20px 130px 20px;
@@ -75,4 +96,8 @@
       line-height: 24px;
     }
   }
+}
+
+.blog {
+  background: ludan-color('grey', 'extra-light');
 }

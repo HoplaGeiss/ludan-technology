@@ -17,7 +17,7 @@ enum tabs {
     <section class="overview">
       <section class="landing">
         <h1 class="landing__role">Ludan Technology</h1>
-        <p class="landing__description">Angular 7 and Node.js development</p>
+        <p class="landing__description">Angular 8, React and Node.js development</p>
       </section>
       <section class="description">
         <h3 class="description__title">Hi, I’m Gabriel. Nice to meet you.</h3>
@@ -30,7 +30,11 @@ enum tabs {
       </section>
       <ludan-skills></ludan-skills>
       <section class="library">
-        <h2 class="overview__title">Example of my work</h2>
+        <h2 class="overview__title">Libraries I Developped</h2>
+        <p class="overview__description">
+          Here are a few npm libraries I developed. Want to see more? Find them all
+          <a class="overview__link" routerLink="library">here</a>.
+        </p>
         <div class="catalogue">
           <ludan-catalogue
             [catalogueItems]="libraryItems"
@@ -39,7 +43,11 @@ enum tabs {
         </div>
       </section>
       <section class="blog">
-        <h2 class="overview__title">Blog</h2>
+        <h2 class="overview__title">My Tech Blog</h2>
+        <p class="overview__description">
+          Some piece of code doesn't justify to be in their own npm package. Find them all
+          <a class="overview__link" routerLink="blog">here</a>.
+        </p>
         <div class="catalogue">
           <ludan-catalogue
             [catalogueItems]="blogItems"
@@ -47,9 +55,13 @@ enum tabs {
           ></ludan-catalogue>
         </div>
       </section>
-      <!--
       <section class="portfolio">
-        <h2>Portfolio</h2>
+        <h2 class="overview__title">Companies I Worked For</h2>
+        <p class="overview__description">
+          Over the years I have worked with startups, small businesses and FTSE 100
+          businesses. Find them all
+          <a class="overview__link" routerLink="portfolio">here</a>.
+        </p>
         <div class="catalogue">
           <ludan-catalogue
             [catalogueItems]="portfolioItems"
@@ -57,7 +69,6 @@ enum tabs {
           ></ludan-catalogue>
         </div>
       </section>
-      -->
     </section>
   `
 })

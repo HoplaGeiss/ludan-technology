@@ -12,7 +12,10 @@ import { StoreService } from '../shared/services/store.service';
       <h1>Portfolio</h1>
 
       <div class="portfolio__catalogue">
-        <ludan-catalogue [catalogueItems]="portfolioItems" (selectEvent)="selectItem($event)"></ludan-catalogue>
+        <ludan-catalogue
+          [catalogueItems]="portfolioItems"
+          (selectEvent)="selectItem($event)"
+        ></ludan-catalogue>
       </div>
     </article>
   `
@@ -27,6 +30,6 @@ export class PortfolioComponent implements OnInit {
   }
 
   selectItem = (item: CatalogueItem) => {
-    this.router.navigate([`/portfolio/${item.id}`]);
-  }
+    this.router.navigate([`/portfolio/${item.name}`]);
+  };
 }

@@ -12,8 +12,12 @@
     margin-bottom: 40px;
   }
 
-  h3 {
+  &__title {
     margin-top: 0;
+  }
+
+  &__subtitle {
+    color: ludan-color('primary');
   }
 
   &__section {
@@ -36,10 +40,6 @@
 
     p {
       line-height: 24px;
-    }
-
-    h4 {
-      color: ludan-color('primary');
     }
   }
 }

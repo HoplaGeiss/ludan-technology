@@ -5,12 +5,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
   template: `
     <div class="footer">
+      <!--
       <div class="call-to-action">
         <div class="text">Contact me</div>
-        <div class="text-hover">Drop me a line at gabriel@ludan.io</div>
       </div>
-      <div class="bottom-row">
-        <div class="copyright">Ludan Technology Ltd.</div>
+      -->
+      <div class="bottom-container">
         <div class="socials">
           <a href="https://github.com/HoplaGeiss" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -28,6 +28,7 @@ import { Component } from '@angular/core';
             </svg>
           </a>
         </div>
+        <div class="copyright">Ludan Technology Ltd.</div>
       </div>
     </div>
   `

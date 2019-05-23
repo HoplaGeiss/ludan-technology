@@ -10,7 +10,7 @@ const routes: Routes = [
     component: PortfolioComponent
   },
   {
-    path: ':id',
+    path: ':name',
     component: PortfolioItemComponent
   }
 ];
