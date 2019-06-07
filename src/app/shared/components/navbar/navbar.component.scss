@@ -2,9 +2,13 @@
 @import 'layout';
 @import 'colours';
 @import 'typography';
+@import 'animation';
 
-nav {
-  @include fluid-type(320px, 1200px, 15px, 26px);
+$overlay-animation-duration: 200ms;
+$fly-in-animation-duration: 200ms;
+
+.navbar {
+  @include fluid-type(320px, 1200px, 18px, 26px);
   @include font-family();
 
   // position: fixed;
@@ -36,7 +40,7 @@ nav {
     }
   }
 
-  img {
+  .logo {
     height: 40px;
     cursor: pointer;
     outline: none;
@@ -46,18 +50,72 @@ nav {
     }
   }
 
-  ul {
+  .menu {
+    height: 30px;
+    cursor: pointer;
+
+    @media only screen and (min-width: $sm) {
+      display: none;
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.6;
+    z-index: 10;
+    animation: half-fade-in $overlay-animation-duration forwards;
+
+    &.hidden {
+      animation: fade-out $overlay-animation-duration forwards $fly-in-animation-duration;
+      pointer-events: none;
+    }
+
+    @media only screen and (min-width: $sm) {
+      display: none;
+    }
+  }
+
+  .links {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    z-index: 10;
 
-    li {
+    @media only screen and (max-width: $sm) {
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 0px;
+      width: 120px;
+      height: 100%;
+      background: white;
+      animation: slide-left $fly-in-animation-duration forwards
+        $overlay-animation-duration;
+      transform: translateX(100%);
+      padding: 10px;
+
+      &.hidden {
+        animation: slide-right $fly-in-animation-duration forwards;
+      }
+    }
+
+    .link {
       padding: 2px 0;
       margin: 0 1px;
       width: 120px;
       text-align: center;
       cursor: pointer;
+
+      @media only screen and (max-width: $sm) {
+        text-align: left;
+        margin-bottom: 10px;
+      }
 
       &::after {
         content: '';

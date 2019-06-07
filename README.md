@@ -32,8 +32,11 @@ firebase deploy
 - sass-lint:fix is broken it just fixes the order. Wait until fixed.
 - find font
 - skills table look more ordered
-- create a burger menu for the navbar
 - add breadcrumb
 - add navigation to home
 - make modal responsive
 - add https support
+
+## Articles
+- SVG Masking in React
+- Saw Tooth with pure css
