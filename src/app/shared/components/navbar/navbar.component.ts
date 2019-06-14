@@ -1,11 +1,11 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import {
   Component,
+  ElementRef,
   EventEmitter,
   Input,
   Output,
-  HostListener,
-  ViewChild,
-  ElementRef
+  ViewChild
 } from '@angular/core';
 
 export interface NavbarItemInterface {
@@ -16,15 +16,50 @@ export interface NavbarItemInterface {
 @Component({
   selector: 'ludan-navbar',
   styleUrls: ['navbar.component.scss'],
+  animations: [
+    trigger('toggleOverlay', [
+      state(
+        '1',
+        style({
+          opacity: 0.5
+        })
+      ),
+      state(
+        '0',
+        style({
+          opacity: 0
+        })
+      ),
+      transition('1 => 0', animate('200ms 300ms ease-out')),
+      transition('0 => 1', animate('200ms ease-in'))
+    ]),
+    trigger('toggleSidebar', [
+      state('1', style({ transform: 'translateX(0)' })),
+      state('0', style({ transform: 'translateX(120px)' })),
+      transition('1 => 0', animate('200ms ease-out')),
+      transition('0 => 1', animate('200ms 300ms ease-in'))
+    ])
+  ],
   template: `
-    <nav #nav class="navbar">
+    <nav class="navbar">
       <img src="assets/images/logo.png" routerLink="/" class="logo" />
       <div
         class="overlay"
         (click)="overlayClick()"
-        [class.hidden]="hideMobileLinks"
+        [@toggleOverlay]="sidebarOpen"
+        [class.hidden]="!sidebarOpen"
       ></div>
-      <ul class="links" [class.hidden]="hideMobileLinks">
+      <ul class="nav nav-xl">
+        <li
+          *ngFor="let item of items"
+          (click)="selectItem(item)"
+          [class.active]="item === selectedItem"
+          class="link"
+        >
+          {{ item.label }}
+        </li>
+      </ul>
+      <ul class="nav nav-xs" [@toggleSidebar]="sidebarOpen">
         <li
           *ngFor="let item of items"
           (click)="selectItem(item)"
@@ -38,7 +73,7 @@ export interface NavbarItemInterface {
         class="menu"
         src="assets/icons/burger.svg"
         alt="Menu"
-        (click)="toggleMobileLinks()"
+        (click)="toggleSidebar()"
       />
     </nav>
   `
@@ -51,24 +86,18 @@ export class NavbarComponent {
 
   @ViewChild('nav') nav: ElementRef;
 
-  hideMobileLinks = true;
+  sidebarOpen = false;
 
   selectItem = item => {
     this.selectEvent.emit(item);
-    if (!this.hideMobileLinks) this.hideMobileLinks = true;
+    if (this.sidebarOpen) this.sidebarOpen = false;
   };
 
-  toggleMobileLinks = () => {
-    this.hideMobileLinks = !this.hideMobileLinks;
+  toggleSidebar = () => {
+    this.sidebarOpen = !this.sidebarOpen;
   };
 
   overlayClick = () => {
-    if (!this.hideMobileLinks) this.hideMobileLinks = true;
+    if (this.sidebarOpen) this.sidebarOpen = false;
   };
-
-  @HostListener('window:scroll', ['$event']) onWindowScroll() {
-    // window.pageYOffset > 0
-    //   ? this.nav.nativeElement.classList.add('colored')
-    //   : this.nav.nativeElement.classList.remove('colored');
-  }
 }
