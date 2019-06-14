@@ -2,8 +2,11 @@
   "name": "ludan-technology",
   "version": "0.0.0",
   "license": "MIT",
-  "description": "Ludan Technology Website",
-  "author": "gabriel.muller.12@gmail.com",
+  "description": "Ludan Technology",
+  "author": {
+    "name": "Gabriel Ludan Muller",
+    "email": "gabriel.muller.12@gmail.com"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -12,8 +15,6 @@
     "test": "ng test",
     "lint": "tslint --project tsconfig.json -c src/tslint.json 'src/**/*.ts'",
     "lint:fix": "tslint --project tsconfig.json -c src/tslint.json 'src/**/*.ts' --fix",
-    "sass-lint": "sass-lint -c .sass-lint.yml -v -q",
-    "sass-lint:fix": "sass-lint-auto-fix",
     "e2e": "ng e2e",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },

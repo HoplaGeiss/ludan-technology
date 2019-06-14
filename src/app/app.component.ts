@@ -44,9 +44,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.navbarItems = [
-      { label: 'Library', name: 'library' },
-      { label: 'Blog', name: 'blog' },
-      { label: 'Portfolio', name: 'portfolio' }
+      { label: 'Libraries I developed', name: 'library' },
+      { label: 'Tech Blog', name: 'blog' },
+      { label: 'Companies I worked For', name: 'portfolio' }
       // { label: 'Contact', name: 'contact' }
     ];
 

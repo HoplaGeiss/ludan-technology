@@ -30,7 +30,7 @@ enum tabs {
       </section>
       <ludan-skills></ludan-skills>
       <section class="library">
-        <h2 class="overview__title">Libraries I Developped</h2>
+        <h2 class="overview__title">Libraries I Developed</h2>
         <p class="overview__description">
           Here are a few npm libraries I developed. Want to see more? Find them all
           <a class="overview__link" routerLink="library">here</a>.
