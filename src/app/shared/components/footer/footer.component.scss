@@ -11,6 +11,10 @@ $call-to-action-height: 40px;
   background: ludan-color('primary');
   position: relative;
   padding-top: calc(#{$call-to-action-height/2});
+
+  @media only screen and (max-width: $sm) {
+    margin-top: 30px;
+  }
 }
 
 .call-to-action {

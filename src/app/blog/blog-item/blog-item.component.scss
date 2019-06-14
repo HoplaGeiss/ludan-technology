@@ -1,12 +1,22 @@
 @import 'colours';
 @import 'typography';
+@import 'layout';
 
 .blog-item {
-  padding: 40px 0;
+  padding: 40px 20px;
   display: flex;
   justify-content: center;
 
+  @media only screen and (max-width: $sm) {
+    padding-bottom: 20px;
+  }
+
   .article {
+    width: 100%;
+    max-width: 1200px;
+    font-size: 1.2em;
+    @include font-family();
+
     .article__title {
       margin: 0;
       font-weight: 600;
@@ -20,11 +30,11 @@
       font-style: italic;
       font-weight: 400;
       margin-bottom: 40px;
-    }
 
-    max-width: 1200px;
-    font-size: 1.2em;
-    @include font-family();
+      @media only screen and (max-width: $sm) {
+        margin-bottom: 20px;
+      }
+    }
 
     /deep/ h3 {
       color: ludan-color('primary');
