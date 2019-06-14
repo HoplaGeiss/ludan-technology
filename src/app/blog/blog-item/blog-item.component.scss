@@ -1,30 +1,53 @@
 @import 'colours';
 @import 'typography';
 
-.blog-article {
-  padding: 40px;
-  font-size: 1.5em;
-  @include font-family();
+.blog-item {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
 
-  /deep/ h3 {
-    color: ludan-color('primary');
-    @include fluid-type(320px, 1200px, 20px, 34px);
-  }
+  .article {
+    .article__title {
+      margin: 0;
+      font-weight: 600;
+      @include fluid-type(320px, 1200px, 24px, 40px);
+      color: ludan-color('primary');
+    }
 
-  /deep/ code {
-    background: ludan-color('background');
-    padding: 0 5px;
-  }
+    .article__date {
+      margin: 0;
+      @include fluid-type(320px, 1200px, 12px, 14px);
+      font-style: italic;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
 
-  /deep/ pre code {
-    background: none;
-  }
+    max-width: 1200px;
+    font-size: 1.2em;
+    @include font-family();
 
-  /deep/ p {
-    padding: 8px 0;
-  }
+    /deep/ h3 {
+      color: ludan-color('primary');
+      font-weight: 500;
+      @include fluid-type(320px, 1200px, 20px, 34px);
+    }
 
-  /deep/ li {
-    margin-bottom: 8px;
+    /deep/ code {
+      background: ludan-color('background');
+      padding: 0 5px;
+      @include fluid-type(320px, 1200px, 14px, 18px);
+    }
+
+    /deep/ pre code {
+      background: none;
+    }
+
+    /deep/ p {
+      padding: 8px 0;
+    }
+
+    /deep/ li {
+      margin-bottom: 8px;
+    }
   }
 }

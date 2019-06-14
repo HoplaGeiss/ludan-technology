@@ -9,12 +9,16 @@ import { StoreService } from './../../shared/services/store.service';
   selector: 'ludan-blog-item',
   styleUrls: ['blog-item.component.scss'],
   template: `
-    <article class="blog-article">
-      <markdown
-        *ngIf="blogItem"
-        [src]="'./assets/blog/' + blogItem.name + '.md'"
-      ></markdown>
-    </article>
+    <div class="blog-item">
+      <article class="article">
+        <h2 class="article__title">{{ blogItem.label }}</h2>
+        <p class="article__date">{{ blogItem.date }}</p>
+        <markdown
+          *ngIf="blogItem"
+          [src]="'./assets/blog/' + blogItem.date + '_' + blogItem.name + '.md'"
+        ></markdown>
+      </article>
+    </div>
   `
 })
 export class BlogItemComponent implements OnInit {

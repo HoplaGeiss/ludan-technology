@@ -68,9 +68,17 @@ export class AppComponent implements OnInit, OnDestroy {
     this.storeService.blogItemsSubject.next([
       {
         id: '1',
+        date: '2018-11-08',
         name: 'ngrx_guards_and_resolvers',
         label: 'NgRx guards and resolvers',
         img: 'guards'
+      },
+      {
+        id: '2',
+        date: '2017-11-22',
+        name: 'angular_unit_test_ng_on_changes',
+        label: 'Angular Unit Test ng-on-changes',
+        img: 'ng-on-changes'
       }
     ]);
   }

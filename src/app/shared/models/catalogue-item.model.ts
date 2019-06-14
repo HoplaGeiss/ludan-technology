@@ -5,6 +5,7 @@ export interface CatalogueItemInterface {
   img?: string;
   description?: string;
   url?: string;
+  date?: string;
 }
 
 export class CatalogueItem implements CatalogueItemInterface {
@@ -14,6 +15,7 @@ export class CatalogueItem implements CatalogueItemInterface {
   img?: string;
   description?: string;
   url?: string;
+  date?: string;
 
   constructor(catalogueItem: any) {
     this.id = catalogueItem.id;
@@ -22,5 +24,6 @@ export class CatalogueItem implements CatalogueItemInterface {
     this.img = catalogueItem.img || 'default';
     this.description = catalogueItem.description;
     this.url = catalogueItem.url;
+    this.date = catalogueItem.date;
   }
 }
