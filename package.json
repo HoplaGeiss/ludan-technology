@@ -16,7 +16,11 @@
     "lint": "tslint --project tsconfig.json -c src/tslint.json 'src/**/*.ts'",
     "lint:fix": "tslint --project tsconfig.json -c src/tslint.json 'src/**/*.ts' --fix",
     "e2e": "ng e2e",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "compile:server": "webpack --config webpack.server.config.js --progress --colors",
+    "serve:ssr": "node dist/server",
+    "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
+    "build:client-and-server-bundles": "ng build --prod && ng run ludan-technology:server:production --bundleDependencies all"
   },
   "private": true,
   "dependencies": {
@@ -30,11 +34,15 @@
     "@angular/forms": "^8.1.1",
     "@angular/platform-browser": "^8.1.1",
     "@angular/platform-browser-dynamic": "^8.1.1",
+    "@angular/platform-server": "^8.1.1",
     "@angular/router": "^8.1.1",
+    "@nguniversal/express-engine": "^8.1.1",
+    "@nguniversal/module-map-ngfactory-loader": "8.1.1",
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/addons": "^5.1.9",
     "@storybook/angular": "^5.1.9",
     "core-js": "^3.1.4",
+    "express": "^4.15.2",
     "ngx-ludan-modal": "*",
     "ngx-ludan-sudoku": "^1.0.0",
     "ngx-markdown": "^8.1.0",
@@ -70,9 +78,11 @@
     "sass-lint": "^1.13.1",
     "sass-lint-auto-fix": "^0.17.0",
     "storybook-readme": "^5.0.5",
+    "ts-loader": "^5.2.0",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
-    "typescript": "^3.4.5"
+    "typescript": "^3.4.5",
+    "webpack-cli": "^3.1.0"
   },
   "husky": {
     "hooks": {

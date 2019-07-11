@@ -1,6 +1,6 @@
-@import 'typography';
-@import 'layout';
-@import 'colours';
+@import '../shared/styles/typography';
+@import '../shared/styles/layout';
+@import '../shared/styles/colours';
 
 .library {
   @include font-family();

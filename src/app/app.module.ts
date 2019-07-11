@@ -14,7 +14,7 @@ import { StoreService } from './shared/services/store.service';
 
 @NgModule({
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     NavbarModule,

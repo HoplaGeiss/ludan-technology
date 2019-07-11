@@ -1,6 +1,6 @@
-@import 'colours';
-@import 'mixins';
-@import 'typography';
+@import '../../../styles/colours.scss';
+@import '../../../styles/mixins';
+@import '../../../styles/typography';
 
 .thumbnail {
   max-width: 400px;
