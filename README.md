@@ -1,10 +1,16 @@
 # Ludan Technology
 
+## Run server side
+```
+npm run build:ssr
+npm run serve:ssr
+```
+
 ## Deploy application
 
 ```
-ng build --prod
-firebase deploy
+npm run build:ssr
+gcloud app deploy
 ```
 ## View on mobile
 

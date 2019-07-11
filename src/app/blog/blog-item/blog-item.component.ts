@@ -9,10 +9,15 @@ import { StoreService } from './../../shared/services/store.service';
   selector: 'ludan-blog-item',
   styleUrls: ['blog-item.component.scss'],
   template: `
-    <div class="blog-item">
+    <div
+      class="blog-item"
+      itemprop="exampleOfWork"
+      itemscope=""
+      itemtype="http://schema.org/BlogPosting"
+    >
       <article class="article">
-        <h2 class="article__title">{{ blogItem.label }}</h2>
-        <p class="article__date">{{ blogItem.date }}</p>
+        <h2 class="article__title" itemprop="headline">{{ blogItem.label }}</h2>
+        <p class="article__date" itemprop="datePublished">{{ blogItem.date }}</p>
         <markdown
           *ngIf="blogItem"
           [src]="'./assets/blog/' + blogItem.date + '_' + blogItem.name + '.md'"

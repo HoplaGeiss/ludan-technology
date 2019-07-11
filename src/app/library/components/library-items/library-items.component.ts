@@ -9,11 +9,16 @@ import { CatalogueItem } from './../../../shared/models/catalogue-item.model';
   selector: 'ludan-library-items',
   styleUrls: ['./library-items.component.scss'],
   template: `
-    <section class="library-item">
-      <h1>{{ item.label }}</h1>
+    <section
+      class="library-item"
+      itemprop="exampleOfWork"
+      itemscope=""
+      itemtype="WebPageElement"
+    >
+      <h1 itemprop="headline">{{ item.label }}</h1>
       <div class="library-item__description">
-        <p>{{ item.description }}</p>
-        <a [href]="item.url">{{ item.url }}</a>
+        <p itemprop="description">{{ item.description }}</p>
+        <a [href]="item.url" itemprop="isBasedOn">{{ item.url }}</a>
         <div class="separator"></div>
       </div>
       <router-outlet></router-outlet>

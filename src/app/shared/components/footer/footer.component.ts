@@ -28,7 +28,14 @@ import { Component } from '@angular/core';
             </svg>
           </a>
         </div>
-        <div class="copyright">Ludan Technology Ltd.</div>
+        <div
+          class="copyright"
+          itemprop="author"
+          itemscope=""
+          itemtype="http://schema.org/Organization"
+        >
+          <span itemprop="legalName">Ludan Technology Ltd.</span>
+        </div>
       </div>
     </div>
   `
