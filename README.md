@@ -22,6 +22,8 @@ ng serve --host localIP
 - display date better
 - Spell check everything
 - Add ads
+- Angular universal
+- schema.org
 
 ## Articles
 - SVG Masking in React
