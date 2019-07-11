@@ -13,7 +13,7 @@ import { CatalogueItem } from './../../../shared/models/catalogue-item.model';
       class="library-item"
       itemprop="exampleOfWork"
       itemscope=""
-      itemtype="WebPageElement"
+      itemtype="http://schema.org/WebPageElement"
     >
       <h1 itemprop="headline">{{ item.label }}</h1>
       <div class="library-item__description">
