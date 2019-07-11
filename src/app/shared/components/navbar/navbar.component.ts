@@ -84,7 +84,7 @@ export class NavbarComponent {
 
   @Output() selectEvent = new EventEmitter();
 
-  @ViewChild('nav') nav: ElementRef;
+  @ViewChild('nav', { static: false }) nav: ElementRef;
 
   sidebarOpen = false;
 
