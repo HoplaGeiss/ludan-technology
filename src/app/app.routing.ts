@@ -7,23 +7,23 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: './overview/overview.module#OverviewModule'
+        loadChildren: () => import('./overview/overview.module').then(m => m.OverviewModule)
       },
       {
         path: 'portfolio',
-        loadChildren: './portfolio/portfolio.module#PortfolioModule'
+        loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)
       },
       {
         path: 'blog',
-        loadChildren: './blog/blog.module#BlogModule'
+        loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)
       },
       {
         path: 'contact',
-        loadChildren: './contact/contact.module#ContactModule'
+        loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
       },
       {
         path: 'library',
-        loadChildren: './library/library.module#LibraryModule'
+        loadChildren: () => import('./library/library.module').then(m => m.LibraryModule)
       }
     ]
   }
