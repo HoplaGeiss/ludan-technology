@@ -23,12 +23,10 @@ ng serve --host localIP
 - add breadcrumb
 - add navigation to home
 - make modal responsive
-- add https support
 - improve SEO
 - display date better
 - Spell check everything
 - Add ads
-- Angular universal
 - schema.org
 
 ## Articles

@@ -15,6 +15,14 @@
       "img": "sudoku",
       "description": "A sudoku puzzle is a very fun component to develop. However, it's deceptively hard to implement. The tricky bit is the service that generates the sudoku's solution. Have a look at the code source for more details:",
       "url": "https://github.com/HoplaGeiss/ludan-sudoku"
+    },
+    {
+      "id": "3",
+      "name": "sidebar",
+      "label": "Sidebar",
+      "img": "sidebar",
+      "description": "I have never developed a website that did not need some shape or form of sidebar. Have a look at the code source for more details:",
+      "url": "https://github.com/HoplaGeiss/ludan-sidebar"
     }
   ]
 }
