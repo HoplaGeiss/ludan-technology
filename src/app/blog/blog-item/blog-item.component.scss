@@ -17,23 +17,41 @@
     font-size: 1.2em;
     @include font-family();
 
-    .article__title {
+    .title {
       margin: 0;
       font-weight: 600;
       @include fluid-type(320px, 1200px, 24px, 40px);
       color: ludan-color('primary');
     }
 
-    .article__date {
+    .subtitle {
       margin: 0;
       @include fluid-type(320px, 1200px, 12px, 14px);
       font-style: italic;
       font-weight: 400;
-      margin-bottom: 40px;
+    }
 
-      @media only screen and (max-width: $sm) {
-        margin-bottom: 20px;
+    .tags {
+      padding-top: 0;
+
+      .tag {
+        background: ludan-color('background');
+        color: ludan-color('primary');
+        padding: 5px 10px;
+        @include fluid-type(320px, 1200px, 12px, 14px);
       }
+    }
+
+    .image {
+      height: 500px;
+      margin: auto;
+      display: block;
+    }
+
+    .separator {
+      width: 20%;
+      border-bottom: 1px solid ludan-color('primary');
+      margin: 40px 40%;
     }
 
     /deep/ h3 {

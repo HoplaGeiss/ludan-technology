@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import * as _ from 'underscore';
 import * as libraryItems from './shared/db/library.json';
+import * as blogItems from './shared/db/blog.json';
 
 import { NavbarItemInterface } from './shared/components/navbar/navbar.component';
 import { StoreService } from './shared/services/store.service';
@@ -64,23 +65,7 @@ export class AppComponent implements OnInit, OnDestroy {
     ]);
 
     this.storeService.libraryItemsSubject.next((libraryItems as any).items);
-
-    this.storeService.blogItemsSubject.next([
-      {
-        id: '1',
-        date: '2018-11-08',
-        name: 'ngrx_guards_and_resolvers',
-        label: 'NgRx guards and resolvers',
-        img: 'guards'
-      },
-      {
-        id: '2',
-        date: '2017-11-22',
-        name: 'angular_unit_test_ng_on_changes',
-        label: 'Angular Unit Test ng-on-changes',
-        img: 'ng-on-changes'
-      }
-    ]);
+    this.storeService.blogItemsSubject.next((blogItems as any).items);
   }
 
   navigate = tab => {

@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "date": "2018-11-08",
+      "name": "ngrx_guards_and_resolvers",
+      "label": "NgRx guards and resolvers",
+      "img": "guards",
+      "tags": ["angular 2+"]
+    },
+    {
+      "date": "2017-11-22",
+      "name": "angular_unit_test_ng_on_changes",
+      "label": "Angular Unit Test ng-on-changes",
+      "img": "ng-on-changes",
+      "tags": ["angular 2+"]
+    },
+    {
+      "date": "2017-08-04",
+      "name": "dynamically_add_component",
+      "label": "How to dynamically add components to the DOM with angular 4",
+      "img": "dynamic",
+      "tags": ["angular 2+"]
+    }
+  ]
+}

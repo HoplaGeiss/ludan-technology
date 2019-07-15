@@ -16,8 +16,21 @@ import { StoreService } from './../../shared/services/store.service';
       itemtype="http://schema.org/BlogPosting"
     >
       <article class="article">
-        <h2 class="article__title" itemprop="headline">{{ blogItem.label }}</h2>
-        <p class="article__date" itemprop="datePublished">{{ blogItem.date }}</p>
+        <h2 class="title" itemprop="headline">{{ blogItem.label }}</h2>
+        <p class="subtitle">
+          <span class="author" itemprop="author">Gabriel Muller</span>
+          <span>&nbsp;|&nbsp;</span>
+          <span class="date" itemprop="datePublished">{{ blogItem.date }}</span>
+        </p>
+        <p class="tags" itemprop="keywords" content="blogItem.tags">
+          <span *ngFor="let tag of blogItem.tags" class="tag">{{ tag }}</span>
+        </p>
+        <img
+          itemprop="image"
+          [src]="'assets/images/' + blogItem.img + '.png'"
+          class="image"
+        />
+        <div class="separator"></div>
         <markdown
           *ngIf="blogItem"
           [src]="'./assets/blog/' + blogItem.date + '_' + blogItem.name + '.md'"
