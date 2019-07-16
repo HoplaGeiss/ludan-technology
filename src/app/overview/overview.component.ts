@@ -16,8 +16,8 @@ enum tabs {
   template: `
     <section class="overview">
       <section class="landing">
-        <h1 class="landing__role" itemprop="name">Ludan Technology</h1>
-        <p class="landing__description" itemprop="description">
+        <h1 class="landing__role">Ludan Technology</h1>
+        <p class="landing__description">
           Angular 8, React and Node.js development
         </p>
       </section>

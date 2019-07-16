@@ -13,7 +13,7 @@ import { StoreService } from './shared/services/store.service';
   selector: 'ludan-root',
   styleUrls: ['./app.component.scss'],
   template: `
-    <main itemscope="" itemtype="http://schema.org/WebSite">
+    <main>
       <ludan-navbar
         [items]="navbarItems"
         [selectedItem]="selectedNavbarItem"

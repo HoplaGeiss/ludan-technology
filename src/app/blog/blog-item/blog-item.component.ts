@@ -18,11 +18,24 @@ import { StoreService } from './../../shared/services/store.service';
       <article class="article">
         <h2 class="title" itemprop="headline">{{ blogItem.label }}</h2>
         <p class="subtitle">
-          <span class="author" itemprop="author">Gabriel Muller</span>
+          <span
+            class="publisher"
+            itemprop="publisher"
+            itemscope=""
+            itemtype="http://schema.org/Organization"
+            ><span itemprop="name">Ludan Technology Ltd |&nbsp;</span>
+          </span>
+          <span
+            class="author"
+            itemprop="author"
+            itemscope=""
+            itemtype="http://schema.org/Person"
+            ><span itemprop="name">Gabriel Muller</span>
+          </span>
           <span>&nbsp;|&nbsp;</span>
           <span class="date" itemprop="datePublished">{{ blogItem.date }}</span>
         </p>
-        <p class="tags" itemprop="keywords" content="blogItem.tags">
+        <p class="tags" itemprop="keywords">
           <span *ngFor="let tag of blogItem.tags" class="tag">{{ tag }}</span>
         </p>
         <img

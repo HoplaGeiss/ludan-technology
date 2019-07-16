@@ -9,8 +9,7 @@ npm run serve:ssr
 ## Deploy application
 
 ```
-npm run build:ssr
-gcloud app deploy
+npm run deploy
 ```
 ## View on mobile
 
@@ -28,7 +27,8 @@ ng serve --host localIP
 - Spell check everything
 - Add ads
 - schema.org
-
+- use webP to reduce image size https://developers.google.com/speed/pagespeed/insight
+-
 ## Articles
 - SVG Masking in React
 - Saw Tooth with pure css
