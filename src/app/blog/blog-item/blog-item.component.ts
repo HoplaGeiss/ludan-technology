@@ -24,6 +24,12 @@ import { StoreService } from './../../shared/services/store.service';
             itemscope=""
             itemtype="http://schema.org/Organization"
             ><span itemprop="name">Ludan Technology Ltd |&nbsp;</span>
+            <span itemprop="logo" itemscope="" itemtype="http://schema.org/imageObject"
+              ><span
+                itemprop="url"
+                content="https://ludan.io/assets/images/logo.png"
+              ></span
+            ></span>
           </span>
           <span
             class="author"

@@ -16,8 +16,29 @@ import { CatalogueItem } from './../../../shared/models/catalogue-item.model';
       itemtype="http://schema.org/WebPageElement"
     >
       <h1 itemprop="headline">{{ item.label }}</h1>
+      <p class="subtitle">
+        <span
+          class="publisher"
+          itemprop="publisher"
+          itemscope=""
+          itemtype="http://schema.org/Organization"
+          ><span itemprop="name">Ludan Technology Ltd |&nbsp;</span>
+        </span>
+        <span
+          class="author"
+          itemprop="author"
+          itemscope=""
+          itemtype="http://schema.org/Person"
+          ><span itemprop="name">Gabriel Muller</span>
+        </span>
+        <span>&nbsp;|&nbsp;</span>
+        <span class="date" itemprop="datePublished">{{ item.date }}</span>
+      </p>
+      <p class="tags" itemprop="keywords">
+        <span *ngFor="let tag of item.tags" class="tag">{{ tag }}</span>
+      </p>
       <div class="library-item__description">
-        <p itemprop="description">{{ item.description }}</p>
+        <p>{{ item.description }}</p>
         <a [href]="item.url" itemprop="isBasedOn">{{ item.url }}</a>
         <div class="separator"></div>
       </div>

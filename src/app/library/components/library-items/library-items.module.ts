@@ -5,9 +5,16 @@ import { LibraryModalModule } from './components/library-modal/library-modal.mod
 import { LibrarySudokuModule } from './components/library-sudoku/library-sudoku.module';
 import { LibrarySidebarModule } from './components/library-sidebar/library-sidebar.module';
 import { LibraryItemsComponent } from './library-items.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  imports: [LibraryModalModule, LibrarySudokuModule, LibrarySidebarModule, RouterModule],
+  imports: [
+    LibraryModalModule,
+    LibrarySudokuModule,
+    LibrarySidebarModule,
+    RouterModule,
+    CommonModule
+  ],
   declarations: [LibraryItemsComponent],
   exports: [LibraryItemsComponent]
 })
