@@ -19,6 +19,7 @@ import { StoreService } from './shared/services/store.service';
         [selectedItem]="selectedNavbarItem"
         (selectEvent)="navigate($event)"
       ></ludan-navbar>
+      <ludan-breadcrumb></ludan-breadcrumb>
       <div class="content">
         <router-outlet></router-outlet>
       </div>

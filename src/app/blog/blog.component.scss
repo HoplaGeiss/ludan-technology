@@ -1,7 +1,9 @@
+@import '../shared/styles/layout';
+
 .blog {
   display: flex;
   flex-direction: column;
-  padding: 0 80px;
+  padding: 0 $side-margin;
 
   &__catalogue {
     flex-grow: 1;

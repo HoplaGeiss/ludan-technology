@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { NavbarModule } from './shared/components/navbar/navbar.module';
 import { StoreService } from './shared/services/store.service';
+import { BreadcrumbModule } from './shared/components/breadcrumb/breadcrumb.module';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { StoreService } from './shared/services/store.service';
     FooterModule,
     AngularFireModule.initializeApp(environment.firebase),
     HttpClientModule,
-    MarkdownModule.forRoot({ loader: HttpClient })
+    MarkdownModule.forRoot({ loader: HttpClient }),
+    BreadcrumbModule
   ],
   declarations: [AppComponent],
   providers: [StoreService],

@@ -1,0 +1,26 @@
+@import '../../../shared/styles/colours.scss';
+@import '../../../shared/styles/typography';
+@import '../../../shared/styles/layout';
+
+.breadcrumbs {
+  margin: 20px $side-margin 0 $side-margin;
+
+  .breadcrumb {
+    .link {
+      @include fluid-type(320px, 1200px, 14px, 18px);
+      margin: 0 5px;
+      color: black;
+      text-decoration: none;
+
+      &:hover {
+        color: ludan-color('primary');
+      }
+    }
+
+    &:first-of-type {
+      .link {
+        margin-left: 0;
+      }
+    }
+  }
+}
