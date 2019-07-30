@@ -2,8 +2,6 @@
 @import '../../../shared/styles/typography';
 
 .library-item {
-  margin-bottom: 20px;
-
   .subtitle {
     margin: 0;
     @include fluid-type(320px, 1200px, 12px, 14px);

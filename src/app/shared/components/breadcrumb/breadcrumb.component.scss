@@ -3,7 +3,11 @@
 @import '../../../shared/styles/layout';
 
 .breadcrumbs {
-  margin: 20px $side-margin 0 $side-margin;
+  padding: 20px $side-margin 0 $side-margin;
+
+  @media only screen and (max-width: $xs) {
+    padding: 0 $side-margin-xs;
+  }
 
   .breadcrumb {
     .link {

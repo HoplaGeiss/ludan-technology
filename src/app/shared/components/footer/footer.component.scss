@@ -3,51 +3,20 @@
 @import '../../styles/typography';
 @import '../../styles/layout';
 
-$call-to-action-height: 40px;
-
 .footer {
-  margin-top: 50px;
   @include font-family();
   background: ludan-color('primary');
-  position: relative;
-  padding-top: calc(#{$call-to-action-height/2});
 
-  @media only screen and (max-width: $sm) {
-    margin-top: 30px;
-  }
-}
-
-.call-to-action {
-  position: absolute;
-  width: 80%;
-  left: 10%;
-  top: -20px;
-  height: $call-to-action-height;
-  border: 1px solid ludan-color('grey', 'light');
-  border-radius: 10px;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ludan-color('primary');
-  @include fluid-type(320px, 1200px, 18px, 24px);
-  cursor: pointer;
-  // transition-duration: 300ms;
-
-  // &:hover {
-  //   border-color: white;
-  //   color: white;
-  //   background: ludan-color('primary');
-  // }
-}
-
-.bottom-container {
-  padding-bottom: 50px;
-  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: white;
+  height: $footer-height-sm;
+
+  @media only screen and (min-width: $sm) {
+    height: $footer-height;
+  }
 
   .socials {
     display: flex;

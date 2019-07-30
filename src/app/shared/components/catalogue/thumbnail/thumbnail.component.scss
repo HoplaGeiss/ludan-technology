@@ -64,7 +64,8 @@
       @include transform(translateY(20px));
 
       .title {
-        padding: 10px 0;
+        text-align: center;
+        padding: 10px 10px;
         @include fluid-type(320px, 1200px, 10px, 20px);
       }
 

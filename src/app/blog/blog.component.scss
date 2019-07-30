@@ -1,12 +1,11 @@
 @import '../shared/styles/layout';
+@import '../shared/styles/typography';
 
 .blog {
-  display: flex;
-  flex-direction: column;
+  @include font-family();
   padding: 0 $side-margin;
 
-  &__catalogue {
-    flex-grow: 1;
-    position: relative;
+  @media only screen and (max-width: $xs) {
+    padding: 0 $side-margin-xs;
   }
 }

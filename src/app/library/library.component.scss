@@ -1,12 +1,12 @@
 @import '../shared/styles/typography';
 @import '../shared/styles/layout';
-@import '../shared/styles/colours';
+// @import '../shared/styles/colours';
 
 .library {
   @include font-family();
   padding: 0 $side-margin;
 
   @media only screen and (max-width: $xs) {
-    padding: 0 20px;
+    padding: 0 $side-margin-xs;
   }
 }

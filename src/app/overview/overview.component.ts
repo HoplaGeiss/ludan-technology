@@ -57,6 +57,7 @@ enum tabs {
           ></ludan-catalogue>
         </div>
       </section>
+      <!--
       <section class="portfolio">
         <h2 class="overview__title">Companies I Worked For</h2>
         <p class="overview__description">
@@ -71,6 +72,7 @@ enum tabs {
           ></ludan-catalogue>
         </div>
       </section>
+      -->
     </section>
   `
 })

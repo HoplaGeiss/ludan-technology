@@ -19,8 +19,8 @@ import { StoreService } from './shared/services/store.service';
         [selectedItem]="selectedNavbarItem"
         (selectEvent)="navigate($event)"
       ></ludan-navbar>
-      <ludan-breadcrumb></ludan-breadcrumb>
       <div class="content">
+        <ludan-breadcrumb></ludan-breadcrumb>
         <router-outlet></router-outlet>
       </div>
       <ludan-footer></ludan-footer>
@@ -47,8 +47,8 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.navbarItems = [
       { label: 'Libraries I developed', name: 'library' },
-      { label: 'Tech Blog', name: 'blog' },
-      { label: 'Companies I worked For', name: 'portfolio' }
+      { label: 'Tech Blog', name: 'blog' }
+      // { label: 'Companies I worked For', name: 'portfolio' }
       // { label: 'Contact', name: 'contact' }
     ];
 

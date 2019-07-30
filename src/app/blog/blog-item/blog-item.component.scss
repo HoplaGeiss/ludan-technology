@@ -3,17 +3,13 @@
 @import '../../shared/styles/layout';
 
 .blog-item {
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
+  padding: 40px 0;
 
   @media only screen and (max-width: $sm) {
     padding-bottom: 20px;
   }
 
   .article {
-    width: 100%;
-    max-width: 1200px;
     font-size: 1.2em;
     @include font-family();
 
