@@ -2,11 +2,32 @@
 @import '../../../shared/styles/typography';
 
 .library-item {
+  padding: 40px 0;
+
+  .title {
+    margin: 0;
+    font-weight: 600;
+    @include fluid-type(320px, 1200px, 24px, 40px);
+    color: ludan-color('primary');
+  }
+
   .subtitle {
     margin: 0;
     @include fluid-type(320px, 1200px, 12px, 14px);
     font-style: italic;
     font-weight: 400;
+  }
+
+  .tags {
+    padding-top: 0;
+    margin-bottom: 20px;
+
+    .tag {
+      background: ludan-color('background');
+      color: ludan-color('primary');
+      padding: 5px 10px;
+      @include fluid-type(320px, 1200px, 12px, 14px);
+    }
   }
 
   &__description {

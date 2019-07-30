@@ -15,7 +15,7 @@ import { CatalogueItem } from '../../../shared/models/catalogue-item.model';
       itemscope=""
       itemtype="http://schema.org/WebPageElement"
     >
-      <h1 itemprop="headline">{{ item.label }}</h1>
+      <h2 class="title" itemprop="headline">{{ item.label }}</h2>
       <p class="subtitle">
         <span
           class="publisher"

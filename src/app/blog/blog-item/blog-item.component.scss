@@ -29,6 +29,7 @@
 
     .tags {
       padding-top: 0;
+      margin-bottom: 20px;
 
       .tag {
         background: ludan-color('background');
@@ -46,8 +47,9 @@
 
     .separator {
       width: 20%;
-      border-bottom: 1px solid ludan-color('primary');
-      margin: 40px 40%;
+      height: 1px;
+      margin: 30px auto;
+      background-color: ludan-color('grey', 'light');
     }
 
     /deep/ h3 {

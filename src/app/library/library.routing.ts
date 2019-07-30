@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LibraryListComponent } from './components/library-list/library-list.component';
-import { LibraryModalComponent } from './components/library-items/components/library-modal/library-modal.component';
-import { LibrarySudokuComponent } from './components/library-items/components/library-sudoku/library-sudoku.component';
-import { LibrarySidebarComponent } from './components/library-items/components/library-sidebar/library-sidebar.component';
-import { LibraryItemComponent } from './components/library-items/library-item.component';
+import { LibraryModalComponent } from './components/library-item/components/library-modal/library-modal.component';
+import { LibrarySudokuComponent } from './components/library-item/components/library-sudoku/library-sudoku.component';
+import { LibrarySidebarComponent } from './components/library-item/components/library-sidebar/library-sidebar.component';
+import { LibraryItemComponent } from './components/library-item/library-item.component';
 import { LibraryComponent } from './library.component';
 
 const routes: Routes = [
