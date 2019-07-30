@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { LibraryModalModule } from './components/library-modal/library-modal.module';
 import { LibrarySudokuModule } from './components/library-sudoku/library-sudoku.module';
 import { LibrarySidebarModule } from './components/library-sidebar/library-sidebar.module';
-import { LibraryItemsComponent } from './library-items.component';
+import { LibraryItemComponent } from './library-item.component';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
     RouterModule,
     CommonModule
   ],
-  declarations: [LibraryItemsComponent],
-  exports: [LibraryItemsComponent]
+  declarations: [LibraryItemComponent],
+  exports: [LibraryItemComponent]
 })
-export class LibraryItemsModule {}
+export class LibraryItemModule {}

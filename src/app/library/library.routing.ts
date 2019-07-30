@@ -5,7 +5,7 @@ import { LibraryListComponent } from './components/library-list/library-list.com
 import { LibraryModalComponent } from './components/library-items/components/library-modal/library-modal.component';
 import { LibrarySudokuComponent } from './components/library-items/components/library-sudoku/library-sudoku.component';
 import { LibrarySidebarComponent } from './components/library-items/components/library-sidebar/library-sidebar.component';
-import { LibraryItemsComponent } from './components/library-items/library-items.component';
+import { LibraryItemComponent } from './components/library-items/library-item.component';
 import { LibraryComponent } from './library.component';
 
 const routes: Routes = [
@@ -19,7 +19,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        component: LibraryItemsComponent,
+        component: LibraryItemComponent,
         children: [
           {
             path: 'modal',

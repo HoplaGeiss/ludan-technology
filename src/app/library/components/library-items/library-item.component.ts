@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { StoreService } from 'src/app/shared/services/store.service';
 import * as _ from 'underscore';
 
-import { CatalogueItem } from './../../../shared/models/catalogue-item.model';
+import { CatalogueItem } from '../../../shared/models/catalogue-item.model';
 
 @Component({
   selector: 'ludan-library-items',
-  styleUrls: ['./library-items.component.scss'],
+  styleUrls: ['./library-item.component.scss'],
   template: `
     <section
       class="library-item"
@@ -46,7 +46,7 @@ import { CatalogueItem } from './../../../shared/models/catalogue-item.model';
     </section>
   `
 })
-export class LibraryItemsComponent implements OnInit {
+export class LibraryItemComponent implements OnInit {
   public item: CatalogueItem;
 
   constructor(private storeService: StoreService, private router: Router) {}
