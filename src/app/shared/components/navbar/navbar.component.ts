@@ -42,7 +42,7 @@ export interface NavbarItemInterface {
   ],
   template: `
     <nav class="navbar">
-      <img src="assets/images/logo.png" routerLink="/" class="logo" />
+      <img src="assets/images/logo.WebP" routerLink="/" class="logo" />
       <div
         class="overlay"
         (click)="overlayClick()"

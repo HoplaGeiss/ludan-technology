@@ -27,7 +27,7 @@ import { StoreService } from './../../shared/services/store.service';
             <span itemprop="logo" itemscope="" itemtype="http://schema.org/imageObject"
               ><span
                 itemprop="url"
-                content="https://ludan.io/assets/images/logo.png"
+                content="https://ludan.io/assets/images/logo.WebP"
               ></span
             ></span>
           </span>
