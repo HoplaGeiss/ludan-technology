@@ -1,11 +1,14 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 @Component({
   selector: 'ludan-thumbnail',
   styleUrls: ['thumbnail.component.scss'],
   template: `
     <figure class="thumbnail">
       <div>
-        <img [src]="'assets/images/' + img" />
+        <img
+          defaultImage="assets/images/default.WebP"
+          [lazyLoad]="'assets/images/' + img"
+        />
         <figcaption class="hover-container" (click)="clickEvent.emit($event)">
           <div class="hover-container__background"></div>
           <div class="hover-container__content">

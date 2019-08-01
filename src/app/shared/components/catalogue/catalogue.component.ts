@@ -7,19 +7,14 @@ import { CatalogueItem } from './../../models/catalogue-item.model';
   styleUrls: ['catalogue.component.scss'],
   template: `
     <div class="catalogue" fxLayout="row wrap" fxLayoutAlign="center">
-      <div
-        (deferLoad)="showMyElement = true"
+      <ludan-thumbnail
         fxFlex.lt-md="100%"
         fxFlex.gt-sm="50%"
-        *ngFor="let catalogueItem of catalogueItems; let i = index"
+        *ngFor="let catalogueItem of catalogueItems"
         (clickEvent)="selectEvent.emit(catalogueItem)"
-      >
-        <ludan-thumbnail
-          *ngIf="showMyElement"
-          [name]="catalogueItem.label"
-          [img]="catalogueItem.img"
-        ></ludan-thumbnail>
-      </div>
+        [name]="catalogueItem.label"
+        [img]="catalogueItem.img"
+      ></ludan-thumbnail>
     </div>
   `
 })

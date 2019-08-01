@@ -4,10 +4,9 @@ import { NgModule } from '@angular/core';
 import { CatalogueComponent } from './catalogue.component';
 import { ThumbnailModule } from './thumbnail/thumbnail.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { DeferLoadModule } from '@trademe/ng-defer-load';
 
 @NgModule({
-  imports: [CommonModule, ThumbnailModule, FlexLayoutModule, DeferLoadModule],
+  imports: [CommonModule, ThumbnailModule, FlexLayoutModule],
   declarations: [CatalogueComponent],
   exports: [CatalogueComponent]
 })
