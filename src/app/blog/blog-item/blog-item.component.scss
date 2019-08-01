@@ -1,56 +1,24 @@
 @import '../../shared/styles/colours';
 @import '../../shared/styles/typography';
 @import '../../shared/styles/layout';
+@import '../../shared/styles/tags';
+@import '../../shared/styles/post-header';
 
 .blog-item {
   padding: 40px 0;
 
-  @media only screen and (max-width: $sm) {
-    padding-bottom: 20px;
+  .image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    margin: auto;
+    display: block;
   }
 
+  // Inside the markdown
   .article {
     font-size: 1.2em;
     @include font-family();
-
-    .title {
-      margin: 0;
-      font-weight: 600;
-      @include fluid-type(320px, 1200px, 24px, 40px);
-      color: ludan-color('primary');
-    }
-
-    .subtitle {
-      margin: 0;
-      @include fluid-type(320px, 1200px, 12px, 14px);
-      font-style: italic;
-      font-weight: 400;
-    }
-
-    .tags {
-      padding-top: 0;
-      margin-bottom: 20px;
-
-      .tag {
-        background: ludan-color('background');
-        color: ludan-color('primary');
-        padding: 5px 10px;
-        @include fluid-type(320px, 1200px, 12px, 14px);
-      }
-    }
-
-    .image {
-      height: 500px;
-      margin: auto;
-      display: block;
-    }
-
-    .separator {
-      width: 20%;
-      height: 1px;
-      margin: 30px auto;
-      background-color: ludan-color('grey', 'light');
-    }
 
     /deep/ h3 {
       color: ludan-color('primary');

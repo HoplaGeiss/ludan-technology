@@ -1,0 +1,15 @@
+.tags {
+  padding-top: 0;
+  margin-bottom: 20px;
+
+  .tag {
+    background: ludan-color('background');
+    color: ludan-color('primary');
+    padding: 5px 10px;
+    @include fluid-type(320px, 1200px, 12px, 14px);
+
+    &:not(:first-of-type) {
+      margin-left: 5px;
+    }
+  }
+}

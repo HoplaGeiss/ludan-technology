@@ -32,9 +32,8 @@ ng serve --host localIP
 - skills table look more ordered
 - make modal responsive
 - display date better
-- make the images on the blog responsive as they force a scrollbar on mobile
 - give the overview a min size so that it does not flicker on load
-- lazy load images
+- make all images responsive
 
 ### Blocked
 
@@ -44,4 +43,3 @@ ng serve --host localIP
 
 - blog post - SVG Masking in React
 - blog post - Saw Tooth with pure css
-- blog post - breadcrumb
