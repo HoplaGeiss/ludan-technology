@@ -25,12 +25,15 @@ ng serve --host localIP
 - find font
 - Spell check everything
 - use webP to reduce image size https://developers.google.com/speed/pagespeed/insight
-
+- add an exeption reporter
+-
 ### Medium priority
 
 - skills table look more ordered
 - make modal responsive
 - display date better
+- make the images on the blog responsive as they force a scrollbar on mobile
+- give the overview a min size so that it does not flicker on load
 
 ### Blocked
 
