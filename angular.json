@@ -27,11 +27,6 @@
               "src/styles.scss",
               "node_modules/prismjs/themes/prism-tomorrow.css"
             ],
-            // "stylePreprocessorOptions": {
-            //   "includePaths": [
-            //     "./src/app/shared/styles"
-            //   ]
-            // },
             "scripts": [
               "node_modules/marked/lib/marked.js",
               "node_modules/prismjs/prism.js",

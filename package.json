@@ -17,11 +17,12 @@
     "lint": "tslint --project tsconfig.json -c src/tslint.json 'src/**/*.ts'",
     "lint:fix": "tslint --project tsconfig.json -c src/tslint.json 'src/**/*.ts' --fix",
     "e2e": "ng e2e",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 6006",
     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
-    "build:client-and-server-bundles": "ng build --prod && ng run ludan-technology:server:production --bundleDependencies all"
+    "build:client-and-server-bundles": "ng build --prod && ng run ludan-technology:server:production --bundleDependencies all",
+    "build-storybook": "build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -38,9 +39,7 @@
     "@angular/router": "^8.1.1",
     "@nguniversal/express-engine": "^8.1.1",
     "@nguniversal/module-map-ngfactory-loader": "8.1.1",
-    "@storybook/addon-knobs": "^5.1.9",
-    "@storybook/addons": "^5.1.9",
-    "@storybook/angular": "^5.1.9",
+    "@trademe/ng-defer-load": "^3.0.1",
     "core-js": "^3.1.4",
     "express": "^4.15.2",
     "ngx-ludan-modal": "*",
@@ -61,6 +60,11 @@
     "@angular/compiler-cli": "^8.1.1",
     "@angular/language-service": "^8.1.1",
     "@babel/core": "^7.5.4",
+    "@storybook/addon-actions": "^5.1.10",
+    "@storybook/addon-links": "^5.1.10",
+    "@storybook/addon-notes": "^5.1.10",
+    "@storybook/addons": "^5.1.10",
+    "@storybook/angular": "^5.1.10",
     "@types/jasmine": "^3.3.13",
     "@types/jasminewd2": "~2.0.3",
     "babel-loader": "^8.0.6",
@@ -73,7 +77,6 @@
     "karma-coverage-istanbul-reporter": "^2.0.5",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
-    "npm-run-all": "^4.1.5",
     "protractor": "^5.4.2",
     "sass-lint": "^1.13.1",
     "sass-lint-auto-fix": "^0.17.0",
@@ -86,7 +89,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "run-p lint:fix"
+      "pre-push": "npm run lint:fix"
     }
   }
 }

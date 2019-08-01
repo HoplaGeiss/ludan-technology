@@ -10,7 +10,11 @@ import { ThumbnailModule } from './thumbnail.module';
     <div style="margin: auto; width: 60%; margin-top: 10%">
       <h1 style="border-bottom: 1px solid #ccc;">Thumbnail</h1>
       <div style="width: 80%; height: 400px;">
-        <ludan-thumbnail name="Example" img="default" (clickEvent)="openCaseStudy($event)"></ludan-thumbnail>
+        <ludan-thumbnail
+          name="Example"
+          img="sudoku.WebP"
+          (clickEvent)="openCaseStudy($event)"
+        ></ludan-thumbnail>
       </div>
     </div>
   `
@@ -27,7 +31,7 @@ class MockComponent implements OnDestroy, OnInit {
 
   openCaseStudy = caseStudy => {
     console.log('Open portolioItem', caseStudy);
-  }
+  };
 }
 
 storiesOf('Shared/Catalogue', module).add('Thumbnail', () => ({
