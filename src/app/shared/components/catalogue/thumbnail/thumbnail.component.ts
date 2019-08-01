@@ -5,7 +5,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   template: `
     <figure class="thumbnail">
       <div>
-        <img [src]="'assets/images/' + img + '.png'" />
+        <img [src]="'assets/images/' + img" />
         <figcaption class="hover-container" (click)="clickEvent.emit($event)">
           <div class="hover-container__background"></div>
           <div class="hover-container__content">

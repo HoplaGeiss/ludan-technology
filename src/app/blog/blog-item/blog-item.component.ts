@@ -44,11 +44,7 @@ import { StoreService } from './../../shared/services/store.service';
         <p class="tags" itemprop="keywords">
           <span *ngFor="let tag of blogItem.tags" class="tag">{{ tag }}</span>
         </p>
-        <img
-          itemprop="image"
-          [src]="'assets/images/' + blogItem.img + '.png'"
-          class="image"
-        />
+        <img itemprop="image" [src]="'assets/images/' + blogItem.img" class="image" />
         <div class="separator"></div>
         <markdown
           *ngIf="blogItem"
