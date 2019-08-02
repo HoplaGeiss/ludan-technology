@@ -35,7 +35,7 @@ export interface NavbarItemInterface {
     ]),
     trigger('toggleSidebar', [
       state('1', style({ transform: 'translateX(0)' })),
-      state('0', style({ transform: 'translateX(120px)' })),
+      state('0', style({ transform: 'translateX(200px)' })),
       transition('1 => 0', animate('200ms ease-out')),
       transition('0 => 1', animate('200ms 300ms ease-in'))
     ])

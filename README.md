@@ -26,12 +26,13 @@ ng serve --host localIP
 - Spell check everything
 - use webP to reduce image size https://developers.google.com/speed/pagespeed/insight
 - add an exeption reporter
+- make all images responsive
 
 ### Medium priority
 
 - skills table look more ordered
 - display date better
-- make all images responsive
+- add a nice image on the landing page
 
 ### Blocked
 
