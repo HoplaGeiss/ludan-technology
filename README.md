@@ -30,9 +30,7 @@ ng serve --host localIP
 ### Medium priority
 
 - skills table look more ordered
-- make modal responsive
 - display date better
-- give the overview a min size so that it does not flicker on load
 - make all images responsive
 
 ### Blocked
