@@ -12,21 +12,21 @@
       "name": "ngrx_guards_and_resolvers",
       "label": "NgRx guards and resolvers",
       "img": "guards.WebP",
-      "tags": ["angular 2+"]
+      "tags": ["angular 2+", "resolvers", "guards"]
     },
     {
       "date": "2017-08-04",
       "name": "dynamically_add_component",
       "label": "How to dynamically add components to the DOM with angular 4",
       "img": "dynamic.WebP",
-      "tags": ["angular 2+"]
+      "tags": ["angular 2+", "DOM", "dynamic"]
     },
     {
       "date": "2017-11-22",
       "name": "angular_unit_test_ng_on_changes",
       "label": "Angular Unit Test ng-on-changes",
       "img": "ng-on-changes.WebP",
-      "tags": ["angular 2+"]
+      "tags": ["angular 2+", "unit test", "ng-on-changes"]
     }
   ]
 }

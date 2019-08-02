@@ -43,6 +43,7 @@
     "express": "^4.15.2",
     "moment": "^2.24.0",
     "ng-lazyload-image": "^6.0.0",
+    "ngx-ludan-accordion": "0.0.1",
     "ngx-ludan-modal": "^1.1.0",
     "ngx-ludan-retirement-calculator": "0.0.2",
     "ngx-ludan-sidebar": "1.1.0",

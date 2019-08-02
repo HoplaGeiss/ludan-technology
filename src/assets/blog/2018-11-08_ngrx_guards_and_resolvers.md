@@ -1,6 +1,6 @@
 In this post, we will have a look at an example of an ngrx application using guards and resolvers. Based on this, we will see when guards and resolvers are best using with ngrx.
 
-Personally, I find one of the main advantages of using ngrx is to handle data in a more efficient way, e.g. not re-loading the data when it's already in state.
+I find one of the main advantages of using ngrx is to handle data more efficiently, e.g. not re-loading the data when it's already in state.
 
 All the example I found online while learning about ngrx were using guards, and I didn't quite understand why that was. When you look at the documentation of guards and resolver on angular's doc, it clearly states that:
 
@@ -10,7 +10,7 @@ All the example I found online while learning about ngrx were using guards, and 
 So after reading that I went ahead and tried to implement my next feature using a resolver, that didn't go so well for me, you will see why in a bit. Now let's get started and implement our little ngrx application.
 
 Our application is an online library and the data we are playing with are books and authors.
-Books are loaded with a gaurd and authors are loaded with a resolver.
+Books are loaded with a guard and authors are loaded with a resolver.
 
 If you are in a hurry, you can check out the source code here: [https://github.com/HoplaGeiss/hopla-resolver-guard](https://github.com/HoplaGeiss/hopla-resolver-guard)
 
@@ -18,7 +18,7 @@ Let's dive in!
 
 ### Routing file
 
-Let's start off with our routing file. As you can see books are protected by a guard and authors are loaded with a resolver.
+Let's start with our routing file. As you can see books are protected by a guard and authors are loaded with a resolver.
 
 ```typescript
 // library.routing.ts
@@ -87,7 +87,7 @@ export class BooksGuard implements CanActivate {
 ### Author resolver
 
 Since I didn't find any example of resolver using ngrx online, I pretty much created this on my own based on guards.
-As you can see the first part is identical to the guard, the only difference is at the end. Instead of returning an observable of true or false I am actually returning the data.
+As you can see the first part is identical to the guard, the only difference is at the end. Instead of returning an observable of true or false I am returning the data.
 
 ```typescript
 // authors.guard.ts
@@ -126,7 +126,7 @@ export class AuthorsResolver implements Resolve<Author[]> {
 ### Container displaying authors and books
 
 To finish let's see how the books and the authors are used in my component.
-The books are loaded in a classical way, by calling a selector.
+The books are loaded classically, by calling a selector.
 However, for the authors we don't need to access the state, we can get them directly from the router.
 
 At first, I thought that's an advantage as I don't need to import the store. However, then I realised that by doing so, I am not going to get the update to the authors from the state.

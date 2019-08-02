@@ -18,31 +18,31 @@
     font-size: 1.2em;
     @include font-family();
 
-    /deep/ h3 {
+    ::ng-deep h3 {
       color: ludan-color('primary');
       font-weight: 500;
       @include fluid-type(320px, 1200px, 20px, 34px);
     }
 
-    /deep/ code {
+    ::ng-deep code {
       background: ludan-color('background');
       padding: 0 5px;
       @include fluid-type(320px, 1200px, 14px, 18px);
     }
 
-    /deep/ pre code {
+    ::ng-deep pre code {
       background: none;
     }
 
-    /deep/ p {
+    ::ng-deep p {
       padding: 8px 0;
     }
 
-    /deep/ li {
+    ::ng-deep li {
       margin-bottom: 8px;
     }
 
-    /deep/ a {
+    ::ng-deep a {
       word-wrap: break-word;
     }
   }

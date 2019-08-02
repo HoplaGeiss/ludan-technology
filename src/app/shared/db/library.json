@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2019-08-02",
+      "name": "accordion",
+      "label": "Angular 8 Accordion",
+      "img": "accordion.WebP",
+      "tags": ["angular 2+", "angular 8", "accordion"],
+      "description": "An accordion and is a component which displays all the key information while leaving the user the possibility to find out more about each item by clicking on them.",
+      "url": "https://github.com/HoplaGeiss/ludan-accordion"
+    },
+    {
       "date": "2019-07-12",
       "name": "sidebar",
       "label": "Sidebar",

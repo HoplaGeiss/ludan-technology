@@ -7,6 +7,7 @@ import { LibrarySudokuComponent } from './components/library-item/components/lib
 import { LibrarySidebarComponent } from './components/library-item/components/library-sidebar/library-sidebar.component';
 // tslint:disable-next-line: max-line-length
 import { LibraryRetirementCalculatorComponent } from './components/library-item/components/library-retirement-calculator/library-retirement-calculator.component';
+import { LibraryAccordionComponent } from './components/library-item/components/library-accordion/library-accordion.component';
 import { LibraryItemComponent } from './components/library-item/library-item.component';
 import { LibraryComponent } from './library.component';
 
@@ -23,6 +24,11 @@ const routes: Routes = [
         path: '',
         component: LibraryItemComponent,
         children: [
+          {
+            path: 'accordion',
+            data: { name: 'accordion' },
+            component: LibraryAccordionComponent
+          },
           {
             path: 'retirement-calculator',
             data: { name: 'retirement-calculator' },

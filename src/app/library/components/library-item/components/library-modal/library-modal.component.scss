@@ -11,7 +11,7 @@
   }
 }
 
-/deep/ .modal {
+::ng-deep .modal {
   .body {
     padding: 10px;
   }

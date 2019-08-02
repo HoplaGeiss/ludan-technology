@@ -22,7 +22,7 @@ template: `
 
 ## Multiple contents
 
-If you would like to add multiple contents to a component you can still use `ng-content`, but in a slightly different way!
+If you would like to add multiple contents to a component you can still use `ng-content` but in a slightly different way!
 
 All you need to do is wrap your contents in divs and call them from your other component with a `select`.
 

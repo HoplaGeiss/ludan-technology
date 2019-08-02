@@ -5,6 +5,7 @@ import { LibraryModalModule } from './components/library-modal/library-modal.mod
 import { LibrarySudokuModule } from './components/library-sudoku/library-sudoku.module';
 import { LibrarySidebarModule } from './components/library-sidebar/library-sidebar.module';
 import { LibraryRetirementCalculatorModule } from './components/library-retirement-calculator/library-retirement-calculator.module';
+import { LibraryAccordionModule } from './components/library-accordion/library-accordion.module';
 import { LibraryItemComponent } from './library-item.component';
 import { CommonModule } from '@angular/common';
 
@@ -14,6 +15,7 @@ import { CommonModule } from '@angular/common';
     LibrarySudokuModule,
     LibrarySidebarModule,
     LibraryRetirementCalculatorModule,
+    LibraryAccordionModule,
     RouterModule,
     CommonModule
   ],
