@@ -5,6 +5,8 @@ import { LibraryListComponent } from './components/library-list/library-list.com
 import { LibraryModalComponent } from './components/library-item/components/library-modal/library-modal.component';
 import { LibrarySudokuComponent } from './components/library-item/components/library-sudoku/library-sudoku.component';
 import { LibrarySidebarComponent } from './components/library-item/components/library-sidebar/library-sidebar.component';
+// tslint:disable-next-line: max-line-length
+import { LibraryRetirementCalculatorComponent } from './components/library-item/components/library-retirement-calculator/library-retirement-calculator.component';
 import { LibraryItemComponent } from './components/library-item/library-item.component';
 import { LibraryComponent } from './library.component';
 
@@ -21,6 +23,11 @@ const routes: Routes = [
         path: '',
         component: LibraryItemComponent,
         children: [
+          {
+            path: 'retirement-calculator',
+            data: { name: 'retirement-calculator' },
+            component: LibraryRetirementCalculatorComponent
+          },
           {
             path: 'modal',
             data: { name: 'modal' },

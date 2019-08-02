@@ -43,5 +43,9 @@
     /deep/ li {
       margin-bottom: 8px;
     }
+
+    /deep/ a {
+      word-wrap: break-word;
+    }
   }
 }

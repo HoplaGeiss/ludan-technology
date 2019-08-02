@@ -2,9 +2,11 @@
 
 .content {
   box-sizing: border-box;
-  position: relative;
-  min-height: calc(100vh - #{$navbar-height} - #{$footer-height});
-  @media only screen and (max-width: $sm) {
-    min-height: calc(100vh - #{$navbar-height-sm} - #{$footer-height-sm});
-  }
+  flex-grow: 1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 120vh;
 }
