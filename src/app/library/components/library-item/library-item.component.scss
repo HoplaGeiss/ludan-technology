@@ -4,15 +4,15 @@
 @import '../../../shared/styles/post-header';
 
 .library-item {
-  padding: 40px 0;
-
-  &__description {
-    p {
-      text-align: justify;
-    }
-    a {
+  .description {
+    .source-code {
       margin-top: 5px;
       display: inline-block;
     }
+  }
+
+  .children {
+    display: flex;
+    justify-content: center;
   }
 }

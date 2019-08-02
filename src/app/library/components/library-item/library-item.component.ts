@@ -10,7 +10,7 @@ import { CatalogueItem } from '../../../shared/models/catalogue-item.model';
   styleUrls: ['./library-item.component.scss'],
   template: `
     <section
-      class="library-item"
+      class="library-item section"
       itemprop="exampleOfWork"
       itemscope=""
       itemtype="http://schema.org/WebPageElement"
@@ -23,6 +23,12 @@ import { CatalogueItem } from '../../../shared/models/catalogue-item.model';
           itemscope=""
           itemtype="http://schema.org/Organization"
           ><span itemprop="name">Ludan Technology Ltd |&nbsp;</span>
+          <span itemprop="logo" itemscope="" itemtype="http://schema.org/imageObject"
+            ><span
+              itemprop="url"
+              content="https://ludan.io/assets/images/logo.WebP"
+            ></span
+          ></span>
         </span>
         <span
           class="author"
@@ -37,12 +43,17 @@ import { CatalogueItem } from '../../../shared/models/catalogue-item.model';
       <p class="tags" itemprop="keywords">
         <span *ngFor="let tag of item.tags" class="tag">{{ tag }}</span>
       </p>
-      <div class="library-item__description">
+      <div class="description">
         <p>{{ item.description }}</p>
-        <a [href]="item.url" itemprop="isBasedOn">{{ item.url }}</a>
+        <p class="source-code">
+          <span>Source code: </span
+          ><a [href]="item.url" itemprop="isBasedOn">{{ item.url }}</a>
+        </p>
         <div class="separator"></div>
       </div>
-      <router-outlet></router-outlet>
+      <div class="children">
+        <router-outlet></router-outlet>
+      </div>
     </section>
   `
 })

@@ -1,8 +1,10 @@
 @import '../../../shared/styles/colours.scss';
 @import '../../../shared/styles/typography';
 @import '../../../shared/styles/layout';
+@import '../../../shared/styles/typography';
 
 .breadcrumbs {
+  @include font-family();
   padding: 20px $side-margin 0 $side-margin;
 
   @media only screen and (max-width: $xs) {

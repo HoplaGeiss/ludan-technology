@@ -1,22 +1,14 @@
 @import '../../../../../shared/styles/button.scss';
 @import '../../../../../shared/styles/typography';
 
-.source-code-row,
 .demo-row {
   display: flex;
   align-items: center;
-}
-
-.demo-row {
   padding-bottom: 10px;
 
-  button {
+  .ludan-button {
     margin-left: 10px;
   }
-}
-
-.source-code-row {
-  margin-top: 5px;
 }
 
 /deep/ .modal {

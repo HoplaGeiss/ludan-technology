@@ -1,36 +1,40 @@
 {
   "items": [
     {
-      "date": "2019-04-19",
-      "name": "retirement-calculator",
-      "label": "Retirement Calculator",
-      "img": "calculator.WebP",
-      "tags": ["angular 2+", "angular 8", "form"],
-      "url": "https://github.com/HoplaGeiss/ludan-retirement-calculator"
-    },
-    {
-      "id": "1",
-      "name": "modal",
-      "label": "Modal",
-      "img": "modal.WebP",
-      "description": "Modals are some of the most useful components for web development. It pays off to develop a simple re-usable components. In this example I am using angular transclusion, to pass in some custom html elements for the body and the footer. That allows for maximum modularity and re-usability. Have a look at the source code for more details:",
-      "url": "https://github.com/HoplaGeiss/ludan-modal"
-    },
-    {
-      "id": "2",
-      "name": "sudoku",
-      "label": "Sudoku",
-      "img": "sudoku.WebP",
-      "description": "A sudoku puzzle is a very fun component to develop. However, it's deceptively hard to implement. The tricky bit is the service that generates the sudoku's solution. Have a look at the code source for more details:",
-      "url": "https://github.com/HoplaGeiss/ludan-sudoku"
-    },
-    {
-      "id": "3",
+      "date": "2019-07-12",
       "name": "sidebar",
       "label": "Sidebar",
       "img": "sidebar.WebP",
-      "description": "I have never developed a website that did not need some shape or form of sidebar. Have a look at the code source for more details:",
+      "tags": ["angular 2+", "angular 8", "sidebar"],
+      "description": "Every website needs a sidebar. This sidebar relies on CSS translations.",
       "url": "https://github.com/HoplaGeiss/ludan-sidebar"
+    },
+    {
+      "date": "2019-04-19",
+      "name": "retirement-calculator",
+      "label": "Retirement Calculator",
+      "img": "retirement-calculator.WebP",
+      "tags": ["angular 2+", "angular 8", "form", "FIRE"],
+      "description": "Lately I have been reeding up on the FIRE movement and I decided to crunch up the numbers to see how far I am from retirement. After that, I thought I would develop an angular form to share the calculator I created.",
+      "url": "https://github.com/HoplaGeiss/ludan-retirement-calculator"
+    },
+    {
+      "date": "2019-04-17",
+      "name": "sudoku",
+      "label": "Sudoku",
+      "img": "sudoku.WebP",
+      "tags": ["angular 2+", "angular 8", "sudoku"],
+      "description": "A sudoku puzzle is a very fun component to develop. However, it's deceptively hard to implement. The tricky bit is the service that generates the sudoku's solution.",
+      "url": "https://github.com/HoplaGeiss/ludan-sudoku"
+    },
+    {
+      "date": "2019-04-12",
+      "name": "modal",
+      "label": "Modal",
+      "img": "modal.WebP",
+      "tags": ["angular 2+", "angular 8", "modal"],
+      "description": "Modals are some of the most useful components for web development. It pays off to develop a simple re-usable component. In this example I am using angular transclusion, to pass in some custom HTML elements for the body and the footer. That allows for maximum modularity and re-usability.",
+      "url": "https://github.com/HoplaGeiss/ludan-modal"
     }
   ]
 }
