@@ -45,7 +45,7 @@
     "ng-lazyload-image": "^6.0.0",
     "ngx-ludan-accordion": "0.0.1",
     "ngx-ludan-modal": "^1.1.0",
-    "ngx-ludan-retirement-calculator": "0.0.2",
+    "ngx-ludan-retirement-calculator": "^1.0.0",
     "ngx-ludan-sidebar": "1.1.0",
     "ngx-ludan-sudoku": "^1.1.0",
     "ngx-markdown": "^8.1.0",

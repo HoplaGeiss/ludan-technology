@@ -58,7 +58,7 @@ DELETE - 2017-01-23-angular2-pipe-does-not-detect-change.md
 DELETE - 2017-02-17-atom-plugins.md
 DELETE - 2017-03-07-create-npm-package.md
 2017-03-07-create-pre-bootstrap-animation.md
-2017-03-28-create-angular-4-accordion.md
+DONE - 2017-03-28-create-angular-4-accordion.md
 DONE - 2017-04-03-create-angular-4-modal.md
 2017-06-13-node-package-json-scripts.md
 DELETE - 2017-07-26-angular-4-nested-routing.md
