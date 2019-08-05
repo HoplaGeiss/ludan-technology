@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2019-08-05",
+      "name": "dropdown",
+      "label": "Angular 8 Dropdown",
+      "img": "dropdown.WebP",
+      "tags": ["angular 2+", "angular 8", "dropdown"],
+      "description": "An accordion is a simple component that can be easily coded in pure HTML and css, but with the help of Angular you can add some more goodies, like having a default item selected and hiding the current selection from the list.",
+      "url": "https://github.com/HoplaGeiss/ludan-dropdown"
+    },
+    {
       "date": "2019-08-02",
       "name": "accordion",
       "label": "Angular 8 Accordion",

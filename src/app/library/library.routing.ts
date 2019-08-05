@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import { LibraryListComponent } from './components/library-list/library-list.component';
+import { LibraryAccordionComponent } from './components/library-item/components/library-accordion/library-accordion.component';
+import { LibraryDropdownComponent } from './components/library-item/components/library-dropdown/library-dropdown.component';
 import { LibraryModalComponent } from './components/library-item/components/library-modal/library-modal.component';
-import { LibrarySudokuComponent } from './components/library-item/components/library-sudoku/library-sudoku.component';
-import { LibrarySidebarComponent } from './components/library-item/components/library-sidebar/library-sidebar.component';
 // tslint:disable-next-line: max-line-length
 import { LibraryRetirementCalculatorComponent } from './components/library-item/components/library-retirement-calculator/library-retirement-calculator.component';
-import { LibraryAccordionComponent } from './components/library-item/components/library-accordion/library-accordion.component';
+import { LibrarySidebarComponent } from './components/library-item/components/library-sidebar/library-sidebar.component';
+import { LibrarySudokuComponent } from './components/library-item/components/library-sudoku/library-sudoku.component';
 import { LibraryItemComponent } from './components/library-item/library-item.component';
+import { LibraryListComponent } from './components/library-list/library-list.component';
 import { LibraryComponent } from './library.component';
 
 const routes: Routes = [
@@ -24,6 +24,11 @@ const routes: Routes = [
         path: '',
         component: LibraryItemComponent,
         children: [
+          {
+            path: 'dropdown',
+            data: { name: 'dropdown' },
+            component: LibraryDropdownComponent
+          },
           {
             path: 'accordion',
             data: { name: 'accordion' },

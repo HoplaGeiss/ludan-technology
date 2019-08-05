@@ -1,13 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
-import { LibraryModalModule } from './components/library-modal/library-modal.module';
-import { LibrarySudokuModule } from './components/library-sudoku/library-sudoku.module';
-import { LibrarySidebarModule } from './components/library-sidebar/library-sidebar.module';
-import { LibraryRetirementCalculatorModule } from './components/library-retirement-calculator/library-retirement-calculator.module';
 import { LibraryAccordionModule } from './components/library-accordion/library-accordion.module';
+import { LibraryDropdownModule } from './components/library-dropdown/library-dropdown.module';
+import { LibraryModalModule } from './components/library-modal/library-modal.module';
+import { LibraryRetirementCalculatorModule } from './components/library-retirement-calculator/library-retirement-calculator.module';
+import { LibrarySidebarModule } from './components/library-sidebar/library-sidebar.module';
+import { LibrarySudokuModule } from './components/library-sudoku/library-sudoku.module';
 import { LibraryItemComponent } from './library-item.component';
-import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
     LibrarySidebarModule,
     LibraryRetirementCalculatorModule,
     LibraryAccordionModule,
+    LibraryDropdownModule,
     RouterModule,
     CommonModule
   ],
