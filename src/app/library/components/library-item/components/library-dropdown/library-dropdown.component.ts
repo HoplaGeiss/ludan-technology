@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       ></ludan-dropdown>
     </div>
   `,
-  styles: ['.wrapper { width: 250px; margin-top: 20px }']
+  styles: ['.wrapper { width: 400px }']
 })
 export class LibraryDropdownComponent {
   items = ['item 1', 'item 2', 'item 3', 'item 4'];

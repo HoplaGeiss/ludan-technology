@@ -7,6 +7,7 @@ import { LibraryModalModule } from './components/library-modal/library-modal.mod
 import { LibraryRetirementCalculatorModule } from './components/library-retirement-calculator/library-retirement-calculator.module';
 import { LibrarySidebarModule } from './components/library-sidebar/library-sidebar.module';
 import { LibrarySudokuModule } from './components/library-sudoku/library-sudoku.module';
+import { LibraryTagsModule } from './components/library-tags/library-tags.module';
 import { LibraryItemComponent } from './library-item.component';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { LibraryItemComponent } from './library-item.component';
     LibraryRetirementCalculatorModule,
     LibraryAccordionModule,
     LibraryDropdownModule,
+    LibraryTagsModule,
     RouterModule,
     CommonModule
   ],

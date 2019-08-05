@@ -2,6 +2,15 @@
   "items": [
     {
       "date": "2019-08-05",
+      "name": "tags",
+      "label": "Angular 8 Tags",
+      "img": "tags.WebP",
+      "tags": ["angular 2+", "angular 8", "tags"],
+      "description": "Here is a simple example of an angular 8 implementation of a list of tags.",
+      "url": "https://github.com/HoplaGeiss/ludan-tags"
+    },
+    {
+      "date": "2019-08-05",
       "name": "dropdown",
       "label": "Angular 8 Dropdown",
       "img": "dropdown.WebP",
