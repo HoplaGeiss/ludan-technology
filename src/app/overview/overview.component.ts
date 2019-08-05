@@ -85,9 +85,15 @@ export class OverviewComponent implements OnInit {
   constructor(private storeService: StoreService, private router: Router) {}
 
   ngOnInit() {
-    this.portfolioItems = this.storeService.portfolioItemsSubject.getValue();
-    this.blogItems = this.storeService.blogItemsSubject.getValue();
-    this.libraryItems = this.storeService.libraryItemsSubject.getValue();
+    this.portfolioItems = this.storeService.portfolioItemsSubject
+      .getValue()
+      .filter(item => item.featured);
+    this.blogItems = this.storeService.blogItemsSubject
+      .getValue()
+      .filter(item => item.featured);
+    this.libraryItems = this.storeService.libraryItemsSubject
+      .getValue()
+      .filter(item => item.featured);
   }
 
   selectItem = (tab: tabs, item: CatalogueItem) => {

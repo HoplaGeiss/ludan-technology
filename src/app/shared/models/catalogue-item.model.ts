@@ -7,6 +7,7 @@ export interface CatalogueItemInterface {
   url?: string;
   date?: string;
   tags?: string[];
+  featured?: boolean;
 }
 
 export class CatalogueItem implements CatalogueItemInterface {
@@ -18,6 +19,7 @@ export class CatalogueItem implements CatalogueItemInterface {
   url?: string;
   date?: string;
   tags?: string[];
+  featured?: boolean;
 
   constructor(catalogueItem: any) {
     this.id = catalogueItem.id;
@@ -28,5 +30,6 @@ export class CatalogueItem implements CatalogueItemInterface {
     this.url = catalogueItem.url;
     this.date = catalogueItem.date;
     this.tags = catalogueItem.tags;
+    this.featured = catalogueItem.featured;
   }
 }
