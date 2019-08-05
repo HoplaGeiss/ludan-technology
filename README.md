@@ -31,15 +31,16 @@ ng serve --host localIP
 - skills table look more ordered
 - display date better
 - add a nice image on the landing page
+- refactor the catalogue component ( improve grouping )
 
 ### Blocked
 
 - Add ads
 
-## Post / Lib
+## Posts
 
-- blog post - SVG Masking in React
-- blog post - Saw Tooth with pure css
+- SVG Masking in React
+- Saw Tooth with pure css
 
 ## Old post
 
