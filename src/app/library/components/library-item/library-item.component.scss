@@ -15,4 +15,10 @@
     display: flex;
     justify-content: center;
   }
+
+  .datePublished,
+  .dateModified,
+  .keywords {
+    display: none;
+  }
 }

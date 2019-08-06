@@ -5,12 +5,22 @@
 @import '../../shared/styles/post-header';
 
 .blog-item {
+  .datePublished,
+  .keywords,
+  .dateModiefied {
+    display: none;
+  }
+
   .image {
     width: auto;
     height: auto;
     max-width: 100%;
     margin: auto;
     display: block;
+  }
+
+  .imageSchema {
+    display: none;
   }
 
   // Inside the markdown

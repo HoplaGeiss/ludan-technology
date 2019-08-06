@@ -2,6 +2,7 @@
   "items": [
     {
       "date": "2019-08-01",
+      "dateModified": "2019-08-01",
       "name": "angular_breadcrumb",
       "label": "Create a bread crumb with angular 8",
       "img": "breadcrumb.WebP",
@@ -10,6 +11,7 @@
     },
     {
       "date": "2018-11-08",
+      "dateModified": "2019-11-08",
       "name": "ngrx_guards_and_resolvers",
       "label": "NgRx guards and resolvers",
       "img": "guards.WebP",
@@ -18,6 +20,7 @@
     },
     {
       "date": "2017-08-04",
+      "dateModified": "2017-08-04",
       "name": "dynamically_add_component",
       "label": "How to dynamically add components to the DOM with angular 4",
       "img": "dynamic.WebP",
@@ -26,6 +29,7 @@
     },
     {
       "date": "2017-11-22",
+      "dateModified": "2017-11-22",
       "name": "angular_unit_test_ng_on_changes",
       "label": "Angular Unit Test ng-on-changes",
       "img": "ng-on-changes.WebP",

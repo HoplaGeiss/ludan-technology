@@ -74,7 +74,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   formatCatalogueItem = (items: any[]): CatalogueItem[] => {
     return items.map(libraryItem => {
-      libraryItem.date = Date.parse(libraryItem.date);
+      libraryItem.dateUTC = new Date(libraryItem.date);
       return libraryItem;
     });
   };

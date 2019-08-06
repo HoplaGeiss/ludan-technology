@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { StoreService } from 'src/app/shared/services/store.service';
 import * as _ from 'underscore';
-
 import { CatalogueItem } from '../../../shared/models/catalogue-item.model';
 
 @Component({
@@ -22,7 +21,8 @@ import { CatalogueItem } from '../../../shared/models/catalogue-item.model';
           itemprop="publisher"
           itemscope=""
           itemtype="http://schema.org/Organization"
-          ><span itemprop="name">Ludan Technology Ltd |&nbsp;</span>
+          ><span itemprop="name">Ludan Technology Ltd</span>
+          <span>&nbsp;|&nbsp;</span>
           <span itemprop="logo" itemscope="" itemtype="http://schema.org/imageObject"
             ><span
               itemprop="url"
@@ -38,13 +38,22 @@ import { CatalogueItem } from '../../../shared/models/catalogue-item.model';
           ><span itemprop="name">Gabriel Muller</span>
         </span>
         <span>&nbsp;|&nbsp;</span>
-        <span class="date" itemprop="datePublished">{{
-          item.date | date: 'MMM d, y'
-        }}</span>
+        <span class="date">{{ item.dateUTC | date: 'MMM d, y' }}</span>
+        <span class="datePublished" itemprop="datePublished">{{ item.date }}</span>
+        <span class="dateModified" itemprop="dateModified">
+          <span *ngIf="item.dateModified">{{ item.dateModified }}</span>
+          <span *ngIf="!item.dateModified">{{ item.date }}</span>
+        </span>
       </p>
-      <p class="tags" itemprop="keywords">
+      <p class="tags">
         <span *ngFor="let tag of item.tags" class="tag">{{ tag }}</span>
       </p>
+      <span itemprop="keywords" class="keywords">
+        <span *ngFor="let tag of item.tags; let last = last" class="tag">
+          <span>{{ tag }}</span>
+          <span *ngIf="!last">,&nbsp;</span>
+        </span>
+      </span>
       <div class="description">
         <p>{{ item.description }}</p>
         <p class="source-code">
@@ -61,6 +70,7 @@ import { CatalogueItem } from '../../../shared/models/catalogue-item.model';
 })
 export class LibraryItemComponent implements OnInit {
   public item: CatalogueItem;
+  @ViewChild('datePublished', { static: false }) datePublished: ElementRef;
 
   constructor(private storeService: StoreService, private router: Router) {}
 

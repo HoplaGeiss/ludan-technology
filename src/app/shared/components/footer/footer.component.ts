@@ -29,6 +29,9 @@ import { Component } from '@angular/core';
         itemtype="http://schema.org/Organization"
       >
         <span itemprop="legalName">Ludan Technology Ltd.</span>
+        <span itemprop="logo" itemscope="" itemtype="http://schema.org/imageObject"
+          ><span itemprop="url" content="https://ludan.io/assets/images/logo.WebP"></span
+        ></span>
       </div>
     </div>
   `

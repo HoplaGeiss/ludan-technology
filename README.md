@@ -23,6 +23,8 @@ ng serve --host localIP
 
 - add an exeption reporter
 - make all images responsive
+- breadcrumb schema
+- schema for list of posts and libs
 
 ### Medium priority
 
