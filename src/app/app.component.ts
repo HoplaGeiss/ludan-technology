@@ -3,10 +3,10 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import * as _ from 'underscore';
-import * as libraryItems from './shared/db/library.json';
-import * as blogItems from './shared/db/blog.json';
-
 import { NavbarItemInterface } from './shared/components/navbar/navbar.component';
+import * as blogItemsJSON from './shared/db/blog.json';
+import * as libraryItemsJSON from './shared/db/library.json';
+import { CatalogueItem } from './shared/models/catalogue-item.model';
 import { StoreService } from './shared/services/store.service';
 
 @Component({
@@ -65,9 +65,19 @@ export class AppComponent implements OnInit, OnDestroy {
       { id: '2', name: 'managed_24_7', label: 'Managed 24/7', img: 'm247' }
     ]);
 
-    this.storeService.libraryItemsSubject.next((libraryItems as any).items);
-    this.storeService.blogItemsSubject.next((blogItems as any).items);
+    const libraryItems = this.formatCatalogueItem((libraryItemsJSON as any).items);
+    const blogItems = this.formatCatalogueItem((blogItemsJSON as any).items);
+
+    this.storeService.libraryItemsSubject.next(libraryItems);
+    this.storeService.blogItemsSubject.next(blogItems);
   }
+
+  formatCatalogueItem = (items: any[]): CatalogueItem[] => {
+    return items.map(libraryItem => {
+      libraryItem.date = Date.parse(libraryItem.date);
+      return libraryItem;
+    });
+  };
 
   navigate = tab => {
     this.router.navigate(['./' + tab.name], {

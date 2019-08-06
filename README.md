@@ -21,15 +21,12 @@ ng serve --host localIP
 
 ### Low priority
 
-- colour scheme
-- find font
 - add an exeption reporter
 - make all images responsive
 
 ### Medium priority
 
 - skills table look more ordered
-- display date better
 - add a nice image on the landing page
 - refactor the catalogue component ( improve grouping )
 

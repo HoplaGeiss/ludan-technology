@@ -38,7 +38,9 @@ import { StoreService } from './../../shared/services/store.service';
           ><span itemprop="name">Gabriel Muller</span>
         </span>
         <span>&nbsp;|&nbsp;</span>
-        <span class="date" itemprop="datePublished">{{ blogItem.date }}</span>
+        <span class="date" itemprop="datePublished">{{
+          blogItem.date | date: 'MMM d, y'
+        }}</span>
       </p>
       <p class="tags" itemprop="keywords">
         <span *ngFor="let tag of blogItem.tags" class="tag">{{ tag }}</span>

@@ -5,7 +5,7 @@ export interface CatalogueItem {
   img?: string;
   description?: string;
   url?: string;
-  date?: string;
+  date?: Date;
   tags?: string[];
   featured?: boolean;
 }

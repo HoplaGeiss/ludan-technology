@@ -38,7 +38,9 @@ import { CatalogueItem } from '../../../shared/models/catalogue-item.model';
           ><span itemprop="name">Gabriel Muller</span>
         </span>
         <span>&nbsp;|&nbsp;</span>
-        <span class="date" itemprop="datePublished">{{ item.date }}</span>
+        <span class="date" itemprop="datePublished">{{
+          item.date | date: 'MMM d, y'
+        }}</span>
       </p>
       <p class="tags" itemprop="keywords">
         <span *ngFor="let tag of item.tags" class="tag">{{ tag }}</span>
