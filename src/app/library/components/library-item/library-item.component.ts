@@ -62,9 +62,7 @@ import { CatalogueItem } from '../../../shared/models/catalogue-item.model';
         </p>
         <div class="separator"></div>
       </div>
-      <div class="children">
-        <router-outlet></router-outlet>
-      </div>
+      <router-outlet></router-outlet>
     </section>
   `
 })

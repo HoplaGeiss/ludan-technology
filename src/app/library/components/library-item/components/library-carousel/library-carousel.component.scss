@@ -1,0 +1,27 @@
+$primary: #e3875a;
+$grey: #dddddd;
+
+.arrow {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  .icon {
+    margin-bottom: 10px;
+  }
+
+  &.active {
+    background-color: $primary;
+    color: white;
+    .icon {
+      fill: white;
+    }
+  }
+
+  &:hover:not(.active) {
+    background: $grey;
+  }
+}

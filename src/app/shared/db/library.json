@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2019-08-08",
+      "name": "carousel",
+      "label": "Angular 8 Carousel",
+      "img": "carousel.WebP",
+      "tags": ["angular 2+", "angular 8", "carousel"],
+      "description": "A carousel is a fairly hard component to develop, but it is very useful to display a list of items.",
+      "url": "https://github.com/HoplaGeiss/ludan-carousel"
+    },
+    {
       "date": "2019-08-05",
       "name": "tags",
       "label": "Angular 8 Tags",

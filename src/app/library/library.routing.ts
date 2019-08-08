@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LibraryAccordionComponent } from './components/library-item/components/library-accordion/library-accordion.component';
+import { LibraryCarouselComponent } from './components/library-item/components/library-carousel/library-carousel.component';
 import { LibraryDropdownComponent } from './components/library-item/components/library-dropdown/library-dropdown.component';
 import { LibraryModalComponent } from './components/library-item/components/library-modal/library-modal.component';
 // tslint:disable-next-line: max-line-length
@@ -25,6 +26,11 @@ const routes: Routes = [
         path: '',
         component: LibraryItemComponent,
         children: [
+          {
+            path: 'carousel',
+            data: { name: 'carousel' },
+            component: LibraryCarouselComponent
+          },
           {
             path: 'tags',
             data: { name: 'tags' },

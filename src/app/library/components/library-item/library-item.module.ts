@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LibraryAccordionModule } from './components/library-accordion/library-accordion.module';
+import { LibraryCarouselModule } from './components/library-carousel/library-carousel.module';
 import { LibraryDropdownModule } from './components/library-dropdown/library-dropdown.module';
 import { LibraryModalModule } from './components/library-modal/library-modal.module';
 import { LibraryRetirementCalculatorModule } from './components/library-retirement-calculator/library-retirement-calculator.module';
@@ -19,6 +20,7 @@ import { LibraryItemComponent } from './library-item.component';
     LibraryAccordionModule,
     LibraryDropdownModule,
     LibraryTagsModule,
+    LibraryCarouselModule,
     RouterModule,
     CommonModule
   ],
