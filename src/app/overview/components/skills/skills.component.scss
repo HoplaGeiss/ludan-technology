@@ -12,15 +12,15 @@
     margin-bottom: 40px;
   }
 
-  &__title {
+  .title {
     margin-top: 0;
   }
 
-  &__subtitle {
+  .subtitle {
     color: ludan-color('primary');
   }
 
-  &__section {
+  .section {
     text-align: center;
     padding: 20px;
 
@@ -32,9 +32,25 @@
     }
 
     @media only screen and (min-width: $gt-sm) {
+      p:first-of-type {
+        height: 90px;
+      }
+
       &:not(:last-child) {
         border-right: 1px solid ludan-color('grey', 'light');
         border-bottom: 0;
+      }
+    }
+
+    @media only screen and (min-width: $gt-md) {
+      p:first-of-type {
+        height: 80px;
+      }
+    }
+
+    @media only screen and (min-width: $gt-lg) {
+      p:first-of-type {
+        height: 60px;
       }
     }
 

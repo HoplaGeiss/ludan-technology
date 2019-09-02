@@ -24,10 +24,12 @@ enum tabs {
       <section class="description">
         <h3 class="description__title">Hi, I’m Gabriel. Nice to meet you.</h3>
         <p class="description__text">
-          Since beginning my journey as software developer nearly 5 years ago, I have
-          worked for startups, small businesses and FTSE 100 businesses to create mobile
-          and web applications. I'm quietly confident, naturally curious, and perpetually
-          working on improving my chops one design problem at a time.
+          Since beginning my journey as a software developer 5 years ago, I have worked
+          for startups, small businesses and FTSE 100 businesses to create web
+          applications. I specialise in green-field projects where I get to architect and
+          build new and exciting applications from the ground up. So far, I have been the
+          lead on 3 projects and built world-class applications using the latest
+          technologies.
         </p>
       </section>
       <ludan-skills></ludan-skills>

@@ -28,7 +28,6 @@ ng serve --host localIP
 
 ### Medium priority
 
-- skills table look more ordered
 - add a nice image on the landing page
 - refactor the catalogue component ( improve grouping )
 
