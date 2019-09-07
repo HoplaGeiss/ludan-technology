@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2019-09-07",
+      "dateModified": "2019-09-07",
+      "name": "jest_testing_express_request",
+      "label": "Test Express Request with Jest",
+      "img": "jestExpress.WebP",
+      "tags": ["express", "jest", "testing"],
+      "featured": false
+    },
+    {
       "date": "2019-08-01",
       "dateModified": "2019-08-01",
       "name": "angular_breadcrumb",
