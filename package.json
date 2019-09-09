@@ -86,7 +86,7 @@
     "protractor": "^5.4.2",
     "sass-lint": "^1.13.1",
     "sass-lint-auto-fix": "^0.17.0",
-    "storybook-readme": "^5.0.5",
+    "storybook-readme": "^5.0.8",
     "ts-loader": "^6.0.4",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",

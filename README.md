@@ -30,6 +30,7 @@ ng serve --host localIP
 
 - add a nice image on the landing page
 - refactor the catalogue component ( improve grouping )
+- Show title on posts / libs
 
 ### Blocked
 
@@ -37,7 +38,6 @@ ng serve --host localIP
 
 ## Posts
 
-- SVG Masking in React
 - Saw Tooth with pure css
 
 ## Old post
