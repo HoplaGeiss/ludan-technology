@@ -8,7 +8,7 @@ import { CatalogueModule } from './catalogue.module';
 @Component({
   selector: 'ludan-story',
   template: `
-    <div style="margin: auto; width: 60%; margin-top: 10%">
+    <div style="margin: auto; width: 100%; margin-top: 10%">
       <h1 style="border-bottom: 1px solid #ccc;">Catalogue</h1>
       <div style="height: 500px">
         <ludan-catalogue

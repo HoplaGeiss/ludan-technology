@@ -75,7 +75,6 @@
     "@types/jasminewd2": "~2.0.3",
     "babel-loader": "^8.0.6",
     "codelyzer": "^5.0.1",
-    "husky": "^3.0.2",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "^4.2.0",
@@ -84,18 +83,12 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
     "protractor": "^5.4.2",
-    "sass-lint": "^1.13.1",
-    "sass-lint-auto-fix": "^0.17.0",
     "storybook-readme": "^5.0.8",
     "ts-loader": "^6.0.4",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
     "typescript": "^3.5.3",
+    "webpack-bundle-analyzer": "^3.4.1",
     "webpack-cli": "^3.3.6"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run lint:fix"
-    }
   }
 }

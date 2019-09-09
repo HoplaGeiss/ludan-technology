@@ -6,10 +6,8 @@ import { CatalogueItem } from './../../models/catalogue-item.model';
   selector: 'ludan-catalogue',
   styleUrls: ['catalogue.component.scss'],
   template: `
-    <div class="catalogue" fxLayout="row wrap" fxLayoutAlign="center">
+    <div class="catalogue">
       <ludan-thumbnail
-        fxFlex.lt-md="100%"
-        fxFlex.gt-sm="50%"
         *ngFor="let catalogueItem of catalogueItems"
         (clickEvent)="selectEvent.emit(catalogueItem)"
         [name]="catalogueItem.label"

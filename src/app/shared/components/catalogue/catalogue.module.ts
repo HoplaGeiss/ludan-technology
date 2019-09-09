@@ -3,10 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { CatalogueComponent } from './catalogue.component';
 import { ThumbnailModule } from './thumbnail/thumbnail.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  imports: [CommonModule, ThumbnailModule, FlexLayoutModule],
+  imports: [CommonModule, ThumbnailModule],
   declarations: [CatalogueComponent],
   exports: [CatalogueComponent]
 })
