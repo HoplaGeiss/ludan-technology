@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2019-09-09",
+      "dateModified": "2019-09-09",
+      "name": "react_svg_masking",
+      "label": "React SVG Masking",
+      "img": "heart.WebP",
+      "tags": ["React", "SVG"],
+      "featured": false
+    },
+    {
       "date": "2019-09-07",
       "dateModified": "2019-09-07",
       "name": "jest_testing_express_request",
