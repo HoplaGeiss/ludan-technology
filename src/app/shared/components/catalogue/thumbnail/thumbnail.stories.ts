@@ -11,7 +11,7 @@ import { ThumbnailModule } from './thumbnail.module';
       <h1 style="border-bottom: 1px solid #ccc;">Thumbnail</h1>
       <div style="width: 80%; height: 400px;">
         <ludan-thumbnail
-          name="Example"
+          name="This is an example of a sudoku. By the way it's a really long name"
           img="sudoku.WebP"
           (clickEvent)="openCaseStudy($event)"
         ></ludan-thumbnail>
