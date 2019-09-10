@@ -29,7 +29,6 @@ ng serve --host localIP
 ### Medium priority
 
 - add a nice image on the landing page
-- Show title on posts / libs
 
 ### Blocked
 
@@ -59,6 +58,15 @@ N/A
 2017-11-29-angular5-tabs.md
 2017-11-30-angular5-search-filter.md
 2017-12-01-angular5-input-directive.md
+
+##### Create blog post for libs
+- accordion
+- carousel
+- modal
+- retirement calc
+- sidebar
+- sudoku
+- tags
 
 ##### DELETE
 DELETE - 2017-07-26-angular-4-nested-routing.md

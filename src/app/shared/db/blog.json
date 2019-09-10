@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2019-09-10",
+      "dateModified": "2019-09-10",
+      "name": "angular_dropdown",
+      "label": "Angular Dropdown",
+      "img": "dropdown.WebP",
+      "tags": ["Angular 2+", "Dropdown", "Angular 8"],
+      "featured": false
+    },
+    {
       "date": "2019-09-09",
       "dateModified": "2019-09-09",
       "name": "react_svg_masking",
@@ -15,16 +24,16 @@
       "name": "jest_testing_express_request",
       "label": "Test Express Request with Jest",
       "img": "jestExpress.WebP",
-      "tags": ["express", "jest", "testing"],
+      "tags": ["Express", "Jest", "Testing"],
       "featured": false
     },
     {
       "date": "2019-08-01",
       "dateModified": "2019-08-01",
       "name": "angular_breadcrumb",
-      "label": "Create a bread crumb with angular 8",
+      "label": "Create a bread crumb with Angular 8",
       "img": "breadcrumb.WebP",
-      "tags": ["angular 2+", "angular 8", "breadcrumb"],
+      "tags": ["Angular 2+", "Angular 8", "Breadcrumb"],
       "featured": true
     },
     {
@@ -33,7 +42,7 @@
       "name": "ngrx_guards_and_resolvers",
       "label": "NgRx guards and resolvers",
       "img": "guards.WebP",
-      "tags": ["angular 2+", "resolvers", "guards"],
+      "tags": ["Angular 2+", "Resolvers", "Guards"],
       "featured": true
     },
     {
@@ -42,7 +51,7 @@
       "name": "dynamically_add_component",
       "label": "How to dynamically add components to the DOM with angular 4",
       "img": "dynamic.WebP",
-      "tags": ["angular 2+", "DOM", "dynamic"],
+      "tags": ["Angular 2+", "DOM", "Dynamic"],
       "featured": true
     },
     {
@@ -51,7 +60,7 @@
       "name": "angular_unit_test_ng_on_changes",
       "label": "Angular Unit Test ng-on-changes",
       "img": "ng-on-changes.WebP",
-      "tags": ["angular 2+", "unit test", "ng-on-changes"],
+      "tags": ["Angular 2+", "Unit Test", "ng-on-changes"],
       "featured": true
     }
   ]
