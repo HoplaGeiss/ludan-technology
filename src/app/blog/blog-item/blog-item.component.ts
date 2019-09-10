@@ -67,6 +67,7 @@ import { StoreService } from './../../shared/services/store.service';
       <div class="separator"></div>
       <markdown
         *ngIf="blogItem"
+        class="article"
         [src]="'./assets/blog/' + blogItem.date + '_' + blogItem.name + '.md'"
       ></markdown>
     </section>

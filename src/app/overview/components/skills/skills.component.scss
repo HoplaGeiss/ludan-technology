@@ -2,6 +2,8 @@
 @import '../../../shared/styles/layout';
 
 .skills {
+  display: flex;
+  flex-wrap: wrap;
   border: 1px solid ludan-color('grey', 'light');
   border-radius: 10px;
   margin: -80px 10% 0 10%;
@@ -23,8 +25,10 @@
   .section {
     text-align: center;
     padding: 20px;
+    box-sizing: border-box;
 
     @media only screen and (max-width: $sm) {
+      width: 100%;
       &:not(:last-child) {
         border-right: 0;
         border-bottom: 1px solid ludan-color('grey', 'light');
@@ -32,6 +36,7 @@
     }
 
     @media only screen and (min-width: $gt-sm) {
+      width: 33.33%;
       p:first-of-type {
         height: 90px;
       }

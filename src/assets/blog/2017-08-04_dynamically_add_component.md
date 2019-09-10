@@ -1,6 +1,6 @@
 Today we are going to talk about dynamic component and how to add them to the DOM, but first let's take a look at how we can add content to components.
 
-## Single content
+### Single content
 
 If you are looking to add a 'single bit of content' to a component, you can use `ng-content`.
 
@@ -20,7 +20,7 @@ template: `
 `
 ```
 
-## Multiple contents
+### Multiple contents
 
 If you would like to add multiple contents to a component you can still use `ng-content` but in a slightly different way!
 
@@ -42,7 +42,7 @@ template: `
 `
 ```
 
-## Dynamic content
+### Dynamic content
 Let's go a step further. Let's see what happens if we try to use `ng-content` and `select` with dynamic content.
 
 ``` typescript

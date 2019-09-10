@@ -1,6 +1,6 @@
 Breadcrumbs are very useful in a large application for the user to be able to navigate back and forth with ease. They are surprisingly easy to implement with angular. let's dive in!
 
-## Listen to the router event
+### Listen to the router event
 
 The first thing to do is to listen to the router events.
 
@@ -16,7 +16,7 @@ this.breadcrumbs$ = this.router.events.pipe(
 - `distinctUntilChanged` filters out the user navigating consecutively to the same page.
 - `this.buildBreadCrumb` is our custom function that builds the breadcrumb from the URL. We will come back to that one shortly.
 
-## Basic breadcrumb template.
+### Basic breadcrumb template
 
 Now let's have a look at how the template should look like.
 
@@ -30,7 +30,7 @@ Now let's have a look at how the template should look like.
 
 In essance, a breadcrumb is just a list of elements displayed horizontally. First, you can start with a classic `ngFor` and display all the elements of the breadcrumb.
 
-## Breadcrumb interface
+### Breadcrumb interface
 
 While building the template, you realise each breadcrumb element will need to be composed of an URL and a label. This makes defining out interface straightforward.
 
@@ -41,7 +41,7 @@ export interface BreadCrumb {
 }
 ```
 
-## buildBreadCrumb function
+### buildBreadCrumb function
 
 Now we know what our `buildBreadCrumb` takes in input ( an URL string ) and what it needs to output ( an array of `Breadbrumb` ), so all that remains is to build it!
 
@@ -62,7 +62,7 @@ buildBreadCrumb(url: string): Array<BreadCrumb> {
 
 The only trick in this function is to display `Home` in the label of the first breadcrumb element.
 
-## Complete the template
+### Complete the template
 
 Now that we have the breadcrumb working, we can think of improving the look and feel of the template.
 

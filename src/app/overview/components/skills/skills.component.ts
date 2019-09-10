@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'ludan-skills',
   styleUrls: ['./skills.component.scss'],
   template: `
-    <section class="skills" fxLayout="row wrap">
-      <div class="section" fxFlex="33.33%" fxFlex.lt-md="100%">
+    <section class="skills">
+      <div class="section">
         <h3 class="title">Front-end developer</h3>
         <p>
           I like to code things from scratch, and enjoy bringing ideas to life in the
@@ -18,7 +18,7 @@ import { Component } from '@angular/core';
         <h4 class="subtitle">Favorite testing tech stack</h4>
         <p>Jasmine, Jest, Storybook, BackstopJS</p>
       </div>
-      <div class="section" fxFlex="33.33%" fxFlex.lt-md="100%">
+      <div class="section">
         <h3 class="title">Back-end developer</h3>
         <p>
           In order to be able to build things from the ground up it's essential to master
@@ -28,7 +28,7 @@ import { Component } from '@angular/core';
         <h4 class="subtitle">Favorite tech stack</h4>
         <p>Node.js, Express, MongoDB, socket.io, FeatherJS</p>
       </div>
-      <div class="section" fxFlex="33.33%" fxFlex.lt-md="100%">
+      <div class="section">
         <h3 class="title">DevOps</h3>
         <p>
           I have extensive experience of setting up CI/CD pipelines to run linters, UI
