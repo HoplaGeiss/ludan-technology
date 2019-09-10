@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { DisqusModule } from 'ngx-disqus';
+
 import { LibraryAccordionModule } from './components/library-accordion/library-accordion.module';
 import { LibraryCarouselModule } from './components/library-carousel/library-carousel.module';
 import { LibraryDropdownModule } from './components/library-dropdown/library-dropdown.module';
@@ -21,6 +23,7 @@ import { LibraryItemComponent } from './library-item.component';
     LibraryDropdownModule,
     LibraryTagsModule,
     LibraryCarouselModule,
+    DisqusModule,
     RouterModule,
     CommonModule
   ],

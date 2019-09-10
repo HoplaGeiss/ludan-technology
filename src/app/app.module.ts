@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app.routing';
 import { NavbarModule } from './shared/components/navbar/navbar.module';
 import { StoreService } from './shared/services/store.service';
 import { BreadcrumbModule } from './shared/components/breadcrumb/breadcrumb.module';
+import { DisqusModule } from 'ngx-disqus';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { BreadcrumbModule } from './shared/components/breadcrumb/breadcrumb.modu
     FooterModule,
     HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
-    BreadcrumbModule
+    BreadcrumbModule,
+    DisqusModule.forRoot('ludan')
   ],
   declarations: [AppComponent],
   providers: [StoreService],

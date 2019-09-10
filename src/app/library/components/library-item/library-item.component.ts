@@ -62,7 +62,8 @@ import { CatalogueItem } from '../../../shared/models/catalogue-item.model';
         </p>
         <div class="separator"></div>
       </div>
-      <router-outlet></router-outlet>
+      <div class="content"><router-outlet></router-outlet></div>
+      <disqus [identifier]="'library/' + item.name"></disqus>
     </section>
   `
 })

@@ -43,6 +43,7 @@
     "express": "^4.15.2",
     "moment": "^2.24.0",
     "ng-lazyload-image": "^6.0.0",
+    "ngx-disqus": "^2.4.3",
     "ngx-ludan-accordion": "^0.0.1",
     "ngx-ludan-carousel": "0.0.1",
     "ngx-ludan-dropdown": "^0.0.1",

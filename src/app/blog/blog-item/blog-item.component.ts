@@ -65,11 +65,14 @@ import { StoreService } from './../../shared/services/store.service';
         <span itemprop="url">https://ludan.io/assets/images/{{ blogItem.img }}</span>
       </span>
       <div class="separator"></div>
-      <markdown
-        *ngIf="blogItem"
-        class="article"
-        [src]="'./assets/blog/' + blogItem.date + '_' + blogItem.name + '.md'"
-      ></markdown>
+      <div class="content">
+        <markdown
+          *ngIf="blogItem"
+          class="article"
+          [src]="'./assets/blog/' + blogItem.date + '_' + blogItem.name + '.md'"
+        ></markdown>
+      </div>
+      <disqus [identifier]="'blog/' + blogItem.name"></disqus>
     </section>
   `
 })
