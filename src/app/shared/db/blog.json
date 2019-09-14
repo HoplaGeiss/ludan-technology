@@ -1,10 +1,28 @@
 {
   "items": [
     {
+      "date": "2019-09-14",
+      "dateModified": "2019-09-14",
+      "name": "angular_sidebar",
+      "label": "Angular 8 Sidebar",
+      "img": "sidebar.WebP",
+      "tags": ["Angular 2+", "Sidebar", "Angular 8"],
+      "featured": false
+    },
+    {
+      "date": "2019-09-14",
+      "dateModified": "2019-09-14",
+      "name": "angular_modal",
+      "label": "Angular 8 Modal",
+      "img": "modal.WebP",
+      "tags": ["Angular 2+", "Modal", "Angular 8"],
+      "featured": false
+    },
+    {
       "date": "2019-09-10",
       "dateModified": "2019-09-10",
       "name": "angular_dropdown",
-      "label": "Angular Dropdown",
+      "label": "Angular 8 Dropdown",
       "img": "dropdown.WebP",
       "tags": ["Angular 2+", "Dropdown", "Angular 8"],
       "featured": false

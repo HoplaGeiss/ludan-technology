@@ -29,6 +29,7 @@ ng serve --host localIP
 ### Medium priority
 
 - add a nice image on the landing page
+- add a link from dropdown from blog to new blog
 
 ### Blocked
 
