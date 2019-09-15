@@ -35,10 +35,6 @@ ng serve --host localIP
 
 - Add ads
 
-## Posts
-
-N/A
-
 ## Old post
 
 ##### TODO
