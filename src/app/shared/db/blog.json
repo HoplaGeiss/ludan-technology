@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2019-09-15",
+      "dateModified": "2019-09-15",
+      "name": "angular_accordion",
+      "label": "Angular 8 Accordion",
+      "img": "accordion.WebP",
+      "tags": ["Angular 2+", "Accordion", "Angular 8"],
+      "featured": false
+    },
+    {
       "date": "2019-09-14",
       "dateModified": "2019-09-14",
       "name": "angular_sidebar",
