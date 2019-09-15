@@ -61,13 +61,9 @@ N/A
 2017-12-01-angular5-input-directive.md
 
 ##### Create blog post for libs
-- accordion
 - carousel
-- modal
 - retirement calc
-- sidebar
 - sudoku
-- tags
 
 ##### DELETE
 DELETE - 2017-07-26-angular-4-nested-routing.md

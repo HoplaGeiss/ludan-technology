@@ -3,6 +3,15 @@
     {
       "date": "2019-09-15",
       "dateModified": "2019-09-15",
+      "name": "angular_tags",
+      "label": "Angular 8 Tags",
+      "img": "tags.WebP",
+      "tags": ["Angular 2+", "Tags", "Angular 8"],
+      "featured": false
+    },
+    {
+      "date": "2019-09-15",
+      "dateModified": "2019-09-15",
       "name": "angular_accordion",
       "label": "Angular 8 Accordion",
       "img": "accordion.WebP",
