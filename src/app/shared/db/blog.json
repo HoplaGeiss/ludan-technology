@@ -3,6 +3,15 @@
     {
       "date": "2019-09-16",
       "dateModified": "2019-09-16",
+      "name": "angular_carousel",
+      "label": "Angular 8 Carousel",
+      "img": "carousel.WebP",
+      "tags": ["Angular 2+", "Carousel", "Angular 8"],
+      "featured": false
+    },
+    {
+      "date": "2019-09-16",
+      "dateModified": "2019-09-16",
       "name": "angular_form",
       "label": "Angular 8 Form - Retirement Calculator",
       "img": "retirement-calculator.WebP",
