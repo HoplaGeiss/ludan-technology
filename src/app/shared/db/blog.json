@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2019-09-16",
+      "dateModified": "2019-09-16",
+      "name": "angular_form",
+      "label": "Angular 8 Form - Retirement Calculator",
+      "img": "retirement-calculator.WebP",
+      "tags": ["Angular 2+", "Form", "Angular 8", "retirement calculator"],
+      "featured": false
+    },
+    {
       "date": "2019-09-15",
       "dateModified": "2019-09-15",
       "name": "angular_tags",
