@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  styleUrls: ['library-dropdown.component.scss'],
   template: `
     <div class="wrapper">
       <ludan-dropdown
