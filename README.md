@@ -29,7 +29,7 @@ ng serve --host localIP
 ### Medium priority
 
 - add a nice image on the landing page
-****
+
 ### Blocked
 
 - Add ads
@@ -56,8 +56,7 @@ ng serve --host localIP
 2017-12-01-angular5-input-directive.md
 
 ##### Create blog post for libs
-- carousel
-- sudoku
+- sudoku ?? too hard
 
 ##### DELETE
 DELETE - 2017-07-26-angular-4-nested-routing.md

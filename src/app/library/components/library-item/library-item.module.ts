@@ -2,11 +2,11 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { DisqusModule } from 'ngx-disqus';
-
 import { LibraryAccordionModule } from './components/library-accordion/library-accordion.module';
 import { LibraryCarouselModule } from './components/library-carousel/library-carousel.module';
 import { LibraryDropdownModule } from './components/library-dropdown/library-dropdown.module';
 import { LibraryModalModule } from './components/library-modal/library-modal.module';
+import { LibraryPieChartModule } from './components/library-pie-chart/library-pie-chart.module';
 import { LibraryRetirementCalculatorModule } from './components/library-retirement-calculator/library-retirement-calculator.module';
 import { LibrarySidebarModule } from './components/library-sidebar/library-sidebar.module';
 import { LibrarySudokuModule } from './components/library-sudoku/library-sudoku.module';
@@ -23,6 +23,7 @@ import { LibraryItemComponent } from './library-item.component';
     LibraryDropdownModule,
     LibraryTagsModule,
     LibraryCarouselModule,
+    LibraryPieChartModule,
     DisqusModule,
     RouterModule,
     CommonModule
