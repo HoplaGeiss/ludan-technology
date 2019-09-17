@@ -13,10 +13,13 @@ import { CatalogueItem } from './../../models/catalogue-item.model';
         [name]="catalogueItem.label"
         [img]="catalogueItem.img"
       ></ludan-thumbnail>
+      <div *ngFor="let hiddenElement of hiddenElements" class="hidden-elements"></div>
     </div>
   `
 })
 export class CatalogueComponent {
+  hiddenElements = ['', '', '', '', ''];
+
   @Input() catalogueItems: CatalogueItem[];
 
   @Output() selectEvent = new EventEmitter();

@@ -3,13 +3,14 @@
 .catalogue {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 20px 0;
   justify-content: center;
 
   ludan-thumbnail {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 10px;
+  }
+
+  .hidden-elements {
+    min-width: 420px;
   }
 }
