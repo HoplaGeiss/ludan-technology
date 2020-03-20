@@ -69,7 +69,7 @@ import { CatalogueItem } from '../../../shared/models/catalogue-item.model';
 })
 export class LibraryItemComponent implements OnInit {
   public item: CatalogueItem;
-  @ViewChild('datePublished', { static: false }) datePublished: ElementRef;
+  @ViewChild('datePublished') datePublished: ElementRef;
 
   constructor(private storeService: StoreService, private router: Router) {}
 
