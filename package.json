@@ -10,7 +10,6 @@
   "scripts": {
     "ng": "ng",
     "start": "npm run serve:ssr",
-    "deploy": "npm run build:ssr && gcloud app deploy --quiet --version v1",
     "build": "ng build",
     "build:prod": "ng build --prod",
     "test": "ng test",
