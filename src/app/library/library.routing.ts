@@ -1,12 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LibraryAccordionComponent } from './components/library-item/components/library-accordion/library-accordion.component';
+import {
+  LibraryAccordionComponent,
+} from './components/library-item/components/library-accordion/library-accordion.component';
+import {
+  LibraryAsyncValidationComponent,
+} from './components/library-item/components/library-async-validation/library-async-validation.component';
 import { LibraryCarouselComponent } from './components/library-item/components/library-carousel/library-carousel.component';
 import { LibraryDropdownComponent } from './components/library-item/components/library-dropdown/library-dropdown.component';
 import { LibraryModalComponent } from './components/library-item/components/library-modal/library-modal.component';
-import { LibraryPieChartComponent } from './components/library-item/components/library-pie-chart/library-pie-chart.component';
-import { LibraryRetirementCalculatorComponent } from './components/library-item/components/library-retirement-calculator/library-retirement-calculator.component';
+import {
+  LibraryPieChartComponent,
+} from './components/library-item/components/library-pie-chart/library-pie-chart.component';
+import {
+  LibraryRetirementCalculatorComponent,
+} from './components/library-item/components/library-retirement-calculator/library-retirement-calculator.component';
 import { LibrarySidebarComponent } from './components/library-item/components/library-sidebar/library-sidebar.component';
 import { LibrarySudokuComponent } from './components/library-item/components/library-sudoku/library-sudoku.component';
 import { LibraryTagsComponent } from './components/library-item/components/library-tags/library-tags.component';
@@ -72,6 +81,11 @@ const routes: Routes = [
             path: 'sidebar',
             data: { name: 'sidebar' },
             component: LibrarySidebarComponent
+          },
+          {
+            path: 'async-validation',
+            data: { name: 'async-validation' },
+            component: LibraryAsyncValidationComponent
           }
         ]
       }
