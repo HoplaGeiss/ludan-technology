@@ -60,7 +60,7 @@
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "typed.js": "^2.0.10",
-    "underscore": "^1.9.1",
+    "underscore": "^1.12.1",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
