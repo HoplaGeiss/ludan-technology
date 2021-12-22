@@ -52,7 +52,8 @@
       "img": "accordion.WebP",
       "tags": ["Angular 2+", "Angular 8", "Accordion"],
       "description": "An accordion and is a component which displays all the key information while leaving the user the possibility to find out more about each item by clicking on them.",
-      "url": "https://github.com/HoplaGeiss/ludan-accordion"
+      "url": "https://github.com/HoplaGeiss/ludan-accordion",
+      "featured": true
     },
     {
       "date": "2019-07-12",

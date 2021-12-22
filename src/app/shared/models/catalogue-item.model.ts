@@ -10,4 +10,5 @@ export interface CatalogueItem {
   dateUTC?: Date;
   tags?: string[];
   featured?: boolean;
+  seeMore?: boolean;
 }

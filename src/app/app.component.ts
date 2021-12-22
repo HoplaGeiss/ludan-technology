@@ -25,13 +25,20 @@ import { StoreService } from './shared/services/store.service';
       </div>
       <ludan-footer></ludan-footer>
     </main>
-  `
+  `,
 })
 export class AppComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<boolean>();
 
   public navbarItems: NavbarItemInterface[];
   public selectedNavbarItem: NavbarItemInterface;
+  private seeMore: CatalogueItem = {
+    id: '0',
+    name: 'see more',
+    label: 'See more..',
+    featured: true,
+    seeMore: true,
+  };
 
   constructor(
     private router: Router,
@@ -47,7 +54,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.navbarItems = [
       { label: 'Libraries I developed', name: 'library' },
-      { label: 'Tech Blog', name: 'blog' }
+      { label: 'Tech Blog', name: 'blog' },
       // { label: 'Companies I worked For', name: 'portfolio' }
       // { label: 'Contact', name: 'contact' }
     ];
@@ -55,39 +62,39 @@ export class AppComponent implements OnInit, OnDestroy {
     // On Init we need to call select tab on the router url directly, as the events have already been fired.
     this.selectItem(this.router.url);
 
-    this.router.events.pipe(takeUntil(this.destroy$)).subscribe(route => {
+    this.router.events.pipe(takeUntil(this.destroy$)).subscribe((route) => {
       if (route instanceof NavigationEnd) {
         this.selectItem(route.url);
       }
     });
 
     this.storeService.portfolioItemsSubject.next([
-      { id: '2', name: 'managed_24_7', label: 'Managed 24/7', img: 'm247' }
+      { id: '2', name: 'managed_24_7', label: 'Managed 24/7', img: 'm247' },
     ]);
 
     const libraryItems = this.formatCatalogueItem((libraryItemsJSON as any).items);
     const blogItems = this.formatCatalogueItem((blogItemsJSON as any).items);
 
-    this.storeService.libraryItemsSubject.next(libraryItems);
-    this.storeService.blogItemsSubject.next(blogItems);
+    this.storeService.libraryItemsSubject.next([...libraryItems, this.seeMore]);
+    this.storeService.blogItemsSubject.next([...blogItems, this.seeMore]);
   }
 
   formatCatalogueItem = (items: any[]): CatalogueItem[] => {
-    return items.map(libraryItem => {
+    return items.map((libraryItem) => {
       libraryItem.dateUTC = new Date(libraryItem.date);
       return libraryItem;
     });
   };
 
-  navigate = tab => {
+  navigate = (tab) => {
     this.router.navigate(['./' + tab.name], {
-      relativeTo: this.activatedRoute
+      relativeTo: this.activatedRoute,
     });
   };
 
   private selectItem = (url: string) => {
     const itemName = url.split('/')[1];
-    const item = _.find(this.navbarItems, navbarItem => navbarItem.name === itemName);
+    const item = _.find(this.navbarItems, (navbarItem) => navbarItem.name === itemName);
     this.selectedNavbarItem = item;
   };
 }

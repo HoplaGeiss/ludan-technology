@@ -7,6 +7,6 @@ import { ThumbnailModule } from './thumbnail/thumbnail.module';
 @NgModule({
   imports: [CommonModule, ThumbnailModule],
   declarations: [CatalogueComponent],
-  exports: [CatalogueComponent]
+  exports: [CatalogueComponent],
 })
 export class CatalogueModule {}

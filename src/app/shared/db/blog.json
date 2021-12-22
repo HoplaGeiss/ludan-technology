@@ -1,6 +1,15 @@
 {
   "items": [
     {
+      "date": "2021-12-22",
+      "dateModified": "2021-12-22",
+      "name": "instant_error_matcher",
+      "label": "Angular 12 Instant Error Matcher",
+      "img": "instant-error-matcher.WebP",
+      "tags": ["Angular 2+", "Forms", "Error", "Angular 12"],
+      "featured": true
+    },
+    {
       "date": "2020-10-16",
       "dateModified": "2020-10-16",
       "name": "angular_async_validator_with_params",

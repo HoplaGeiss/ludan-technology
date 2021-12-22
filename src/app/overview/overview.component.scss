@@ -33,10 +33,10 @@
   .library {
     display: flex;
     flex-direction: column;
-    padding: 0 80px 40px 80px;
+    padding: 20px 80px 40px 80px;
 
     @media only screen and (max-width: $sm) {
-      padding: 0px 40px 40px 40px;
+      padding: 20px 40px 40px 40px;
     }
 
     .catalogue {
@@ -100,4 +100,5 @@
 
 .blog {
   background: ludan-color('grey', 'extra-light');
+  padding-top: 10px;
 }

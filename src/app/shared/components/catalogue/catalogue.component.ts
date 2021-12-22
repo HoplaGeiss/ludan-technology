@@ -12,10 +12,12 @@ import { CatalogueItem } from './../../models/catalogue-item.model';
         (clickEvent)="selectEvent.emit(catalogueItem)"
         [name]="catalogueItem.label"
         [img]="catalogueItem.img"
+        [seeMore]="catalogueItem.seeMore"
       ></ludan-thumbnail>
+
       <div *ngFor="let hiddenElement of hiddenElements" class="hidden-elements"></div>
     </div>
-  `
+  `,
 })
 export class CatalogueComponent {
   hiddenElements = ['', '', '', '', ''];

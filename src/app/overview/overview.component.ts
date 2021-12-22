@@ -7,7 +7,7 @@ import { StoreService } from './../shared/services/store.service';
 enum tabs {
   PORTFOLIO = 'portfolio',
   BLOG = 'blog',
-  LIBRARY = 'library'
+  LIBRARY = 'library',
 }
 
 @Component({
@@ -17,9 +17,7 @@ enum tabs {
     <section class="overview">
       <section class="landing">
         <h1 class="landing__role">Ludan Technology</h1>
-        <p class="landing__description">
-          Angular 8, React and Node.js development
-        </p>
+        <p class="landing__description">Angular 8, React and Node.js development</p>
       </section>
       <section class="description">
         <h3 class="description__title">Hi, I’m Gabriel. Nice to meet you.</h3>
@@ -76,7 +74,7 @@ enum tabs {
       </section>
       -->
     </section>
-  `
+  `,
 })
 export class OverviewComponent implements OnInit {
   public portfolioItems: CatalogueItem[];
@@ -89,16 +87,17 @@ export class OverviewComponent implements OnInit {
   ngOnInit() {
     this.portfolioItems = this.storeService.portfolioItemsSubject
       .getValue()
-      .filter(item => item.featured);
+      .filter((item) => item.featured);
     this.blogItems = this.storeService.blogItemsSubject
       .getValue()
-      .filter(item => item.featured);
+      .filter((item) => item.featured);
     this.libraryItems = this.storeService.libraryItemsSubject
       .getValue()
-      .filter(item => item.featured);
+      .filter((item) => item.featured);
   }
 
   selectItem = (tab: tabs, item: CatalogueItem) => {
-    this.router.navigate([`/${tab}/${item.name}`]);
+    const url = item.id === '0' ? tab : `/${tab}/${item.name}`;
+    this.router.navigate([url]);
   };
 }
